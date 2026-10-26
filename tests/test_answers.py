@@ -34,7 +34,8 @@ def test_declines_in_other_words_count_but_claims_about_the_act_do_not():
     answers = [
         "The AI Act does not provide any tax incentives for AI start-ups.",
         "No, it is not allowed [1]. The provided passages do not mention other cases.",
-    ]  # a claim about the Act; a decline only after an answer
+        f"High-risk systems must comply [2]. {DECLINE}",
+    ]  # a claim about the Act; declines only after an answer
     for text in answers:
         assert not read_answer(text, k=5, decline=DECLINE)["declined"], text
 

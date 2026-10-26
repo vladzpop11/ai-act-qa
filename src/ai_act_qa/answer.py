@@ -4,8 +4,9 @@ The prompt (prompts/answer_v1.txt) numbers the passages [1] to [k] and asks for 
 after each statement, or for one fixed sentence when the passages do not answer. Reading the
 answer is deterministic: which passage numbers it cites (and whether they exist), and whether
 it declined. Models often decline in their own words ("The provided passages do not contain
-..."), so a decline is either the fixed sentence or a first sentence saying that the passages
-given do not answer; "The AI Act does not ..." is a claim about the Act, so an answer.
+..."), so a decline is an answer whose first sentence is the fixed sentence or says that the
+passages given do not answer. "The AI Act does not ..." is a claim about the Act, so an
+answer, and so is an answer that adds the fixed sentence after answering.
 """
 
 import re
@@ -70,10 +71,11 @@ def read_answer(text: str, k: int, decline: str) -> dict:
     """-> {"citations": valid passage numbers, "invalid": numbers outside 1..k,
     "declined": the fixed sentence or in other words, "exact_decline": the fixed sentence}."""
     numbers = [int(n) for n in CITATION.findall(text)]
-    exact = normalise(decline).rstrip(".") in normalise(text)
+    first = first_sentence(text)
+    exact = normalise(decline).rstrip(".") in normalise(first)
     return {
         "citations": sorted({n for n in numbers if 1 <= n <= k}),
         "invalid": sorted({n for n in numbers if not 1 <= n <= k}),
-        "declined": exact or any(p.search(first_sentence(text)) for p in DECLINES),
+        "declined": exact or any(p.search(first) for p in DECLINES),
         "exact_decline": exact,
     }
