@@ -22,6 +22,7 @@ from ai_act_qa.config import project_path
 
 COLLECTION = "ai_act"
 BM25 = "Qdrant/bm25"
+MODELS = ".cache/fastembed"  # downloaded ONNX models (cached in CI)
 
 
 @dataclass
@@ -57,9 +58,11 @@ class Retriever:
         self.cfg = cfg
         self.client = QdrantClient(location=location) if location == ":memory:" else QdrantClient(
             url=location)  # fmt: skip
-        self.dense = TextEmbedding(cfg["embedding"])
-        self.sparse = SparseTextEmbedding(BM25)
-        self.reranker = TextCrossEncoder(cfg["reranker"]) if cfg.get("rerank") else None
+        cache = str(project_path(MODELS))
+        self.dense = TextEmbedding(cfg["embedding"], cache_dir=cache)
+        self.sparse = SparseTextEmbedding(BM25, cache_dir=cache)
+        self.reranker = (TextCrossEncoder(cfg["reranker"], cache_dir=cache)
+                         if cfg.get("rerank") else None)  # fmt: skip
 
     def index(self, chunks: list[Chunk]) -> None:
         texts = [c.text for c in chunks]
