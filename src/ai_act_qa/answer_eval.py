@@ -26,6 +26,8 @@ import os
 import statistics
 from pathlib import Path
 
+import httpx
+
 from ai_act_qa.answer import load_prompt, messages, read_answer
 from ai_act_qa.artifacts import provenance, write_json
 from ai_act_qa.chunk import build
@@ -46,6 +48,7 @@ GRADE_SCHEMA = {
     "required": ["explanation", "correctness", "grounded"],
 }
 SCORE = {"correct": 1.0, "partial": 0.5, "incorrect": 0.0}
+TIMEOUT = 900.0  # seconds: an answer slower than this counts as a failure (llm.chat's timeout)
 
 
 def folder(split: str) -> Path:
@@ -196,11 +199,18 @@ def mac_latency(args) -> None:
     names = args.models or [n for n in cfg["answers"]["candidates"] if cfg["models"][n]["mac"]]
     args.mode = "docker"
     for name in names:
+        rows, timed_out = [], False
         with server(args, cfg, name) as url:
-            rows = [answer_one(url, cfg, prompt, q, hits[q.id]) for q in questions]
-        seconds = [r["seconds"] for r in rows]
+            for q in questions:
+                try:
+                    rows.append(answer_one(url, cfg, prompt, q, hits[q.id]))
+                except httpx.TimeoutException:  # e.g. the model does not fit in Docker's memory
+                    timed_out = True
+                    break
+        seconds = [r["seconds"] for r in rows] + ([TIMEOUT] if timed_out else [])
         results[name] = {"questions": [q.id for q in questions], "seconds": seconds,
-                         "median_seconds": statistics.median(seconds),
+                         "timed_out": timed_out,
+                         "median_seconds": TIMEOUT if timed_out else statistics.median(seconds),
                          "completion_tokens": [r["completion_tokens"] for r in rows]}  # fmt: skip
         print(f"{name}: median {statistics.median(seconds):.0f}s {seconds}", flush=True)
         record = {"threads": args.threads, "models": results, "provenance": provenance()}

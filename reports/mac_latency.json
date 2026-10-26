@@ -1,0 +1,84 @@
+{
+ "threads": 2,
+ "models": {
+  "qwen3.5-0.8b": {
+   "questions": [
+    "q002",
+    "q004",
+    "q006",
+    "q007",
+    "q008"
+   ],
+   "seconds": [
+    18.42,
+    39.46,
+    40.06,
+    23.39,
+    18.57
+   ],
+   "median_seconds": 23.39,
+   "completion_tokens": [
+    74,
+    400,
+    400,
+    93,
+    120
+   ]
+  },
+  "qwen3.5-2b": {
+   "questions": [
+    "q002",
+    "q004",
+    "q006",
+    "q007",
+    "q008"
+   ],
+   "seconds": [
+    44.36,
+    47.68,
+    45.9,
+    54.96,
+    35.18
+   ],
+   "median_seconds": 45.9,
+   "completion_tokens": [
+    76,
+    126,
+    108,
+    129,
+    87
+   ]
+  },
+  "gemma-4-e2b": {
+   "questions": [
+    "q002",
+    "q004",
+    "q006",
+    "q007",
+    "q008"
+   ],
+   "seconds": [
+    71.58,
+    67.68,
+    53.5,
+    79.21,
+    47.88
+   ],
+   "median_seconds": 67.68,
+   "completion_tokens": [
+    50,
+    104,
+    48,
+    95,
+    96
+   ]
+  }
+ },
+ "provenance": {
+  "created": "2026-10-26T15:20:29Z",
+  "commit": "df71681",
+  "dirty": false,
+  "document_sha256": "5e7719f77e8a606b257dc25958ee3222c4383300a5a34270a5b850a2ce8b8715",
+  "questions_sha256": "cefdf76605c86ed82435ff10a53b9e5d7a34b005d777c716228ddad004646ed8"
+ }
+}
