@@ -1,0 +1,286 @@
+{
+ "questions_sha256": "43df4e47cfd1eb1ceece91941b4f2a9bcef156f8d2f364eda28ea4fc2043c1ab",
+ "reviewed_at": "2026-10-26T13:52:28.843Z",
+ "applied_at": "2026-10-26T13:54:06Z",
+ "verdicts": {
+  "q001": {
+   "verdict": "ok"
+  },
+  "q002": {
+   "verdict": "ok"
+  },
+  "q003": {
+   "verdict": "ok"
+  },
+  "q004": {
+   "verdict": "ok"
+  },
+  "q005": {
+   "verdict": "ok"
+  },
+  "q006": {
+   "verdict": "ok"
+  },
+  "q007": {
+   "verdict": "ok"
+  },
+  "q008": {
+   "verdict": "ok"
+  },
+  "q009": {
+   "verdict": "ok"
+  },
+  "q010": {
+   "verdict": "ok"
+  },
+  "q011": {
+   "verdict": "ok"
+  },
+  "q012": {
+   "verdict": "ok"
+  },
+  "q013": {
+   "verdict": "ok"
+  },
+  "q014": {
+   "verdict": "ok"
+  },
+  "q015": {
+   "verdict": "ok"
+  },
+  "q016": {
+   "verdict": "ok"
+  },
+  "q017": {
+   "verdict": "ok"
+  },
+  "q018": {
+   "verdict": "ok"
+  },
+  "q019": {
+   "verdict": "ok"
+  },
+  "q020": {
+   "verdict": "ok"
+  },
+  "q021": {
+   "verdict": "ok"
+  },
+  "q022": {
+   "verdict": "ok"
+  },
+  "q023": {
+   "verdict": "ok"
+  },
+  "q024": {
+   "verdict": "ok"
+  },
+  "q025": {
+   "verdict": "ok"
+  },
+  "q026": {
+   "verdict": "ok"
+  },
+  "q027": {
+   "verdict": "ok"
+  },
+  "q028": {
+   "verdict": "ok"
+  },
+  "q029": {
+   "verdict": "ok"
+  },
+  "q030": {
+   "verdict": "ok"
+  },
+  "q031": {
+   "verdict": "ok"
+  },
+  "q032": {
+   "verdict": "ok"
+  },
+  "q033": {
+   "verdict": "ok"
+  },
+  "q034": {
+   "verdict": "ok"
+  },
+  "q035": {
+   "verdict": "ok"
+  },
+  "q036": {
+   "verdict": "ok"
+  },
+  "q037": {
+   "verdict": "ok"
+  },
+  "q038": {
+   "verdict": "ok"
+  },
+  "q039": {
+   "verdict": "ok"
+  },
+  "q040": {
+   "verdict": "ok"
+  },
+  "q041": {
+   "verdict": "ok"
+  },
+  "q042": {
+   "verdict": "ok"
+  },
+  "q043": {
+   "verdict": "ok"
+  },
+  "q044": {
+   "verdict": "ok"
+  },
+  "q045": {
+   "verdict": "ok"
+  },
+  "q046": {
+   "verdict": "passage",
+   "note": "include article 3(14) in the expected passages"
+  },
+  "q047": {
+   "verdict": "ok"
+  },
+  "q048": {
+   "verdict": "ok"
+  },
+  "q049": {
+   "verdict": "ok"
+  },
+  "q050": {
+   "verdict": "ok"
+  },
+  "q051": {
+   "verdict": "ok"
+  },
+  "q052": {
+   "verdict": "passage",
+   "note": "include article 3(49)(b) in the expected passages section to establish the definition linking critical infrastructure disruption to article 73(3)"
+  },
+  "q053": {
+   "verdict": "ok"
+  },
+  "q054": {
+   "verdict": "ok"
+  },
+  "q055": {
+   "verdict": "ok"
+  },
+  "q056": {
+   "verdict": "ok"
+  },
+  "q057": {
+   "verdict": "ok"
+  },
+  "q058": {
+   "verdict": "ok"
+  },
+  "q059": {
+   "verdict": "ok"
+  },
+  "q060": {
+   "verdict": "ok"
+  },
+  "q061": {
+   "verdict": "ok"
+  },
+  "q062": {
+   "verdict": "ok"
+  },
+  "q063": {
+   "verdict": "ok"
+  },
+  "q064": {
+   "verdict": "ok"
+  },
+  "q065": {
+   "verdict": "ok"
+  },
+  "q066": {
+   "verdict": "ok"
+  },
+  "q067": {
+   "verdict": "ok"
+  },
+  "q068": {
+   "verdict": "ok"
+  },
+  "q069": {
+   "verdict": "ok"
+  },
+  "q070": {
+   "verdict": "ok"
+  },
+  "q071": {
+   "verdict": "ok"
+  },
+  "q072": {
+   "verdict": "ok"
+  },
+  "q073": {
+   "verdict": "ok"
+  },
+  "q074": {
+   "verdict": "ok"
+  },
+  "q075": {
+   "verdict": "answer",
+   "note": "correct both the passage text and the reference answer to reflex the statutory timeline established in article 113 of the EU AI ACT. Correct Application date: 2 august 2026."
+  },
+  "q076": {
+   "verdict": "answer",
+   "note": "correct both the passage text and the reference answer to reflex the statutory timeline established in article 113 of the EU AI ACT. Correct Application date: 2 august 2027."
+  },
+  "q077": {
+   "verdict": "answer",
+   "note": "correct the exception timeline in the reference answer and passage text. Correct exception dates: 2 august 2026 for ai systems under article 6(2)/ annex III and 2 august 2027 for ai systems under article 6(1)/ annex I"
+  },
+  "q078": {
+   "verdict": "ok"
+  },
+  "q079": {
+   "verdict": "ok"
+  },
+  "q080": {
+   "verdict": "ok"
+  },
+  "q081": {
+   "verdict": "ok"
+  },
+  "q082": {
+   "verdict": "ok"
+  },
+  "q083": {
+   "verdict": "ok"
+  },
+  "q084": {
+   "verdict": "ok"
+  },
+  "q085": {
+   "verdict": "ok"
+  },
+  "q086": {
+   "verdict": "ok"
+  },
+  "q087": {
+   "verdict": "ok"
+  },
+  "q088": {
+   "verdict": "ok"
+  },
+  "q089": {
+   "verdict": "ok"
+  }
+ },
+ "resolutions": {
+  "q046": "Fixed: Article 3(14) added to the expected passages and to the reference answer.",
+  "q052": "Fixed: Article 3(49)(b) added to the expected passages and to the reference answer.",
+  "q075": "Not changed, pending the reviewer's confirmation: the suggested dates are those of the original Regulation (EU) 2024/1689, Article 113(c). The pinned consolidated text of 27 July 2026 has Article 113, points (a) and (c), replaced by Regulation (EU) 2026/1744: Annex III high-risk systems from 2 December 2027, Annex I from 2 August 2028; general application stays 2 August 2026. The passage text is the source itself and cannot be edited.",
+  "q076": "Not changed, pending the reviewer's confirmation: the suggested dates are those of the original Regulation (EU) 2024/1689, Article 113(c). The pinned consolidated text of 27 July 2026 has Article 113, points (a) and (c), replaced by Regulation (EU) 2026/1744: Annex III high-risk systems from 2 December 2027, Annex I from 2 August 2028; general application stays 2 August 2026. The passage text is the source itself and cannot be edited.",
+  "q077": "Not changed, pending the reviewer's confirmation: the suggested dates are those of the original Regulation (EU) 2024/1689, Article 113(c). The pinned consolidated text of 27 July 2026 has Article 113, points (a) and (c), replaced by Regulation (EU) 2026/1744: Annex III high-risk systems from 2 December 2027, Annex I from 2 August 2028; general application stays 2 August 2026. The passage text is the source itself and cannot be edited."
+ }
+}

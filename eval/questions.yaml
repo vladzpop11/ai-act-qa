@@ -247,8 +247,8 @@ questions:
   - id: q046
     type: amended
     question: Do AI features that are only used for convenience or performance optimisation count as safety components?
-    expected: [art6.1a]
-    answer: No. AI systems solely used for non-safety aspects such as user assistance, performance optimisation, service efficiency, automation, convenience or quality control do not qualify as safety components (unless their failure would endanger health and safety).
+    expected: [art6.1a, art3.14]
+    answer: No. AI systems solely used for non-safety aspects such as user assistance, performance optimisation, service efficiency, automation, convenience or quality control do not qualify as safety components (unless their failure would endanger health and safety); a safety component is one that fulfils a safety function, i.e. is intended to prevent or mitigate risks to the health and safety of persons or property, or whose failure endangers them (Article 3(14)).
   - id: q047
     type: classification
     question: Are AI systems used in critical infrastructure such as water or electricity supply high-risk?
@@ -279,8 +279,8 @@ questions:
   - id: q052
     type: number
     question: How fast must a serious disruption of critical infrastructure caused by a high-risk AI system be reported?
-    expected: [art73.3]
-    answer: Immediately, and not later than two days after the provider or deployer becomes aware of the incident (this also applies to a widespread infringement).
+    expected: [art73.3, art3.49.b]
+    answer: It is a serious incident under Article 3(49)(b) (a serious and irreversible disruption of the management or operation of critical infrastructure), so it must be reported immediately, and not later than two days after the provider or deployer becomes aware of the incident (this also applies to a widespread infringement).
 
   # --- transparency ---
   - id: q053
