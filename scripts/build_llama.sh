@@ -5,6 +5,16 @@
 # Usage: scripts/build_llama.sh TAG OUT_DIR  -> OUT_DIR/llama-server
 set -euo pipefail
 tag="$1"; out="$2"
+# The CUDA compiler is often installed but not on PATH (Kaggle: /usr/local/cuda/bin).
+if ! command -v nvcc >/dev/null; then
+  for dir in /usr/local/cuda/bin /usr/local/cuda-*/bin; do
+    if [ -x "$dir/nvcc" ]; then export PATH="$dir:$PATH"; break; fi
+  done
+fi
+command -v nvcc >/dev/null || { echo "no CUDA compiler (nvcc) found"; exit 1; }
+command -v cmake >/dev/null || pip install -q cmake
+echo "nvcc: $(nvcc --version | tail -1); $(cmake --version | head -1); $(nproc) cores"
+export CUDACXX="$(command -v nvcc)"
 arch=$(nvidia-smi --query-gpu=compute_cap --format=csv,noheader | head -1 | tr -d '.')
 echo "llama.cpp $tag for compute capability $arch"
 src="$out/llama.cpp"
