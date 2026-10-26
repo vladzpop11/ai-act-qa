@@ -109,3 +109,12 @@ judge:
 # development questions, unanswerable included); a smaller model is kept unless a larger one
 # scores more than `margin` higher.
 selection: {metric: score, margin: 0.05, mac_seconds: 150}
+
+# Checking the judge against a person (fixed 2026-10-26, after the first development run and
+# before any label). The judge shares a family with one of the pair that decided the served model,
+# so every question where it graded the pair differently is labelled (both answers), plus
+# `random_per_model` random answers of each other model for an unbiased agreement estimate.
+judge_agreement:
+  pair: [qwen3.5-2b, gemma-4-e2b]
+  random_per_model: 3
+  seed: 20261026

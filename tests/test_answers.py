@@ -4,6 +4,7 @@ from ai_act_qa.answer import load_prompt, messages, read_answer
 from ai_act_qa.answer_eval import select, summarise
 from ai_act_qa.config import load_config
 from ai_act_qa.eval_set import Question
+from ai_act_qa.judge_agreement import compare, kappa
 from ai_act_qa.parse import Unit
 from ai_act_qa.search import Hit
 
@@ -90,3 +91,12 @@ def test_selection_prefers_the_smaller_model_within_the_margin_and_needs_mac_spe
     summary["mid"]["score"] = 0.70
     assert select(summary, cfg, latency)["selected"] == "mid"
     assert select(summary, cfg, {})["selected"] is None
+
+
+def test_kappa_and_agreement_between_person_and_judge():
+    assert kappa([("correct", "correct"), ("incorrect", "incorrect")]) == 1.0
+    assert kappa([("correct", "incorrect"), ("incorrect", "correct")]) == -1.0
+    items = [{"person": "correct", "judge": "correct", "judge_rubric": "correct"},
+             {"person": "incorrect", "judge": "correct", "judge_rubric": "incorrect"}]  # fmt: skip
+    c = compare(items)
+    assert c["agreement"] == 0.5 and c["agreement_rubric"] == 1.0 and c["answers"] == 2

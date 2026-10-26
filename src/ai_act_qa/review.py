@@ -29,13 +29,7 @@ VERDICTS = {
     "question": "Question unclear or misleading",
 }
 
-PAGE = """<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Question review</title>
-<style>
+STYLE = """
 :root { --bg: #fbfaf7; --card: #ffffff; --text: #1d1d1b; --muted: #5f5d57; --line: #dedbd2;
         --accent: #2f5d8a; --ok: #2e7044; --warn: #9a5b13; }
 @media (prefers-color-scheme: dark) {
@@ -71,7 +65,19 @@ button { font: inherit; background: var(--accent); color: var(--bg); border: 0; 
          padding: 8px 14px; cursor: pointer; }
 button:focus-visible, input:focus-visible, textarea:focus-visible {
   outline: 3px solid var(--accent); outline-offset: 2px; }
-</style>
+"""
+
+PAGE = (
+    """<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Question review</title>
+<style>
+"""
+    + STYLE
+    + """</style>
 </head>
 <body>
 <header>
@@ -124,6 +130,7 @@ paint();
 </body>
 </html>
 """
+)
 
 
 def card(q, units: dict, canonical: str) -> str:

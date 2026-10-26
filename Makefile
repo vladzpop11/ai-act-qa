@@ -1,4 +1,4 @@
-.PHONY: help setup test data questions split retrieval retrieval-experiments retrieval-test review review-apply retrieval-gate mac-latency answers-report
+.PHONY: help setup test data questions split retrieval retrieval-experiments retrieval-test review review-apply retrieval-gate mac-latency answers-report labels labels-apply judge-agreement
 
 help:  ## List the targets
 	@grep -E '^[a-z-]+:.*## ' $(MAKEFILE_LIST) | awk -F':.*## ' '{printf "  %-22s %s\n", $$1, $$2}'
@@ -45,3 +45,14 @@ mac-latency:  ## Seconds per answer of each Mac candidate on this Mac (Docker ll
 
 answers-report:  ## Metrics per model and the served model, from the Kaggle results (reports/answers_dev.json)
 	uv run python -m ai_act_qa.answer_eval report
+
+labels:  ## Sample answers for checking the judge and build the labelling page (eval/judge_labels.html)
+	@test -f eval/judge_sample.json || uv run python -m ai_act_qa.judge_agreement sample
+	uv run python -m ai_act_qa.judge_agreement page
+	open eval/judge_labels.html
+
+labels-apply:  ## Record downloaded labels: make labels-apply FILE=~/Downloads/judge_labels.json
+	uv run python -m ai_act_qa.judge_agreement apply "$(FILE)"
+
+judge-agreement:  ## Agreement between the labels and the judge -> reports/judge_agreement.json
+	uv run python -m ai_act_qa.judge_agreement report
