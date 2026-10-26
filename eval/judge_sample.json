@@ -1,0 +1,304 @@
+{
+ "pair": [
+  "qwen3.5-2b",
+  "gemma-4-e2b"
+ ],
+ "seed": 20261026,
+ "items": [
+  {
+   "model": "qwen3.5-2b",
+   "id": "q002",
+   "set": "pair",
+   "item": "a01"
+  },
+  {
+   "model": "qwen3.5-0.8b",
+   "id": "q074",
+   "set": "random",
+   "item": "a02"
+  },
+  {
+   "model": "gemma-4-e2b",
+   "id": "q002",
+   "set": "pair",
+   "item": "a03"
+  },
+  {
+   "model": "gemma-4-e2b",
+   "id": "q069",
+   "set": "pair",
+   "item": "a04"
+  },
+  {
+   "model": "gemma-4-e2b",
+   "id": "q084",
+   "set": "pair",
+   "item": "a05"
+  },
+  {
+   "model": "qwen3.5-2b",
+   "id": "q012",
+   "set": "pair",
+   "item": "a06"
+  },
+  {
+   "model": "gemma-4-e2b",
+   "id": "q011",
+   "set": "pair",
+   "item": "a07"
+  },
+  {
+   "model": "qwen3.5-2b",
+   "id": "q069",
+   "set": "pair",
+   "item": "a08"
+  },
+  {
+   "model": "gemma-4-e2b",
+   "id": "q018",
+   "set": "pair",
+   "item": "a09"
+  },
+  {
+   "model": "qwen3.5-9b",
+   "id": "q009",
+   "set": "random",
+   "item": "a10"
+  },
+  {
+   "model": "qwen3.5-9b",
+   "id": "q002",
+   "set": "random",
+   "item": "a11"
+  },
+  {
+   "model": "gemma-4-e2b",
+   "id": "q007",
+   "set": "pair",
+   "item": "a12"
+  },
+  {
+   "model": "qwen3.5-2b",
+   "id": "q024",
+   "set": "pair",
+   "item": "a13"
+  },
+  {
+   "model": "gemma-4-e2b",
+   "id": "q039",
+   "set": "pair",
+   "item": "a14"
+  },
+  {
+   "model": "qwen3.5-2b",
+   "id": "q041",
+   "set": "pair",
+   "item": "a15"
+  },
+  {
+   "model": "qwen3.5-2b",
+   "id": "q039",
+   "set": "pair",
+   "item": "a16"
+  },
+  {
+   "model": "qwen3.5-2b",
+   "id": "q006",
+   "set": "pair",
+   "item": "a17"
+  },
+  {
+   "model": "gemma-4-e2b",
+   "id": "q078",
+   "set": "pair",
+   "item": "a18"
+  },
+  {
+   "model": "qwen3.5-2b",
+   "id": "q018",
+   "set": "pair",
+   "item": "a19"
+  },
+  {
+   "model": "qwen3.5-9b",
+   "id": "q088",
+   "set": "random",
+   "item": "a20"
+  },
+  {
+   "model": "qwen3.5-2b",
+   "id": "q051",
+   "set": "pair",
+   "item": "a21"
+  },
+  {
+   "model": "qwen3.5-2b",
+   "id": "q028",
+   "set": "pair",
+   "item": "a22"
+  },
+  {
+   "model": "qwen3.5-2b",
+   "id": "q011",
+   "set": "pair",
+   "item": "a23"
+  },
+  {
+   "model": "gemma-4-e2b",
+   "id": "q012",
+   "set": "pair",
+   "item": "a24"
+  },
+  {
+   "model": "gemma-4-e2b",
+   "id": "q051",
+   "set": "pair",
+   "item": "a25"
+  },
+  {
+   "model": "qwen3.5-2b",
+   "id": "q078",
+   "set": "pair",
+   "item": "a26"
+  },
+  {
+   "model": "qwen3.5-4b",
+   "id": "q049",
+   "set": "random",
+   "item": "a27"
+  },
+  {
+   "model": "qwen3.5-2b",
+   "id": "q045",
+   "set": "pair",
+   "item": "a28"
+  },
+  {
+   "model": "qwen3.5-2b",
+   "id": "q007",
+   "set": "pair",
+   "item": "a29"
+  },
+  {
+   "model": "gemma-4-e2b",
+   "id": "q024",
+   "set": "pair",
+   "item": "a30"
+  },
+  {
+   "model": "qwen3.5-2b",
+   "id": "q074",
+   "set": "pair",
+   "item": "a31"
+  },
+  {
+   "model": "qwen3.5-2b",
+   "id": "q084",
+   "set": "pair",
+   "item": "a32"
+  },
+  {
+   "model": "qwen3.5-0.8b",
+   "id": "q013",
+   "set": "random",
+   "item": "a33"
+  },
+  {
+   "model": "gemma-4-e4b",
+   "id": "q012",
+   "set": "random",
+   "item": "a34"
+  },
+  {
+   "model": "gemma-4-e2b",
+   "id": "q022",
+   "set": "pair",
+   "item": "a35"
+  },
+  {
+   "model": "gemma-4-e2b",
+   "id": "q006",
+   "set": "pair",
+   "item": "a36"
+  },
+  {
+   "model": "gemma-4-e2b",
+   "id": "q044",
+   "set": "pair",
+   "item": "a37"
+  },
+  {
+   "model": "qwen3.5-4b",
+   "id": "q039",
+   "set": "random",
+   "item": "a38"
+  },
+  {
+   "model": "gemma-4-e2b",
+   "id": "q074",
+   "set": "pair",
+   "item": "a39"
+  },
+  {
+   "model": "gemma-4-e2b",
+   "id": "q028",
+   "set": "pair",
+   "item": "a40"
+  },
+  {
+   "model": "gemma-4-e4b",
+   "id": "q024",
+   "set": "random",
+   "item": "a41"
+  },
+  {
+   "model": "qwen3.5-0.8b",
+   "id": "q087",
+   "set": "random",
+   "item": "a42"
+  },
+  {
+   "model": "qwen3.5-2b",
+   "id": "q022",
+   "set": "pair",
+   "item": "a43"
+  },
+  {
+   "model": "qwen3.5-4b",
+   "id": "q053",
+   "set": "random",
+   "item": "a44"
+  },
+  {
+   "model": "gemma-4-e2b",
+   "id": "q041",
+   "set": "pair",
+   "item": "a45"
+  },
+  {
+   "model": "qwen3.5-2b",
+   "id": "q044",
+   "set": "pair",
+   "item": "a46"
+  },
+  {
+   "model": "gemma-4-e4b",
+   "id": "q084",
+   "set": "random",
+   "item": "a47"
+  },
+  {
+   "model": "gemma-4-e2b",
+   "id": "q045",
+   "set": "pair",
+   "item": "a48"
+  }
+ ],
+ "provenance": {
+  "created": "2026-10-26T21:05:35Z",
+  "commit": "810f564",
+  "dirty": false,
+  "document_sha256": "5e7719f77e8a606b257dc25958ee3222c4383300a5a34270a5b850a2ce8b8715",
+  "questions_sha256": "cefdf76605c86ed82435ff10a53b9e5d7a34b005d777c716228ddad004646ed8"
+ }
+}
