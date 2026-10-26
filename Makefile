@@ -1,4 +1,4 @@
-.PHONY: help setup test data questions split retrieval retrieval-experiments retrieval-test
+.PHONY: help setup test data questions split retrieval retrieval-experiments retrieval-test review review-apply
 
 help:  ## List the targets
 	@grep -E '^[a-z-]+:.*## ' $(MAKEFILE_LIST) | awk -F':.*## ' '{printf "  %-22s %s\n", $$1, $$2}'
@@ -29,3 +29,10 @@ retrieval-experiments:  ## Compare retrieval settings on the development questio
 
 retrieval-test:  ## Score retrieval on the test questions: once, at the end of the project
 	uv run python -m ai_act_qa.retrieval_eval --test
+
+review:  ## Build the question review page (eval/review.html) and open it
+	uv run python -m ai_act_qa.review page
+	open eval/review.html
+
+review-apply:  ## Record downloaded verdicts: make review-apply FILE=~/Downloads/review.json
+	uv run python -m ai_act_qa.review apply "$(FILE)"

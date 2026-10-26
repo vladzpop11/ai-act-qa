@@ -16,3 +16,4 @@ dist/
 # The pinned source document is committed (data/raw); everything derived from it is rebuilt.
 data/processed/
 data/cache/
+eval/review.html
