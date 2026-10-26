@@ -16,8 +16,11 @@ python -m ai_act_qa.answer_eval report [--split dev]
 llama-server (Kaggle). Model files go to $MODELS_DIR (default .cache/models); --delete-after
 removes each one when its model is done (Kaggle's disk).
 
-Deterministic metrics: declines (the fixed sentence), citations (do the cited numbers exist,
-does a cited passage contain an expected one). Judged: correctness and groundedness.
+Deterministic metrics: declines (and whether they use the fixed sentence), citations (do the
+cited numbers exist, does a cited passage contain an expected one). Judged: correctness and
+groundedness. `score` follows the judge's rubric as written: a decline on a question the Act
+answers is incorrect. The judge itself credits such a decline when retrieval missed the
+answer's passage (seen in the first dev run); that grade is kept as `score_judge`.
 """
 
 import argparse
@@ -219,7 +222,9 @@ def mac_latency(args) -> None:
 
 # -- report ------------------------------------------------------------------------------------
 def summarise(rows: list[dict], grades: dict[str, dict], questions: dict[str, Question],
-              hits: dict[str, list[Hit]], units: dict) -> dict:  # fmt: skip
+              hits: dict[str, list[Hit]], units: dict, decline: str) -> dict:  # fmt: skip
+    # Re-read every answer, so that answers written before a change to read_answer count alike.
+    rows = [{**r, **read_answer(r["text"], len(hits[r["id"]]), decline)} for r in rows]
     answerable = [r for r in rows if questions[r["id"]].answerable]
     unanswerable = [r for r in rows if not questions[r["id"]].answerable]
     answered = [r for r in answerable if not r["declined"]]
@@ -228,17 +233,27 @@ def summarise(rows: list[dict], grades: dict[str, dict], questions: dict[str, Qu
         cited = [hits[r["id"]][n - 1] for n in r["citations"]]
         return any(overlaps(h.spans, units[e]) for h in cited for e in questions[r["id"]].expected)
 
-    graded = [grades[r["id"]] for r in rows if "correctness" in grades.get(r["id"], {})]
+    def rubric(r: dict) -> float:  # a decline on an answerable question is incorrect
+        declined_answerable = r["declined"] and questions[r["id"]].answerable
+        return 0.0 if declined_answerable else SCORE[grades[r["id"]]["correctness"]]
+
+    judged_rows = [r for r in rows if "correctness" in grades.get(r["id"], {})]
+    graded = [grades[r["id"]] for r in judged_rows]
+    declines = [r for r in rows if r["declined"]]
     share = lambda xs, n: round(sum(xs) / n, 3) if n else None  # noqa: E731
     return {
         "questions": len(rows),
         "judged": len(graded),
-        "score": share([SCORE[g["correctness"]] for g in graded], len(graded)),
+        "score": share([rubric(r) for r in judged_rows], len(graded)),
+        "score_judge": share([SCORE[g["correctness"]] for g in graded], len(graded)),
         "correct": share([g["correctness"] == "correct" for g in graded], len(graded)),
         "partial": share([g["correctness"] == "partial" for g in graded], len(graded)),
         "grounded": share([g["grounded"] for g in graded], len(graded)),
         "declines_unanswerable": share([r["declined"] for r in unanswerable], len(unanswerable)),
         "declines_answerable": share([r["declined"] for r in answerable], len(answerable)),
+        "declines_with_fixed_sentence": share(
+            [r["exact_decline"] for r in declines], len(declines)
+        ),  # fmt: skip
         "answers_with_citation": share([bool(r["citations"]) for r in answered], len(answered)),
         "invalid_citations": share([bool(r["invalid"]) for r in rows], len(rows)),
         "cites_expected_passage": share([cites_expected(r) for r in answered], len(answered)),
@@ -280,7 +295,8 @@ def report(args) -> None:
         rows = [r for r in read_jsonl(path) if r["id"] in questions]
         judged = folder(args.split) / "judged" / path.name
         grades = {g["id"]: g for g in read_jsonl(judged)}
-        summary[path.stem] = summarise(rows, grades, questions, hits, units)
+        summary[path.stem] = summarise(rows, grades, questions, hits, units,
+                                       cfg["answers"]["decline"])  # fmt: skip
     latency_path = project_path("reports/mac_latency.json")
     latency = json.loads(latency_path.read_text())["models"] if latency_path.exists() else {}
     selection = select(summary, cfg, latency) if args.split == "dev" else None
