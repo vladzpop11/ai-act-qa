@@ -67,3 +67,45 @@ retrieval_experiments:
     bge_base: {retrieval: {embedding: BAAI/bge-base-en-v1.5}}
     window_chunks: {chunking: {method: window}}
     no_header: {chunking: {header: false}}
+
+# --- Stage 2: answers -------------------------------------------------------------------------
+# Open-weight models in GGUF files, pinned by SHA-256 and run with llama.cpp: the same file on
+# the Mac (CPU, Docker) and on Kaggle's GPUs, so the evaluated model is the served one.
+# `mac` marks the candidates for serving on the 8 GB Mac; the others show what larger models
+# reach. All Apache 2.0. Fixed before any answer was generated (2026-10-26).
+llama_cpp:
+  tag: b11898   # release built on Kaggle (from source, for the GPU found there)
+  context: 8192
+models:
+  qwen3.5-0.8b: {repo: bartowski/Qwen_Qwen3.5-0.8B-GGUF, file: Qwen_Qwen3.5-0.8B-Q4_K_M.gguf, sha256: fb044e93939a70469c905781334f5de1e6c8b608ced6cbc8c9249bd4127d9526, family: qwen, mac: true}
+  qwen3.5-2b: {repo: bartowski/Qwen_Qwen3.5-2B-GGUF, file: Qwen_Qwen3.5-2B-Q4_K_M.gguf, sha256: 57a1085840f497d764a7fc5d346922dbde961efb54cc792ea81d694fd846a1d8, family: qwen, mac: true}
+  gemma-4-e2b: {repo: google/gemma-4-E2B-it-qat-q4_0-gguf, file: gemma-4-E2B_q4_0-it.gguf, sha256: fa401b55b07ee70a54c6dae3903c783a6e65064312529ea57175cb5f8dec6634, family: gemma, mac: true}
+  qwen3.5-4b: {repo: bartowski/Qwen_Qwen3.5-4B-GGUF, file: Qwen_Qwen3.5-4B-Q4_K_M.gguf, sha256: 13c16f426047e2de38cd075bdade4a7bcbc8c774384876f677740cda65f8a983, family: qwen, mac: true}
+  qwen3.5-9b: {repo: bartowski/Qwen_Qwen3.5-9B-GGUF, file: Qwen_Qwen3.5-9B-Q4_K_M.gguf, sha256: d784ce9eda1a5a7b51e8f705a9e6310844bf4f173654d115823c775fdea56d43, family: qwen, mac: false}
+  gemma-4-e4b: {repo: google/gemma-4-E4B-it-qat-q4_0-gguf, file: gemma-4-E4B_q4_0-it.gguf, sha256: 676c35070db6dbe52f93e9c864ee0fba4eddea94b9c875d9cb10daff453fbaee, family: gemma, mac: false}
+  gemma-4-31b: {repo: google/gemma-4-31B-it-qat-q4_0-gguf, file: gemma-4-31B_q4_0-it.gguf, sha256: 179cfb99212709597eae5929112cfca677e1bbf566178b479ae1da0c4772874b, family: gemma, mac: false}
+
+answers:
+  prompt: prompts/answer_v1.txt   # the prompt version is its file name and SHA-256, logged per answer
+  # smallest first (the selection rule prefers smaller models)
+  candidates: [qwen3.5-0.8b, qwen3.5-2b, gemma-4-e2b, qwen3.5-4b, qwen3.5-9b, gemma-4-e4b]
+  max_tokens: 400
+  temperature: 0          # greedy for evaluation: the same answer every run (repeat runs come in stage 3)
+  seed: 42
+  thinking: false         # Qwen 3.5 and Gemma 4 can reason before answering; too slow on the Mac
+  decline: "The AI Act passages provided do not answer this question."
+
+# The judge: the largest model, from a different family than the Qwen candidates (a model
+# tends to favour answers of its own family, so the Gemma rows are read with that caveat). Its
+# agreement with a person's labels is measured on a sample before its scores are trusted.
+judge:
+  model: gemma-4-31b
+  prompt: prompts/judge_v1.txt
+  max_tokens: 300
+
+# Choosing the served model, fixed before any answer was generated (2026-10-26). Among the `mac`
+# candidates whose median answer time on the Mac is within `mac_seconds` (measured locally, same
+# prompt and k), the highest development `score` wins (correct = 1, partial = 0.5, over all
+# development questions, unanswerable included); a smaller model is kept unless a larger one
+# scores more than `margin` higher.
+selection: {metric: score, margin: 0.05, mac_seconds: 150}

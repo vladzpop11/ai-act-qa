@@ -1,4 +1,4 @@
-.PHONY: help setup test data questions split retrieval retrieval-experiments retrieval-test review review-apply retrieval-gate
+.PHONY: help setup test data questions split retrieval retrieval-experiments retrieval-test review review-apply retrieval-gate mac-latency answers-report
 
 help:  ## List the targets
 	@grep -E '^[a-z-]+:.*## ' $(MAKEFILE_LIST) | awk -F':.*## ' '{printf "  %-22s %s\n", $$1, $$2}'
@@ -39,3 +39,9 @@ review-apply:  ## Record downloaded verdicts: make review-apply FILE=~/Downloads
 
 retrieval-gate:  ## CI: fail if retrieval on the development questions drops below the gate
 	uv run python -m ai_act_qa.retrieval_eval --gate
+
+mac-latency:  ## Seconds per answer of each Mac candidate on this Mac (Docker llama.cpp, CPU)
+	uv run python -m ai_act_qa.answer_eval mac-latency
+
+answers-report:  ## Metrics per model and the served model, from the Kaggle results (reports/answers_dev.json)
+	uv run python -m ai_act_qa.answer_eval report

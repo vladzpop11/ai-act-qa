@@ -6,8 +6,8 @@
  "hit@5": 0.84,
  "mrr": 0.8055,
  "words@5": 564.0,
- "seconds_per_query": 3.84,
- "index_seconds": 3.1,
+ "seconds_per_query": 2.92,
+ "index_seconds": 0.7,
  "per_question": [
   {
    "id": "q002",
@@ -761,10 +761,10 @@
   }
  ],
  "provenance": {
-  "created": "2026-10-26T13:03:05Z",
-  "commit": null,
-  "dirty": true,
+  "created": "2026-10-26T14:18:40Z",
+  "commit": "c45dee4",
+  "dirty": false,
   "document_sha256": "5e7719f77e8a606b257dc25958ee3222c4383300a5a34270a5b850a2ce8b8715",
-  "questions_sha256": "43df4e47cfd1eb1ceece91941b4f2a9bcef156f8d2f364eda28ea4fc2043c1ab"
+  "questions_sha256": "cefdf76605c86ed82435ff10a53b9e5d7a34b005d777c716228ddad004646ed8"
  }
 }
