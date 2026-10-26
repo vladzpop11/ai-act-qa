@@ -19,11 +19,15 @@ arch=$(nvidia-smi --query-gpu=compute_cap --format=csv,noheader | head -1 | tr -
 echo "llama.cpp $tag for compute capability $arch"
 src="$out/llama.cpp"
 if [ ! -d "$src" ]; then
-  git clone --depth 1 --branch "$tag" https://github.com/ggml-org/llama.cpp "$src"
+  git -c advice.detachedHead=false clone --depth 1 --branch "$tag" https://github.com/ggml-org/llama.cpp "$src"
 fi
 # Static libraries, so the one binary can be copied; no HTTPS (the server only listens locally).
+# GGML_CUDA_NO_VMM: Kaggle's toolkit has no libcuda.so to link against at build time (CMake:
+# "Target ggml-cuda links to CUDA::cuda_driver but the target was not found", 2026-10-26).
+# Without virtual memory management, llama.cpp does not link the driver library directly; the
+# CUDA runtime still loads it when the server starts. Only GPU memory pooling is affected.
 cmake -S "$src" -B "$src/build" -DGGML_CUDA=ON -DCMAKE_CUDA_ARCHITECTURES="$arch" \
-  -DBUILD_SHARED_LIBS=OFF -DLLAMA_OPENSSL=OFF -DLLAMA_BUILD_TESTS=OFF \
+  -DGGML_CUDA_NO_VMM=ON -DBUILD_SHARED_LIBS=OFF -DLLAMA_OPENSSL=OFF -DLLAMA_BUILD_TESTS=OFF \
   -DLLAMA_BUILD_EXAMPLES=OFF -DCMAKE_BUILD_TYPE=Release
 cmake --build "$src/build" --target llama-server -j "$(nproc)"
 cp "$src/build/bin/llama-server" "$out/llama-server"
