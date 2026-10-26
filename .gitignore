@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info
+.ruff_cache/
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+.env
+.env.*
+.cache/
+.vscode/
+
+# The pinned source document is committed (data/raw); everything derived from it is rebuilt.
+data/processed/
+data/cache/

@@ -1,0 +1,65 @@
+# EU AI Act question answering: data, retrieval and evaluation settings.
+
+# The document: Regulation (EU) 2024/1689 (the AI Act), consolidated version of 27 July 2026,
+# which includes the Digital Omnibus amendments (Regulation (EU) 2026/1744). Downloaded from
+# the Publications Office (EUR-Lex itself refuses scripts) and pinned by SHA-256: a different
+# file is refused, so a new version is a deliberate change. Reuse is allowed under Commission
+# Decision 2011/833/EU with the source acknowledged; the consolidated text "has no legal
+# effect" (its own disclaimer), so the service cites passages and gives no legal advice.
+source:
+  celex: 02024R1689-20260727
+  title: "Regulation (EU) 2024/1689 (AI Act), consolidated text of 27 July 2026"
+  url: http://publications.europa.eu/resource/celex/02024R1689-20260727
+  headers:
+    Accept: application/xhtml+xml
+    Accept-Language: en   # without it the server answers 400 (checked 2026-10-26)
+  sha256: 5e7719f77e8a606b257dc25958ee3222c4383300a5a34270a5b850a2ce8b8715
+  path: data/raw/ai-act-02024R1689-20260727.xhtml
+  units_path: data/processed/units.jsonl
+
+# Chunking: `structural` keeps paragraphs and points whole (split only when longer than
+# max_words, each part repeating a lead-in of up to max_lead_words); `window` cuts fixed word
+# windows inside each article or annex. Both are compared on the development questions.
+chunking:
+  method: structural
+  max_words: 220
+  max_lead_words: 100
+  window_words: 160
+  overlap_words: 40
+  header: true   # start each chunk with its article's citation, title and chapter
+
+# Retrieval, as set before the first evaluation (2026-10-26); alternatives are compared on the
+# development questions only.
+retrieval:
+  embedding: BAAI/bge-small-en-v1.5
+  query_prefix: "Represent this sentence for searching relevant passages: "  # bge's query instruction
+  mode: hybrid          # dense | bm25 | hybrid (reciprocal rank fusion)
+  candidates: 30        # results per method before fusion, and before reranking
+  rerank: true
+  reranker: Xenova/ms-marco-MiniLM-L-6-v2
+  k: 5                  # passages given to the model
+
+# Evaluation, fixed before any question was scored (2026-10-26). Questions are split once into
+# development (all design choices) and test (used once, at the end), at random within each
+# question type.
+evaluation:
+  test_share: 0.4
+  split_seed: 20261026
+
+# Retrieval experiments (make retrieval-experiments), fixed before running them (2026-10-26).
+# Each setting changes the configured retrieval above and is scored on the development
+# questions. Rule: the highest recall@5 wins, but `as_set` is kept unless another setting beats
+# it by more than `margin` (0.04 is about two of the ~50 answerable development questions);
+# ties go to fewer words given to the model. Settings that only measure a component (e.g.
+# without reranking) can win too: then the simpler pipeline is used.
+retrieval_experiments:
+  rule: {metric: recall@5, baseline: as_set, margin: 0.04, tie_break: words@5}
+  settings:
+    as_set: {}
+    dense_only: {retrieval: {mode: dense}}
+    bm25_only: {retrieval: {mode: bm25}}
+    no_rerank: {retrieval: {rerank: false}}
+    reranker_l12: {retrieval: {reranker: Xenova/ms-marco-MiniLM-L-12-v2}}
+    bge_base: {retrieval: {embedding: BAAI/bge-base-en-v1.5}}
+    window_chunks: {chunking: {method: window}}
+    no_header: {chunking: {header: false}}

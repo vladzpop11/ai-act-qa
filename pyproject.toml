@@ -1,0 +1,48 @@
+[project]
+name = "ai-act-qa"
+version = "0.1.0"
+description = "Questions answered from the EU AI Act with open models, tested like a product: retrieval and answer evaluation, adversarial tests, flakiness, load and accessibility"
+readme = "README.md"
+authors = [
+    { name = "Vladzpop", email = "291580488+vladzpop11@users.noreply.github.com" }
+]
+requires-python = ">=3.12,<3.13"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = [
+    "fastembed>=0.9.1",
+    "httpx>=0.28.1",
+    "numpy>=2",
+    "qdrant-client>=1.20.0",
+    "pyyaml>=6.0.3",
+]
+
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.7.0",
+    "pytest>=9.1.1",
+    "ruff>=0.17.1",
+]
+
+[tool.uv]
+# The lock must install on this Intel Mac and in Linux containers: onnxruntime (for fastembed)
+# stopped publishing Intel-Mac wheels after 1.23, so both get the same 1.23.x.
+required-environments = [
+    "sys_platform == 'darwin' and platform_machine == 'x86_64'",
+    "sys_platform == 'linux' and platform_machine == 'x86_64'",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
