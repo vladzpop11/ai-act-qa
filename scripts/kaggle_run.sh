@@ -10,6 +10,8 @@ split="${1:-dev}"
 out=/kaggle/working/results
 export MODELS_DIR=/tmp/models UV_LINK_MODE=copy
 mkdir -p "$out" /tmp/llama
+exec > >(tee -a "$out/run.log") 2>&1   # everything also goes to the notebook's output files
+echo "=== $(date -u) kaggle_run.sh $split, commit $(git rev-parse --short HEAD)"
 nvidia-smi --query-gpu=name,memory.total --format=csv
 
 tag=$(uv run python -c "from ai_act_qa.config import load_config; print(load_config()['llama_cpp']['tag'])")
