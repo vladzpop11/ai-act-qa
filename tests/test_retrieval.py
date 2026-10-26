@@ -77,5 +77,7 @@ def test_selection_rule_keeps_baseline_within_margin():
     results = {"as_set": {"recall@5": 0.80, "words@5": 500},
                "other": {"recall@5": 0.83, "words@5": 300}}  # fmt: skip
     assert select(results, rule) == "as_set"
+    exact = {"as_set": {"recall@5": 0.86, "words@5": 50}, "other": {"recall@5": 0.9, "words@5": 9}}
+    assert select(exact, rule) == "as_set"  # 0.90 - 0.86 is exactly the margin, not more
     results["other"]["recall@5"] = 0.85
     assert select(results, rule) == "other"

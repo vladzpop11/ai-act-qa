@@ -95,7 +95,8 @@ def select(results: dict, rule: dict) -> str:
     metric = rule["metric"]
     baseline = rule["baseline"]
     best = max(results, key=lambda n: (results[n][metric], -results[n][rule["tie_break"]]))
-    if results[best][metric] - results[baseline][metric] > rule["margin"]:
+    # Rounded: 0.90 - 0.86 is 0.04000000000000004 in floating point, which is not "more than 0.04".
+    if round(results[best][metric] - results[baseline][metric], 6) > rule["margin"]:
         return best
     return baseline
 

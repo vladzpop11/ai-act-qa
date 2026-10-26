@@ -1,0 +1,6115 @@
+{
+ "split": "dev",
+ "rule": {
+  "metric": "recall@5",
+  "baseline": "as_set",
+  "margin": 0.04,
+  "tie_break": "words@5"
+ },
+ "selected": "window_chunks",
+ "results": {
+  "as_set": {
+   "questions": 50,
+   "chunks": 906,
+   "recall@5": 0.86,
+   "hit@5": 0.84,
+   "mrr": 0.8055,
+   "words@5": 564.0,
+   "seconds_per_query": 4.28,
+   "index_seconds": 0.7,
+   "per_question": [
+    {
+     "id": "q002",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 483,
+     "top": [
+      "art3.60",
+      "art50.4",
+      "art3.57",
+      "art3.52",
+      "art3.55"
+     ]
+    },
+    {
+     "id": "q004",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 621,
+     "top": [
+      "art3.56",
+      "art4",
+      "art58.2.e",
+      "art66.f",
+      "art95.2"
+     ]
+    },
+    {
+     "id": "q006",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 538,
+     "top": [
+      "art3.14b",
+      "art3.14a",
+      "art1",
+      "art34",
+      "art58.2.f"
+     ]
+    },
+    {
+     "id": "q007",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 797,
+     "top": [
+      "art3.23",
+      "art43.4",
+      "art25.1",
+      "art12",
+      "art111.2"
+     ]
+    },
+    {
+     "id": "q008",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 459,
+     "top": [
+      "art3.47",
+      "art56.8",
+      "art64",
+      "art56.3",
+      "art75a.4#t0.w0"
+     ]
+    },
+    {
+     "id": "q009",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 353,
+     "top": [
+      "art2.3",
+      "art2.6",
+      "art3.66",
+      "art2.10",
+      "art5.1.bb"
+     ]
+    },
+    {
+     "id": "q011",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 528,
+     "top": [
+      "art2.12",
+      "art54.6",
+      "art53.2",
+      "art25.4",
+      "art2.8"
+     ]
+    },
+    {
+     "id": "q012",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 374,
+     "top": [
+      "art2.6",
+      "art2.8",
+      "art3.63",
+      "art52.4",
+      "art91.3"
+     ]
+    },
+    {
+     "id": "q013",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.25,
+     "words": 641,
+     "top": [
+      "art74.1",
+      "art2.3",
+      "art26.10#w2",
+      "art2.1",
+      "art2.6"
+     ]
+    },
+    {
+     "id": "q015",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 643,
+     "top": [
+      "art4",
+      "art3.56",
+      "art66.f",
+      "art95.2",
+      "art92.5"
+     ]
+    },
+    {
+     "id": "q018",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.5,
+     "words": 603,
+     "top": [
+      "art14.1",
+      "art14.4",
+      "art14.2",
+      "art14.3",
+      "art14.5"
+     ]
+    },
+    {
+     "id": "q020",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 641,
+     "top": [
+      "art47.1",
+      "art23.5",
+      "art47.4",
+      "art18",
+      "art22.3.b"
+     ]
+    },
+    {
+     "id": "q022",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 467,
+     "top": [
+      "art49.1",
+      "art49.2",
+      "art49.3",
+      "art47.1",
+      "art23.1"
+     ]
+    },
+    {
+     "id": "q023",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 482,
+     "top": [
+      "art26.7",
+      "anxIII.4",
+      "art6.4",
+      "art9.8",
+      "art26.8"
+     ]
+    },
+    {
+     "id": "q024",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.2,
+     "words": 564,
+     "top": [
+      "art27.2",
+      "art27.3",
+      "art27.5",
+      "art27.4",
+      "art27.1.f"
+     ]
+    },
+    {
+     "id": "q025",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.3333333333333333,
+     "words": 617,
+     "top": [
+      "art27.4",
+      "art27.5",
+      "art27.1.f",
+      "art27.1.c",
+      "art27.2"
+     ]
+    },
+    {
+     "id": "q026",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 738,
+     "top": [
+      "art26.11",
+      "anxIII.4",
+      "art14.5",
+      "art86",
+      "art6.3"
+     ]
+    },
+    {
+     "id": "q027",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 443,
+     "top": [
+      "art6.4",
+      "art80.2",
+      "art80.4",
+      "art80.5",
+      "art80.3"
+     ]
+    },
+    {
+     "id": "q028",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 608,
+     "top": [
+      "art63",
+      "art3.14a",
+      "art17.1.e",
+      "anxVII#t0.w0",
+      "art17.4"
+     ]
+    },
+    {
+     "id": "q030",
+     "type": "prohibition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 461,
+     "top": [
+      "art5.1.f",
+      "art26.7",
+      "art3.39",
+      "art50.3",
+      "anxIII.4"
+     ]
+    },
+    {
+     "id": "q031",
+     "type": "prohibition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 640,
+     "top": [
+      "art5.1.c",
+      "art5.1.b",
+      "art5.1.g",
+      "art5.1.d",
+      "art5.1.h"
+     ]
+    },
+    {
+     "id": "q032",
+     "type": "prohibition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 449,
+     "top": [
+      "art5.1.e",
+      "art5.2#t0",
+      "art3.34",
+      "art50.3",
+      "art3.35"
+     ]
+    },
+    {
+     "id": "q034",
+     "type": "date",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 326,
+     "top": [
+      "art5.1.ba",
+      "art5.1b",
+      "art5.1.bb",
+      "art5.1.e",
+      "art5.3#w2"
+     ]
+    },
+    {
+     "id": "q035",
+     "type": "prohibition",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.125,
+     "words": 523,
+     "top": [
+      "art5.2.a",
+      "art5.2#t0",
+      "art5.2.b",
+      "art5.7",
+      "art5.4"
+     ]
+    },
+    {
+     "id": "q036",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 885,
+     "top": [
+      "art5.3#w0",
+      "art5.3#w1",
+      "art5.2#t0",
+      "art26.10#w0",
+      "art5.5"
+     ]
+    },
+    {
+     "id": "q039",
+     "type": "amended",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 597,
+     "top": [
+      "art5.1b",
+      "art5.1.ba",
+      "art5.1a",
+      "art5.1.e",
+      "art50.4"
+     ]
+    },
+    {
+     "id": "q040",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 513,
+     "top": [
+      "art6.1",
+      "art25.3",
+      "art6.1c",
+      "art6.2",
+      "art6.4"
+     ]
+    },
+    {
+     "id": "q041",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 616,
+     "top": [
+      "art6.3",
+      "art7.3",
+      "art6.4",
+      "art7.1",
+      "art80.1"
+     ]
+    },
+    {
+     "id": "q044",
+     "type": "classification",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.16666666666666666,
+     "words": 534,
+     "top": [
+      "art6.3",
+      "art15.5",
+      "art6.1c",
+      "art14.1",
+      "art6.1a"
+     ]
+    },
+    {
+     "id": "q045",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 734,
+     "top": [
+      "anxIII.8",
+      "art15.4",
+      "art15.5",
+      "art26.3",
+      "art25.4"
+     ]
+    },
+    {
+     "id": "q048",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 694,
+     "top": [
+      "art19",
+      "art26.6",
+      "art23.5",
+      "art18",
+      "art47.1"
+     ]
+    },
+    {
+     "id": "q049",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 761,
+     "top": [
+      "art26.6",
+      "art19",
+      "art23.5",
+      "art18",
+      "art22.3.b"
+     ]
+    },
+    {
+     "id": "q050",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 491,
+     "top": [
+      "art73.2",
+      "art73.4",
+      "art73.6",
+      "art73.3",
+      "art73.8"
+     ]
+    },
+    {
+     "id": "q051",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 430,
+     "top": [
+      "art73.4",
+      "art73.2",
+      "art73.10",
+      "art73.9",
+      "art73.1"
+     ]
+    },
+    {
+     "id": "q053",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 945,
+     "top": [
+      "art50.1",
+      "art50.4",
+      "anxIV.1",
+      "art4",
+      "art5.1a"
+     ]
+    },
+    {
+     "id": "q055",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 623,
+     "top": [
+      "art50.4",
+      "art3.60",
+      "art75d.4",
+      "art75d.2",
+      "art5.1.ba"
+     ]
+    },
+    {
+     "id": "q059",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 417,
+     "top": [
+      "art53.1.b",
+      "art53.1.a",
+      "art53.3",
+      "art53.1.c",
+      "art53.1.d"
+     ]
+    },
+    {
+     "id": "q062",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 376,
+     "top": [
+      "anxXIII.g",
+      "anxXIII.b",
+      "anxXIII.a",
+      "anxXIII.e",
+      "anxXIII.d"
+     ]
+    },
+    {
+     "id": "q063",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 539,
+     "top": [
+      "anxXIII.f",
+      "art51",
+      "art3.65",
+      "anxXIII.g",
+      "anxXIII.d"
+     ]
+    },
+    {
+     "id": "q064",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 500,
+     "top": [
+      "art53.1.c",
+      "art92.5",
+      "art94",
+      "art91.5",
+      "art53.1.b"
+     ]
+    },
+    {
+     "id": "q068",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 399,
+     "top": [
+      "art99.6",
+      "art99.1",
+      "art62.2",
+      "art63",
+      "art99.6a"
+     ]
+    },
+    {
+     "id": "q069",
+     "type": "amended",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 396,
+     "top": [
+      "art100.3",
+      "art99.3",
+      "art100.2",
+      "art101.2",
+      "art101.1"
+     ]
+    },
+    {
+     "id": "q072",
+     "type": "rights",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.5,
+     "words": 811,
+     "top": [
+      "art46.2",
+      "art86",
+      "art26.10#w2",
+      "art14.4",
+      "art45.2"
+     ]
+    },
+    {
+     "id": "q074",
+     "type": "date",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 496,
+     "top": [
+      "art57.1",
+      "art57.3",
+      "art57.16",
+      "art57.14",
+      "art58.2.g"
+     ]
+    },
+    {
+     "id": "q075",
+     "type": "amended",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 524,
+     "top": [
+      "art43.1.sp2.d",
+      "art43.1.b",
+      "art43.1.a",
+      "art43.1.sp2.b",
+      "art43.1.sp2.a"
+     ]
+    },
+    {
+     "id": "q076",
+     "type": "amended",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 674,
+     "top": [
+      "art2.2",
+      "art43.3#w1",
+      "art46.7",
+      "art43.3#w2",
+      "art43.3#w0"
+     ]
+    },
+    {
+     "id": "q077",
+     "type": "date",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.2,
+     "words": 654,
+     "top": [
+      "art111.2",
+      "art111.3",
+      "art56.9",
+      "art111.1",
+      "art113"
+     ]
+    },
+    {
+     "id": "q078",
+     "type": "date",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 652,
+     "top": [
+      "art111.2",
+      "art6.4",
+      "art43.4",
+      "art24.2",
+      "art72.4"
+     ]
+    },
+    {
+     "id": "q079",
+     "type": "multi",
+     "recall": 0.5,
+     "hit": false,
+     "rr": 1.0,
+     "words": 370,
+     "top": [
+      "art3.4",
+      "art60.4.h",
+      "art26.2",
+      "art3.8",
+      "art26.3"
+     ]
+    },
+    {
+     "id": "q080",
+     "type": "multi",
+     "recall": 0.5,
+     "hit": false,
+     "rr": 1.0,
+     "words": 570,
+     "top": [
+      "art99.3",
+      "art100.2",
+      "art100.3",
+      "art26.5",
+      "art5.1.h"
+     ]
+    }
+   ]
+  },
+  "dense_only": {
+   "questions": 50,
+   "chunks": 906,
+   "recall@5": 0.86,
+   "hit@5": 0.84,
+   "mrr": 0.7978,
+   "words@5": 552.6,
+   "seconds_per_query": 2.77,
+   "index_seconds": 0.9,
+   "per_question": [
+    {
+     "id": "q002",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 545,
+     "top": [
+      "art3.60",
+      "art50.4",
+      "art3.57",
+      "art3.55",
+      "art3.23"
+     ]
+    },
+    {
+     "id": "q004",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 620,
+     "top": [
+      "art3.56",
+      "art4",
+      "art58.2.i",
+      "art95.2",
+      "art3.1"
+     ]
+    },
+    {
+     "id": "q006",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 490,
+     "top": [
+      "art3.14b",
+      "art3.14a",
+      "art1",
+      "art58.2.f",
+      "art111.1"
+     ]
+    },
+    {
+     "id": "q007",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 642,
+     "top": [
+      "art3.23",
+      "art43.4",
+      "art111.2",
+      "art7.1",
+      "art111.1"
+     ]
+    },
+    {
+     "id": "q008",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 351,
+     "top": [
+      "art3.47",
+      "art56.8",
+      "art64",
+      "art65.8",
+      "art56.3"
+     ]
+    },
+    {
+     "id": "q009",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 337,
+     "top": [
+      "art2.3",
+      "art2.12",
+      "art2.6",
+      "art3.66",
+      "art2.10"
+     ]
+    },
+    {
+     "id": "q011",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 528,
+     "top": [
+      "art2.12",
+      "art54.6",
+      "art53.2",
+      "art25.4",
+      "art2.8"
+     ]
+    },
+    {
+     "id": "q012",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 604,
+     "top": [
+      "art2.6",
+      "art2.8",
+      "art3.63",
+      "art68.3",
+      "art51"
+     ]
+    },
+    {
+     "id": "q013",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.3333333333333333,
+     "words": 604,
+     "top": [
+      "art74.1",
+      "art2.3",
+      "art2.1",
+      "art2.6",
+      "art74.8"
+     ]
+    },
+    {
+     "id": "q015",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 635,
+     "top": [
+      "art4",
+      "art3.56",
+      "art95.2",
+      "art56.3",
+      "art26.7"
+     ]
+    },
+    {
+     "id": "q018",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.5,
+     "words": 603,
+     "top": [
+      "art14.1",
+      "art14.4",
+      "art14.2",
+      "art14.3",
+      "art14.5"
+     ]
+    },
+    {
+     "id": "q020",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 615,
+     "top": [
+      "art47.1",
+      "art23.5",
+      "art47.4",
+      "art18",
+      "art36.3"
+     ]
+    },
+    {
+     "id": "q022",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 458,
+     "top": [
+      "art49.1",
+      "art49.2",
+      "art49.3",
+      "art24.1",
+      "art23.1"
+     ]
+    },
+    {
+     "id": "q023",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 456,
+     "top": [
+      "art26.7",
+      "art49.3",
+      "anxIII.4",
+      "art6.4",
+      "art49.2"
+     ]
+    },
+    {
+     "id": "q024",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.2,
+     "words": 564,
+     "top": [
+      "art27.2",
+      "art27.3",
+      "art27.5",
+      "art27.4",
+      "art27.1.f"
+     ]
+    },
+    {
+     "id": "q025",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.3333333333333333,
+     "words": 617,
+     "top": [
+      "art27.4",
+      "art27.5",
+      "art27.1.f",
+      "art27.1.c",
+      "art27.2"
+     ]
+    },
+    {
+     "id": "q026",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 715,
+     "top": [
+      "art26.11",
+      "anxIII.4",
+      "art14.2",
+      "art6.3",
+      "art14.4"
+     ]
+    },
+    {
+     "id": "q027",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 443,
+     "top": [
+      "art6.4",
+      "art80.2",
+      "art80.4",
+      "art80.5",
+      "art80.3"
+     ]
+    },
+    {
+     "id": "q028",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 518,
+     "top": [
+      "art63",
+      "art3.14a",
+      "art17.1.e",
+      "art17.4",
+      "art17.2"
+     ]
+    },
+    {
+     "id": "q030",
+     "type": "prohibition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 461,
+     "top": [
+      "art5.1.f",
+      "art26.7",
+      "art3.39",
+      "art50.3",
+      "anxIII.4"
+     ]
+    },
+    {
+     "id": "q031",
+     "type": "prohibition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 640,
+     "top": [
+      "art5.1.c",
+      "art5.1.b",
+      "art5.1.g",
+      "art5.1.d",
+      "art5.1.h"
+     ]
+    },
+    {
+     "id": "q032",
+     "type": "prohibition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 535,
+     "top": [
+      "art5.1.e",
+      "art5.2#t0",
+      "art5.4",
+      "art5.6",
+      "art50.3"
+     ]
+    },
+    {
+     "id": "q034",
+     "type": "date",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 295,
+     "top": [
+      "art5.1.ba",
+      "art5.1b",
+      "art5.8",
+      "art5.1.bb",
+      "art5.1.e"
+     ]
+    },
+    {
+     "id": "q035",
+     "type": "prohibition",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.125,
+     "words": 523,
+     "top": [
+      "art5.2.a",
+      "art5.2#t0",
+      "art5.2.b",
+      "art5.7",
+      "art5.4"
+     ]
+    },
+    {
+     "id": "q036",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 885,
+     "top": [
+      "art5.3#w0",
+      "art5.3#w1",
+      "art5.2#t0",
+      "art26.10#w0",
+      "art5.5"
+     ]
+    },
+    {
+     "id": "q039",
+     "type": "amended",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 597,
+     "top": [
+      "art5.1b",
+      "art5.1.ba",
+      "art5.1a",
+      "art5.1.e",
+      "art50.4"
+     ]
+    },
+    {
+     "id": "q040",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 513,
+     "top": [
+      "art6.1",
+      "art25.3",
+      "art6.1c",
+      "art6.2",
+      "art6.4"
+     ]
+    },
+    {
+     "id": "q041",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 616,
+     "top": [
+      "art6.3",
+      "art7.3",
+      "art6.4",
+      "art7.1",
+      "art80.1"
+     ]
+    },
+    {
+     "id": "q044",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.2,
+     "words": 645,
+     "top": [
+      "art6.3",
+      "art15.5",
+      "art6.1c",
+      "art6.1a",
+      "anxIII.3"
+     ]
+    },
+    {
+     "id": "q045",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 784,
+     "top": [
+      "anxIII.8",
+      "art15.4",
+      "art15.5",
+      "art25.4",
+      "art46.2"
+     ]
+    },
+    {
+     "id": "q048",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 694,
+     "top": [
+      "art19",
+      "art26.6",
+      "art23.5",
+      "art18",
+      "art47.1"
+     ]
+    },
+    {
+     "id": "q049",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 642,
+     "top": [
+      "art26.6",
+      "art19",
+      "art23.5",
+      "art18",
+      "art16.e"
+     ]
+    },
+    {
+     "id": "q050",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 491,
+     "top": [
+      "art73.2",
+      "art73.4",
+      "art73.6",
+      "art73.3",
+      "art73.8"
+     ]
+    },
+    {
+     "id": "q051",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 430,
+     "top": [
+      "art73.4",
+      "art73.2",
+      "art73.10",
+      "art73.9",
+      "art73.1"
+     ]
+    },
+    {
+     "id": "q053",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 838,
+     "top": [
+      "art50.1",
+      "art50.4",
+      "art4",
+      "art50.2",
+      "art75.2a.a"
+     ]
+    },
+    {
+     "id": "q055",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 673,
+     "top": [
+      "art50.4",
+      "art3.60",
+      "art75d.4",
+      "art50.2",
+      "art57.7"
+     ]
+    },
+    {
+     "id": "q059",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 417,
+     "top": [
+      "art53.1.b",
+      "art53.1.a",
+      "art53.3",
+      "art53.1.c",
+      "art53.1.d"
+     ]
+    },
+    {
+     "id": "q062",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 376,
+     "top": [
+      "anxXIII.g",
+      "anxXIII.b",
+      "anxXIII.a",
+      "anxXIII.e",
+      "anxXIII.d"
+     ]
+    },
+    {
+     "id": "q063",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 539,
+     "top": [
+      "anxXIII.f",
+      "art51",
+      "art3.65",
+      "anxXIII.g",
+      "anxXIII.d"
+     ]
+    },
+    {
+     "id": "q064",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 484,
+     "top": [
+      "art53.1.c",
+      "art53.4",
+      "art92.5",
+      "art94",
+      "art91.5"
+     ]
+    },
+    {
+     "id": "q068",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 399,
+     "top": [
+      "art99.6",
+      "art99.1",
+      "art62.2",
+      "art63",
+      "art99.6a"
+     ]
+    },
+    {
+     "id": "q069",
+     "type": "amended",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 396,
+     "top": [
+      "art100.3",
+      "art99.3",
+      "art100.2",
+      "art101.2",
+      "art101.1"
+     ]
+    },
+    {
+     "id": "q072",
+     "type": "rights",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 702,
+     "top": [
+      "art46.2",
+      "art26.10#w1",
+      "art24.2",
+      "art24.4",
+      "art23.2"
+     ]
+    },
+    {
+     "id": "q074",
+     "type": "date",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 496,
+     "top": [
+      "art57.1",
+      "art57.3",
+      "art57.16",
+      "art57.14",
+      "art58.2.g"
+     ]
+    },
+    {
+     "id": "q075",
+     "type": "amended",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 429,
+     "top": [
+      "art49.1",
+      "art49.3",
+      "anxIII.2",
+      "art7.1",
+      "art6.4"
+     ]
+    },
+    {
+     "id": "q076",
+     "type": "amended",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 492,
+     "top": [
+      "art2.2",
+      "art60a.1",
+      "art25.3",
+      "art11.2",
+      "art60.2"
+     ]
+    },
+    {
+     "id": "q077",
+     "type": "date",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.2,
+     "words": 654,
+     "top": [
+      "art111.2",
+      "art111.3",
+      "art56.9",
+      "art111.1",
+      "art113"
+     ]
+    },
+    {
+     "id": "q078",
+     "type": "date",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 618,
+     "top": [
+      "art111.2",
+      "art6.4",
+      "art43.4",
+      "art23.1",
+      "art24.2"
+     ]
+    },
+    {
+     "id": "q079",
+     "type": "multi",
+     "recall": 0.5,
+     "hit": false,
+     "rr": 1.0,
+     "words": 435,
+     "top": [
+      "art3.4",
+      "art26.2",
+      "art3.8",
+      "art50.4",
+      "art26.3"
+     ]
+    },
+    {
+     "id": "q080",
+     "type": "multi",
+     "recall": 0.5,
+     "hit": false,
+     "rr": 1.0,
+     "words": 584,
+     "top": [
+      "art99.3",
+      "art100.2",
+      "art100.3",
+      "art26.10#w0",
+      "art26.5"
+     ]
+    }
+   ]
+  },
+  "bm25_only": {
+   "questions": 50,
+   "chunks": 906,
+   "recall@5": 0.84,
+   "hit@5": 0.84,
+   "mrr": 0.7748,
+   "words@5": 575.7,
+   "seconds_per_query": 2.88,
+   "index_seconds": 0.6,
+   "per_question": [
+    {
+     "id": "q002",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 377,
+     "top": [
+      "art3.60",
+      "art50.4",
+      "art3.52",
+      "art3.51",
+      "art3.50"
+     ]
+    },
+    {
+     "id": "q004",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 621,
+     "top": [
+      "art3.56",
+      "art4",
+      "art58.2.e",
+      "art66.f",
+      "art95.2"
+     ]
+    },
+    {
+     "id": "q006",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 538,
+     "top": [
+      "art3.14b",
+      "art3.14a",
+      "art1",
+      "art34",
+      "art58.2.f"
+     ]
+    },
+    {
+     "id": "q007",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 693,
+     "top": [
+      "art3.23",
+      "art43.4",
+      "art25.1",
+      "art36.5",
+      "art12"
+     ]
+    },
+    {
+     "id": "q008",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 512,
+     "top": [
+      "art3.47",
+      "art56.8",
+      "art64",
+      "art75a.4#t0.w0",
+      "art75a.5"
+     ]
+    },
+    {
+     "id": "q009",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 508,
+     "top": [
+      "art2.3",
+      "art3.66",
+      "art74.4",
+      "art5.1.bb",
+      "art14.5"
+     ]
+    },
+    {
+     "id": "q011",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 566,
+     "top": [
+      "art2.12",
+      "art54.6",
+      "art53.2",
+      "art25.4",
+      "art74.1"
+     ]
+    },
+    {
+     "id": "q012",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 374,
+     "top": [
+      "art2.6",
+      "art2.8",
+      "art3.63",
+      "art52.4",
+      "art91.3"
+     ]
+    },
+    {
+     "id": "q013",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.3333333333333333,
+     "words": 694,
+     "top": [
+      "art2.3",
+      "art26.10#w2",
+      "art2.1",
+      "art2.6",
+      "art74.8"
+     ]
+    },
+    {
+     "id": "q015",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 643,
+     "top": [
+      "art4",
+      "art3.56",
+      "art66.f",
+      "art95.2",
+      "art92.5"
+     ]
+    },
+    {
+     "id": "q018",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 610,
+     "top": [
+      "art14.4",
+      "art14.3",
+      "art31.11",
+      "art74.11",
+      "art9.6"
+     ]
+    },
+    {
+     "id": "q020",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 641,
+     "top": [
+      "art47.1",
+      "art23.5",
+      "art47.4",
+      "art18",
+      "art22.3.b"
+     ]
+    },
+    {
+     "id": "q022",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 415,
+     "top": [
+      "art49.1",
+      "art49.2",
+      "art49.3",
+      "art47.1",
+      "art71.5"
+     ]
+    },
+    {
+     "id": "q023",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 660,
+     "top": [
+      "art26.7",
+      "anxIII.4",
+      "art26.8",
+      "art26.5",
+      "art31.4"
+     ]
+    },
+    {
+     "id": "q024",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.2,
+     "words": 564,
+     "top": [
+      "art27.2",
+      "art27.3",
+      "art27.5",
+      "art27.4",
+      "art27.1.f"
+     ]
+    },
+    {
+     "id": "q025",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.3333333333333333,
+     "words": 617,
+     "top": [
+      "art27.4",
+      "art27.5",
+      "art27.1.f",
+      "art27.1.c",
+      "art27.2"
+     ]
+    },
+    {
+     "id": "q026",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 738,
+     "top": [
+      "art26.11",
+      "anxIII.4",
+      "art14.5",
+      "art86",
+      "art6.3"
+     ]
+    },
+    {
+     "id": "q027",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 456,
+     "top": [
+      "art6.4",
+      "art43.2",
+      "art49.2",
+      "art43.3#w3",
+      "art43.1.sp2.c"
+     ]
+    },
+    {
+     "id": "q028",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 608,
+     "top": [
+      "art63",
+      "art3.14a",
+      "art17.1.e",
+      "anxVII#t0.w0",
+      "art17.4"
+     ]
+    },
+    {
+     "id": "q030",
+     "type": "prohibition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 461,
+     "top": [
+      "art5.1.f",
+      "art26.7",
+      "art3.39",
+      "art50.3",
+      "anxIII.4"
+     ]
+    },
+    {
+     "id": "q031",
+     "type": "prohibition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 624,
+     "top": [
+      "art5.1.c",
+      "art5.1.b",
+      "art112.13",
+      "anxIII.5",
+      "art7.2.h"
+     ]
+    },
+    {
+     "id": "q032",
+     "type": "prohibition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 449,
+     "top": [
+      "art5.1.e",
+      "art5.2#t0",
+      "art3.34",
+      "art50.3",
+      "art3.35"
+     ]
+    },
+    {
+     "id": "q034",
+     "type": "date",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 292,
+     "top": [
+      "art5.1.ba",
+      "art5.1b",
+      "art5.1.bb",
+      "art2.10",
+      "art3.60"
+     ]
+    },
+    {
+     "id": "q035",
+     "type": "prohibition",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.125,
+     "words": 523,
+     "top": [
+      "art5.2.a",
+      "art5.2#t0",
+      "art5.2.b",
+      "art5.7",
+      "art5.4"
+     ]
+    },
+    {
+     "id": "q036",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 885,
+     "top": [
+      "art5.3#w0",
+      "art5.3#w1",
+      "art5.2#t0",
+      "art26.10#w0",
+      "art5.5"
+     ]
+    },
+    {
+     "id": "q039",
+     "type": "amended",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 597,
+     "top": [
+      "art5.1b",
+      "art5.1.ba",
+      "art5.1a",
+      "art5.1.e",
+      "art50.4"
+     ]
+    },
+    {
+     "id": "q040",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 507,
+     "top": [
+      "art6.1",
+      "art25.3",
+      "art6.1c",
+      "art6.2",
+      "art11.2"
+     ]
+    },
+    {
+     "id": "q041",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 616,
+     "top": [
+      "art6.3",
+      "art7.3",
+      "art6.4",
+      "art7.1",
+      "art80.1"
+     ]
+    },
+    {
+     "id": "q044",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.25,
+     "words": 685,
+     "top": [
+      "art6.3",
+      "art15.5",
+      "art14.1",
+      "anxIII.3",
+      "art4a.2"
+     ]
+    },
+    {
+     "id": "q045",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 592,
+     "top": [
+      "anxIII.8",
+      "art15.4",
+      "art26.3",
+      "art60.4.h",
+      "art28.3"
+     ]
+    },
+    {
+     "id": "q048",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 694,
+     "top": [
+      "art19",
+      "art26.6",
+      "art23.5",
+      "art18",
+      "art47.1"
+     ]
+    },
+    {
+     "id": "q049",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 761,
+     "top": [
+      "art26.6",
+      "art19",
+      "art23.5",
+      "art18",
+      "art22.3.b"
+     ]
+    },
+    {
+     "id": "q050",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 491,
+     "top": [
+      "art73.2",
+      "art73.4",
+      "art73.6",
+      "art73.3",
+      "art73.8"
+     ]
+    },
+    {
+     "id": "q051",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 430,
+     "top": [
+      "art73.4",
+      "art73.2",
+      "art73.10",
+      "art73.9",
+      "art73.1"
+     ]
+    },
+    {
+     "id": "q053",
+     "type": "obligation",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 842,
+     "top": [
+      "anxIV.1",
+      "art4",
+      "art5.1a",
+      "art6.1a",
+      "art75a.2"
+     ]
+    },
+    {
+     "id": "q055",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 760,
+     "top": [
+      "art50.4",
+      "art3.60",
+      "art78.3",
+      "art75d.4",
+      "art75d.2"
+     ]
+    },
+    {
+     "id": "q059",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 417,
+     "top": [
+      "art53.1.b",
+      "art53.1.a",
+      "art53.3",
+      "art53.1.c",
+      "art53.1.d"
+     ]
+    },
+    {
+     "id": "q062",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 376,
+     "top": [
+      "anxXIII.g",
+      "anxXIII.b",
+      "anxXIII.a",
+      "anxXIII.e",
+      "anxXIII.d"
+     ]
+    },
+    {
+     "id": "q063",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 478,
+     "top": [
+      "anxXIII.f",
+      "art51",
+      "art3.65",
+      "anxXIII.g",
+      "art3.64"
+     ]
+    },
+    {
+     "id": "q064",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 539,
+     "top": [
+      "art53.1.c",
+      "art92.5",
+      "art94",
+      "art91.5",
+      "art89"
+     ]
+    },
+    {
+     "id": "q068",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 554,
+     "top": [
+      "art99.6",
+      "art99.1",
+      "art62.2",
+      "art63",
+      "art62.1"
+     ]
+    },
+    {
+     "id": "q069",
+     "type": "amended",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 363,
+     "top": [
+      "art100.3",
+      "art100.2",
+      "art101.1",
+      "art101.4",
+      "art3.14b"
+     ]
+    },
+    {
+     "id": "q072",
+     "type": "rights",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.5,
+     "words": 811,
+     "top": [
+      "art46.2",
+      "art86",
+      "art26.10#w2",
+      "art14.4",
+      "art45.2"
+     ]
+    },
+    {
+     "id": "q074",
+     "type": "date",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 563,
+     "top": [
+      "art57.1",
+      "art58.2.g",
+      "art59.1.c",
+      "art57.3a",
+      "art57.15"
+     ]
+    },
+    {
+     "id": "q075",
+     "type": "amended",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 524,
+     "top": [
+      "art43.1.sp2.d",
+      "art43.1.b",
+      "art43.1.a",
+      "art43.1.sp2.b",
+      "art43.1.sp2.a"
+     ]
+    },
+    {
+     "id": "q076",
+     "type": "amended",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 674,
+     "top": [
+      "art2.2",
+      "art43.3#w1",
+      "art46.7",
+      "art43.3#w2",
+      "art43.3#w0"
+     ]
+    },
+    {
+     "id": "q077",
+     "type": "date",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 650,
+     "top": [
+      "art111.2",
+      "art56.9",
+      "art111.1",
+      "art2.13",
+      "art52.4"
+     ]
+    },
+    {
+     "id": "q078",
+     "type": "date",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 635,
+     "top": [
+      "art111.2",
+      "art6.4",
+      "art24.1",
+      "art43.4",
+      "art72.4"
+     ]
+    },
+    {
+     "id": "q079",
+     "type": "multi",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 612,
+     "top": [
+      "art60.4.h",
+      "art26.2",
+      "art60.4.j",
+      "art26.3",
+      "art26.5"
+     ]
+    },
+    {
+     "id": "q080",
+     "type": "multi",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 547,
+     "top": [
+      "art99.3",
+      "art100.2",
+      "art99.4",
+      "art5.1.h",
+      "art5.1.a"
+     ]
+    }
+   ]
+  },
+  "no_rerank": {
+   "questions": 50,
+   "chunks": 906,
+   "recall@5": 0.8,
+   "hit@5": 0.78,
+   "mrr": 0.6911,
+   "words@5": 564.1,
+   "seconds_per_query": 0.04,
+   "index_seconds": 0.8,
+   "per_question": [
+    {
+     "id": "q002",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 483,
+     "top": [
+      "art3.60",
+      "art50.4",
+      "art3.57",
+      "art3.55",
+      "art3.52"
+     ]
+    },
+    {
+     "id": "q004",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 626,
+     "top": [
+      "art3.56",
+      "art4",
+      "art95.2",
+      "art56.5",
+      "art66.f"
+     ]
+    },
+    {
+     "id": "q006",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 542,
+     "top": [
+      "art3.14b",
+      "art1",
+      "art62.1",
+      "art3.14a",
+      "art58.2.f"
+     ]
+    },
+    {
+     "id": "q007",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 543,
+     "top": [
+      "art3.23",
+      "art43.4",
+      "art7.1",
+      "art96.1.c",
+      "art111.1"
+     ]
+    },
+    {
+     "id": "q008",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.3333333333333333,
+     "words": 590,
+     "top": [
+      "art75a.4#t0.w1",
+      "art64",
+      "art3.47",
+      "art112.5",
+      "art75a.4#t0.w0"
+     ]
+    },
+    {
+     "id": "q009",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 509,
+     "top": [
+      "art2.3",
+      "art3.1",
+      "art3.66",
+      "art5.1.bb",
+      "anxIII.8"
+     ]
+    },
+    {
+     "id": "q011",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 693,
+     "top": [
+      "art2.12",
+      "art54.6",
+      "art53.2",
+      "art75.1",
+      "art25.4"
+     ]
+    },
+    {
+     "id": "q012",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 505,
+     "top": [
+      "art2.6",
+      "art2.8",
+      "art3.63",
+      "art68.3",
+      "art57.5"
+     ]
+    },
+    {
+     "id": "q013",
+     "type": "scope",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.16666666666666666,
+     "words": 584,
+     "top": [
+      "art2.3",
+      "art60a.1",
+      "art2.8",
+      "art26.10#w1",
+      "art3.1"
+     ]
+    },
+    {
+     "id": "q015",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 560,
+     "top": [
+      "art4",
+      "art3.56",
+      "art92.5",
+      "art56.3",
+      "art91.5"
+     ]
+    },
+    {
+     "id": "q018",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 607,
+     "top": [
+      "art14.4",
+      "art14.1",
+      "art31.11",
+      "art14.2",
+      "anxIII.3"
+     ]
+    },
+    {
+     "id": "q020",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.5,
+     "words": 334,
+     "top": [
+      "art47.4",
+      "art47.1",
+      "anxV.2",
+      "art23.5",
+      "anxV.3"
+     ]
+    },
+    {
+     "id": "q022",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.5,
+     "words": 411,
+     "top": [
+      "art49.2",
+      "art49.1",
+      "art71.5",
+      "art71.4",
+      "art49.3"
+     ]
+    },
+    {
+     "id": "q023",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 510,
+     "top": [
+      "art26.7",
+      "anxIII.4",
+      "art6.1",
+      "art2.11",
+      "art6.1a"
+     ]
+    },
+    {
+     "id": "q024",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.5,
+     "words": 685,
+     "top": [
+      "art27.2",
+      "art27.1.f",
+      "art27.1.d",
+      "art27.4",
+      "art27.1.c"
+     ]
+    },
+    {
+     "id": "q025",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.3333333333333333,
+     "words": 672,
+     "top": [
+      "art27.4",
+      "art27.5",
+      "art27.1.d",
+      "art27.1.f",
+      "art27.1.c"
+     ]
+    },
+    {
+     "id": "q026",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.5,
+     "words": 760,
+     "top": [
+      "art6.3",
+      "art26.11",
+      "anxIII.4",
+      "art6.1",
+      "art86"
+     ]
+    },
+    {
+     "id": "q027",
+     "type": "obligation",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.14285714285714285,
+     "words": 374,
+     "top": [
+      "art80.6",
+      "art49.2",
+      "art80.5",
+      "art39",
+      "art80.2"
+     ]
+    },
+    {
+     "id": "q028",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.5,
+     "words": 496,
+     "top": [
+      "art3.14a",
+      "art63",
+      "art17.2",
+      "art3.14b",
+      "art1"
+     ]
+    },
+    {
+     "id": "q030",
+     "type": "prohibition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.25,
+     "words": 428,
+     "top": [
+      "anxIII.4",
+      "art3.39",
+      "art50.3",
+      "art5.1.f",
+      "art2.11"
+     ]
+    },
+    {
+     "id": "q031",
+     "type": "prohibition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 548,
+     "top": [
+      "art5.1.c",
+      "art5.1.d",
+      "art112.13",
+      "art5.1.g",
+      "art7.2.h"
+     ]
+    },
+    {
+     "id": "q032",
+     "type": "prohibition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 404,
+     "top": [
+      "art5.1.e",
+      "art50.3",
+      "art59.1.j",
+      "art3.35",
+      "art3.34"
+     ]
+    },
+    {
+     "id": "q034",
+     "type": "date",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 449,
+     "top": [
+      "art5.1.ba",
+      "art5.1b",
+      "art50.4",
+      "art5.1.e",
+      "art2.10"
+     ]
+    },
+    {
+     "id": "q035",
+     "type": "prohibition",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.14285714285714285,
+     "words": 523,
+     "top": [
+      "art5.2#t0",
+      "art5.2.b",
+      "art5.2.a",
+      "art5.4",
+      "art5.7"
+     ]
+    },
+    {
+     "id": "q036",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.25,
+     "words": 779,
+     "top": [
+      "art5.2#t0",
+      "art26.10#w0",
+      "art3.42",
+      "art5.3#w0",
+      "art26.10#w1"
+     ]
+    },
+    {
+     "id": "q039",
+     "type": "amended",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 466,
+     "top": [
+      "art5.1b",
+      "art50.4",
+      "art5.1.ba",
+      "art3.60",
+      "art5.1.e"
+     ]
+    },
+    {
+     "id": "q040",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 505,
+     "top": [
+      "art6.1",
+      "art25.3",
+      "art6.1c",
+      "anxIII.2",
+      "art6.1a"
+     ]
+    },
+    {
+     "id": "q041",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 672,
+     "top": [
+      "art6.3",
+      "art6.4",
+      "art6.1",
+      "art7.1",
+      "art80.1"
+     ]
+    },
+    {
+     "id": "q044",
+     "type": "classification",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.1111111111111111,
+     "words": 851,
+     "top": [
+      "art6.3",
+      "art14.4",
+      "art15.5",
+      "art25.4",
+      "art6.1c"
+     ]
+    },
+    {
+     "id": "q045",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 618,
+     "top": [
+      "anxIII.8",
+      "art6.3",
+      "art62.3",
+      "anxIII.7.a",
+      "art13.3.e"
+     ]
+    },
+    {
+     "id": "q048",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 777,
+     "top": [
+      "art19",
+      "art26.6",
+      "art16.e",
+      "art12",
+      "art18"
+     ]
+    },
+    {
+     "id": "q049",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 627,
+     "top": [
+      "art26.6",
+      "art19",
+      "art13.3.f",
+      "art16.e",
+      "art12"
+     ]
+    },
+    {
+     "id": "q050",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.5,
+     "words": 472,
+     "top": [
+      "art73.4",
+      "art73.2",
+      "art73.3",
+      "art73.6",
+      "art73.1"
+     ]
+    },
+    {
+     "id": "q051",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 490,
+     "top": [
+      "art73.4",
+      "art73.10",
+      "art3.49",
+      "art73.9",
+      "art73.6"
+     ]
+    },
+    {
+     "id": "q053",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 687,
+     "top": [
+      "art50.1",
+      "anxIV.1",
+      "art50.2",
+      "anxXIII.g",
+      "art50.3"
+     ]
+    },
+    {
+     "id": "q055",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 494,
+     "top": [
+      "art50.4",
+      "art3.60",
+      "art28.4",
+      "art13.3.b.ii",
+      "art57.14"
+     ]
+    },
+    {
+     "id": "q059",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 508,
+     "top": [
+      "art53.1.d",
+      "art53.1.a",
+      "art53.4",
+      "art53.1.b",
+      "art53.2"
+     ]
+    },
+    {
+     "id": "q062",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.25,
+     "words": 589,
+     "top": [
+      "art52.5",
+      "art52.4",
+      "art51",
+      "anxXIII.c",
+      "anxXIII.a"
+     ]
+    },
+    {
+     "id": "q063",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 511,
+     "top": [
+      "anxXIII.f",
+      "anxXIII.g",
+      "art51",
+      "art92.7",
+      "anxXIII.a"
+     ]
+    },
+    {
+     "id": "q064",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 434,
+     "top": [
+      "art53.1.c",
+      "art94",
+      "art92.5",
+      "art54.6",
+      "art53.2"
+     ]
+    },
+    {
+     "id": "q068",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 554,
+     "top": [
+      "art99.6",
+      "art99.1",
+      "art62.1",
+      "art62.2",
+      "art63"
+     ]
+    },
+    {
+     "id": "q069",
+     "type": "amended",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 469,
+     "top": [
+      "art101.3",
+      "art3.14b",
+      "art1",
+      "art101.1",
+      "art101.4"
+     ]
+    },
+    {
+     "id": "q072",
+     "type": "rights",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.5,
+     "words": 686,
+     "top": [
+      "art24.2",
+      "art86",
+      "art46.2",
+      "art26.10#w1",
+      "art6.1a"
+     ]
+    },
+    {
+     "id": "q074",
+     "type": "date",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 507,
+     "top": [
+      "art57.1",
+      "art60.4.e",
+      "art59.1.c",
+      "art57.3",
+      "art57.3a"
+     ]
+    },
+    {
+     "id": "q075",
+     "type": "amended",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 740,
+     "top": [
+      "art7.2.a",
+      "art43.3#w0",
+      "art7.1",
+      "art43.3#w2",
+      "art8"
+     ]
+    },
+    {
+     "id": "q076",
+     "type": "amended",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 596,
+     "top": [
+      "art6.1",
+      "art2.2",
+      "art60a.4",
+      "art7.2.a",
+      "art43.3#w2"
+     ]
+    },
+    {
+     "id": "q077",
+     "type": "date",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.07692307692307693,
+     "words": 569,
+     "top": [
+      "art111.1",
+      "art111.2",
+      "art3.47",
+      "art3.61",
+      "art111.3"
+     ]
+    },
+    {
+     "id": "q078",
+     "type": "date",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 833,
+     "top": [
+      "art111.2",
+      "art6.1",
+      "art6.1c",
+      "art26.5",
+      "art8"
+     ]
+    },
+    {
+     "id": "q079",
+     "type": "multi",
+     "recall": 0.5,
+     "hit": false,
+     "rr": 1.0,
+     "words": 511,
+     "top": [
+      "art3.4",
+      "anxXI.s2.2.b",
+      "art3.8",
+      "art28.4",
+      "art26.5"
+     ]
+    },
+    {
+     "id": "q080",
+     "type": "multi",
+     "recall": 0.5,
+     "hit": false,
+     "rr": 1.0,
+     "words": 424,
+     "top": [
+      "art99.3",
+      "art5.1.h",
+      "art100.2",
+      "art5.1.a",
+      "art101.3"
+     ]
+    }
+   ]
+  },
+  "reranker_l12": {
+   "questions": 50,
+   "chunks": 906,
+   "recall@5": 0.88,
+   "hit@5": 0.86,
+   "mrr": 0.8089,
+   "words@5": 581.4,
+   "seconds_per_query": 5.76,
+   "index_seconds": 0.6,
+   "per_question": [
+    {
+     "id": "q002",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 483,
+     "top": [
+      "art3.60",
+      "art50.4",
+      "art3.57",
+      "art3.52",
+      "art3.55"
+     ]
+    },
+    {
+     "id": "q004",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 621,
+     "top": [
+      "art3.56",
+      "art4",
+      "art58.2.e",
+      "art66.f",
+      "art95.2"
+     ]
+    },
+    {
+     "id": "q006",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 538,
+     "top": [
+      "art3.14b",
+      "art1",
+      "art3.14a",
+      "art58.2.f",
+      "art34"
+     ]
+    },
+    {
+     "id": "q007",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 797,
+     "top": [
+      "art3.23",
+      "art43.4",
+      "art111.2",
+      "art25.1",
+      "art12"
+     ]
+    },
+    {
+     "id": "q008",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 557,
+     "top": [
+      "art3.47",
+      "art56.8",
+      "art64",
+      "art75a.4#t0.w0",
+      "art75a.4#t0.w1"
+     ]
+    },
+    {
+     "id": "q009",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 357,
+     "top": [
+      "art2.3",
+      "art2.10",
+      "art2.6",
+      "art5.1.bb",
+      "art2.8"
+     ]
+    },
+    {
+     "id": "q011",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 528,
+     "top": [
+      "art2.12",
+      "art54.6",
+      "art53.2",
+      "art25.4",
+      "art2.8"
+     ]
+    },
+    {
+     "id": "q012",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 479,
+     "top": [
+      "art2.6",
+      "art2.8",
+      "art3.63",
+      "art52.4",
+      "art68.3"
+     ]
+    },
+    {
+     "id": "q013",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.5,
+     "words": 641,
+     "top": [
+      "art2.3",
+      "art2.1",
+      "art74.1",
+      "art2.6",
+      "art26.10#w2"
+     ]
+    },
+    {
+     "id": "q015",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 612,
+     "top": [
+      "art4",
+      "art3.56",
+      "art66.f",
+      "art75a.4.d",
+      "art95.2"
+     ]
+    },
+    {
+     "id": "q018",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.3333333333333333,
+     "words": 603,
+     "top": [
+      "art14.1",
+      "art14.2",
+      "art14.4",
+      "art14.3",
+      "art14.5"
+     ]
+    },
+    {
+     "id": "q020",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 641,
+     "top": [
+      "art47.1",
+      "art23.5",
+      "art47.4",
+      "art18",
+      "art22.3.b"
+     ]
+    },
+    {
+     "id": "q022",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 467,
+     "top": [
+      "art49.1",
+      "art49.2",
+      "art49.3",
+      "art23.1",
+      "art47.1"
+     ]
+    },
+    {
+     "id": "q023",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 604,
+     "top": [
+      "art26.7",
+      "anxIII.4",
+      "art6.4",
+      "art9.8",
+      "art14.4"
+     ]
+    },
+    {
+     "id": "q024",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.5,
+     "words": 700,
+     "top": [
+      "art27.2",
+      "art27.1.f",
+      "art27.1.c",
+      "art27.1.b",
+      "art27.1.e"
+     ]
+    },
+    {
+     "id": "q025",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.3333333333333333,
+     "words": 646,
+     "top": [
+      "art27.4",
+      "art27.5",
+      "art27.1.f",
+      "art27.1.c",
+      "art27.1.e"
+     ]
+    },
+    {
+     "id": "q026",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 755,
+     "top": [
+      "art26.11",
+      "art86",
+      "art14.4",
+      "art14.5",
+      "anxIII.4"
+     ]
+    },
+    {
+     "id": "q027",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.5,
+     "words": 458,
+     "top": [
+      "art80.2",
+      "art6.4",
+      "art80.4",
+      "art80.1",
+      "art80.6"
+     ]
+    },
+    {
+     "id": "q028",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 743,
+     "top": [
+      "art63",
+      "art17.4",
+      "anxVII#t0.w0",
+      "art17.1.e",
+      "anxVII#t1.w3"
+     ]
+    },
+    {
+     "id": "q030",
+     "type": "prohibition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 465,
+     "top": [
+      "art5.1.f",
+      "art26.7",
+      "art3.39",
+      "art50.3",
+      "anxIII.1"
+     ]
+    },
+    {
+     "id": "q031",
+     "type": "prohibition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 640,
+     "top": [
+      "art5.1.c",
+      "art5.1.b",
+      "art5.1.d",
+      "art5.1.g",
+      "art5.1.h"
+     ]
+    },
+    {
+     "id": "q032",
+     "type": "prohibition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 449,
+     "top": [
+      "art5.1.e",
+      "art50.3",
+      "art5.2#t0",
+      "art3.34",
+      "art3.35"
+     ]
+    },
+    {
+     "id": "q034",
+     "type": "date",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 368,
+     "top": [
+      "art5.1.ba",
+      "art5.1b",
+      "art5.1.e",
+      "art5.1.bb",
+      "art5.1.g"
+     ]
+    },
+    {
+     "id": "q035",
+     "type": "prohibition",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.1111111111111111,
+     "words": 523,
+     "top": [
+      "art5.2#t0",
+      "art5.4",
+      "art5.2.a",
+      "art5.2.b",
+      "art5.7"
+     ]
+    },
+    {
+     "id": "q036",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 885,
+     "top": [
+      "art5.3#w0",
+      "art5.2#t0",
+      "art5.3#w1",
+      "art26.10#w0",
+      "art5.5"
+     ]
+    },
+    {
+     "id": "q039",
+     "type": "amended",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 569,
+     "top": [
+      "art5.1b",
+      "art5.1.ba",
+      "art50.4",
+      "art3.60",
+      "art50.2"
+     ]
+    },
+    {
+     "id": "q040",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 514,
+     "top": [
+      "art6.1",
+      "art25.3",
+      "art6.1c",
+      "art9.9",
+      "art6.1a"
+     ]
+    },
+    {
+     "id": "q041",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 689,
+     "top": [
+      "art6.3",
+      "art80.1",
+      "art7.3",
+      "art7.1",
+      "art6.1"
+     ]
+    },
+    {
+     "id": "q044",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.3333333333333333,
+     "words": 652,
+     "top": [
+      "art6.3",
+      "art14.1",
+      "anxIII.3",
+      "art6.1a",
+      "art6.1"
+     ]
+    },
+    {
+     "id": "q045",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 509,
+     "top": [
+      "anxIII.8",
+      "anxIII.7.a",
+      "anxIII.6.b",
+      "anxIII.7.d",
+      "anxIII.6.a"
+     ]
+    },
+    {
+     "id": "q048",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 805,
+     "top": [
+      "art19",
+      "art26.6",
+      "art23.5",
+      "art18",
+      "art36.9"
+     ]
+    },
+    {
+     "id": "q049",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 694,
+     "top": [
+      "art26.6",
+      "art19",
+      "art23.5",
+      "art18",
+      "art47.1"
+     ]
+    },
+    {
+     "id": "q050",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 470,
+     "top": [
+      "art73.2",
+      "art73.4",
+      "art73.6",
+      "art73.3",
+      "art73.5"
+     ]
+    },
+    {
+     "id": "q051",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 435,
+     "top": [
+      "art73.4",
+      "art73.2",
+      "art73.10",
+      "art73.1",
+      "art3.49"
+     ]
+    },
+    {
+     "id": "q053",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 810,
+     "top": [
+      "art50.1",
+      "art50.4",
+      "art75.2a.a",
+      "art75.2a.c",
+      "anxIV.1"
+     ]
+    },
+    {
+     "id": "q055",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 623,
+     "top": [
+      "art50.4",
+      "art3.60",
+      "art75d.4",
+      "art5.1.ba",
+      "art75d.2"
+     ]
+    },
+    {
+     "id": "q059",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 531,
+     "top": [
+      "art53.1.a",
+      "art53.1.b",
+      "art53.3",
+      "art53.1.c",
+      "art55.1"
+     ]
+    },
+    {
+     "id": "q062",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 401,
+     "top": [
+      "anxXIII.g",
+      "anxXIII.f",
+      "anxXIII.b",
+      "anxXIII.e",
+      "anxXIII.c"
+     ]
+    },
+    {
+     "id": "q063",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 539,
+     "top": [
+      "anxXIII.f",
+      "art51",
+      "art3.65",
+      "anxXIII.g",
+      "anxXIII.d"
+     ]
+    },
+    {
+     "id": "q064",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 496,
+     "top": [
+      "art53.1.c",
+      "art92.5",
+      "art94",
+      "art89",
+      "art91.1"
+     ]
+    },
+    {
+     "id": "q068",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 318,
+     "top": [
+      "art99.6",
+      "art99.1",
+      "art99.6a",
+      "art62.2",
+      "art58.2.d"
+     ]
+    },
+    {
+     "id": "q069",
+     "type": "amended",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 528,
+     "top": [
+      "art101.1",
+      "art101.5",
+      "art99.3",
+      "art1",
+      "art100.3"
+     ]
+    },
+    {
+     "id": "q072",
+     "type": "rights",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.5,
+     "words": 781,
+     "top": [
+      "art46.2",
+      "art86",
+      "art26.10#w1",
+      "art26.10#w2",
+      "art45.2"
+     ]
+    },
+    {
+     "id": "q074",
+     "type": "date",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 496,
+     "top": [
+      "art57.1",
+      "art57.3",
+      "art57.16",
+      "art57.14",
+      "art58.2.g"
+     ]
+    },
+    {
+     "id": "q075",
+     "type": "amended",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 514,
+     "top": [
+      "art43.1.sp2.a",
+      "art43.1.sp2.d",
+      "art43.1.sp2.c",
+      "art43.1.a",
+      "art43.1.sp2.b"
+     ]
+    },
+    {
+     "id": "q076",
+     "type": "amended",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 598,
+     "top": [
+      "art43.3#w1",
+      "art2.2",
+      "art46.7",
+      "art43.3#w2",
+      "art60a.1"
+     ]
+    },
+    {
+     "id": "q077",
+     "type": "date",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.3333333333333333,
+     "words": 654,
+     "top": [
+      "art111.2",
+      "art111.3",
+      "art113",
+      "art111.1",
+      "art56.9"
+     ]
+    },
+    {
+     "id": "q078",
+     "type": "date",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 696,
+     "top": [
+      "art111.2",
+      "art24.2",
+      "art6.4",
+      "art43.4",
+      "art8"
+     ]
+    },
+    {
+     "id": "q079",
+     "type": "multi",
+     "recall": 0.5,
+     "hit": false,
+     "rr": 1.0,
+     "words": 660,
+     "top": [
+      "art3.4",
+      "art26.5",
+      "art26.2",
+      "art50.2",
+      "art60.4.h"
+     ]
+    },
+    {
+     "id": "q080",
+     "type": "multi",
+     "recall": 0.5,
+     "hit": false,
+     "rr": 1.0,
+     "words": 527,
+     "top": [
+      "art99.3",
+      "art100.2",
+      "art100.3",
+      "art101.1",
+      "art5.1.h"
+     ]
+    }
+   ]
+  },
+  "bge_base": {
+   "questions": 50,
+   "chunks": 906,
+   "recall@5": 0.88,
+   "hit@5": 0.86,
+   "mrr": 0.8062,
+   "words@5": 555.3,
+   "seconds_per_query": 2.94,
+   "index_seconds": 477.1,
+   "per_question": [
+    {
+     "id": "q002",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 457,
+     "top": [
+      "art3.60",
+      "art50.4",
+      "art3.36",
+      "art3.57",
+      "art3.52"
+     ]
+    },
+    {
+     "id": "q004",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 502,
+     "top": [
+      "art3.56",
+      "art4",
+      "art58.2.e",
+      "art58.2.i",
+      "art66.f"
+     ]
+    },
+    {
+     "id": "q006",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 538,
+     "top": [
+      "art3.14b",
+      "art3.14a",
+      "art1",
+      "art34",
+      "art58.2.f"
+     ]
+    },
+    {
+     "id": "q007",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 797,
+     "top": [
+      "art3.23",
+      "art43.4",
+      "art25.1",
+      "art12",
+      "art111.2"
+     ]
+    },
+    {
+     "id": "q008",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 470,
+     "top": [
+      "art3.47",
+      "art56.8",
+      "art64",
+      "art65.8",
+      "art75a.4#t0.w0"
+     ]
+    },
+    {
+     "id": "q009",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 337,
+     "top": [
+      "art2.3",
+      "art2.12",
+      "art2.6",
+      "art3.66",
+      "art2.10"
+     ]
+    },
+    {
+     "id": "q011",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 528,
+     "top": [
+      "art2.12",
+      "art54.6",
+      "art53.2",
+      "art25.4",
+      "art2.8"
+     ]
+    },
+    {
+     "id": "q012",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 374,
+     "top": [
+      "art2.6",
+      "art2.8",
+      "art3.63",
+      "art52.4",
+      "art91.3"
+     ]
+    },
+    {
+     "id": "q013",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.25,
+     "words": 641,
+     "top": [
+      "art74.1",
+      "art2.3",
+      "art26.10#w2",
+      "art2.1",
+      "art2.6"
+     ]
+    },
+    {
+     "id": "q015",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 643,
+     "top": [
+      "art4",
+      "art3.56",
+      "art66.f",
+      "art95.2",
+      "art92.5"
+     ]
+    },
+    {
+     "id": "q018",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.5,
+     "words": 553,
+     "top": [
+      "art14.1",
+      "art14.4",
+      "art14.2",
+      "art14.3",
+      "art31.11"
+     ]
+    },
+    {
+     "id": "q020",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 641,
+     "top": [
+      "art47.1",
+      "art23.5",
+      "art47.4",
+      "art18",
+      "art22.3.b"
+     ]
+    },
+    {
+     "id": "q022",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 415,
+     "top": [
+      "art49.1",
+      "art49.2",
+      "art49.3",
+      "art47.1",
+      "art71.5"
+     ]
+    },
+    {
+     "id": "q023",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 482,
+     "top": [
+      "art26.7",
+      "anxIII.4",
+      "art6.4",
+      "art9.8",
+      "art26.8"
+     ]
+    },
+    {
+     "id": "q024",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.2,
+     "words": 564,
+     "top": [
+      "art27.2",
+      "art27.3",
+      "art27.5",
+      "art27.4",
+      "art27.1.f"
+     ]
+    },
+    {
+     "id": "q025",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.3333333333333333,
+     "words": 617,
+     "top": [
+      "art27.4",
+      "art27.5",
+      "art27.1.f",
+      "art27.1.c",
+      "art27.2"
+     ]
+    },
+    {
+     "id": "q026",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 610,
+     "top": [
+      "art26.11",
+      "anxIII.4",
+      "art14.2",
+      "art14.5",
+      "art86"
+     ]
+    },
+    {
+     "id": "q027",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 443,
+     "top": [
+      "art6.4",
+      "art80.2",
+      "art80.4",
+      "art80.5",
+      "art80.3"
+     ]
+    },
+    {
+     "id": "q028",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 608,
+     "top": [
+      "art63",
+      "art3.14a",
+      "art17.1.e",
+      "anxVII#t0.w0",
+      "art17.4"
+     ]
+    },
+    {
+     "id": "q030",
+     "type": "prohibition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 461,
+     "top": [
+      "art5.1.f",
+      "art26.7",
+      "art3.39",
+      "art50.3",
+      "anxIII.4"
+     ]
+    },
+    {
+     "id": "q031",
+     "type": "prohibition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 578,
+     "top": [
+      "art5.1.c",
+      "art5.1.b",
+      "art5.1.g",
+      "art5.1.a",
+      "art5.1.d"
+     ]
+    },
+    {
+     "id": "q032",
+     "type": "prohibition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 467,
+     "top": [
+      "art5.1.e",
+      "art5.2#t0",
+      "art3.34",
+      "art5.4",
+      "art5.6"
+     ]
+    },
+    {
+     "id": "q034",
+     "type": "date",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 295,
+     "top": [
+      "art5.1.ba",
+      "art5.1b",
+      "art5.8",
+      "art5.1.bb",
+      "art5.1.e"
+     ]
+    },
+    {
+     "id": "q035",
+     "type": "prohibition",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.125,
+     "words": 523,
+     "top": [
+      "art5.2.a",
+      "art5.2#t0",
+      "art5.2.b",
+      "art5.7",
+      "art5.4"
+     ]
+    },
+    {
+     "id": "q036",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 885,
+     "top": [
+      "art5.3#w0",
+      "art5.3#w1",
+      "art5.2#t0",
+      "art26.10#w0",
+      "art5.5"
+     ]
+    },
+    {
+     "id": "q039",
+     "type": "amended",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 597,
+     "top": [
+      "art5.1b",
+      "art5.1.ba",
+      "art5.1a",
+      "art5.1.e",
+      "art50.4"
+     ]
+    },
+    {
+     "id": "q040",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 513,
+     "top": [
+      "art6.1",
+      "art25.3",
+      "art6.1c",
+      "art6.2",
+      "art6.4"
+     ]
+    },
+    {
+     "id": "q041",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 616,
+     "top": [
+      "art6.3",
+      "art7.3",
+      "art6.4",
+      "art7.1",
+      "art80.1"
+     ]
+    },
+    {
+     "id": "q044",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.2,
+     "words": 621,
+     "top": [
+      "art6.3",
+      "art15.5",
+      "art14.1",
+      "art6.1a",
+      "anxIII.3"
+     ]
+    },
+    {
+     "id": "q045",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 718,
+     "top": [
+      "anxIII.8",
+      "art15.4",
+      "art26.3",
+      "art25.4",
+      "art77.3"
+     ]
+    },
+    {
+     "id": "q048",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 694,
+     "top": [
+      "art19",
+      "art26.6",
+      "art23.5",
+      "art18",
+      "art47.1"
+     ]
+    },
+    {
+     "id": "q049",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 761,
+     "top": [
+      "art26.6",
+      "art19",
+      "art23.5",
+      "art18",
+      "art22.3.b"
+     ]
+    },
+    {
+     "id": "q050",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 491,
+     "top": [
+      "art73.2",
+      "art73.4",
+      "art73.6",
+      "art73.3",
+      "art73.8"
+     ]
+    },
+    {
+     "id": "q051",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 430,
+     "top": [
+      "art73.4",
+      "art73.2",
+      "art73.10",
+      "art73.9",
+      "art73.1"
+     ]
+    },
+    {
+     "id": "q053",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 945,
+     "top": [
+      "art50.1",
+      "art50.4",
+      "anxIV.1",
+      "art4",
+      "art5.1a"
+     ]
+    },
+    {
+     "id": "q055",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 707,
+     "top": [
+      "art50.4",
+      "art3.60",
+      "art75d.2",
+      "art5.1.ba",
+      "art50.2"
+     ]
+    },
+    {
+     "id": "q059",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 417,
+     "top": [
+      "art53.1.b",
+      "art53.1.a",
+      "art53.3",
+      "art53.1.c",
+      "art53.1.d"
+     ]
+    },
+    {
+     "id": "q062",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 376,
+     "top": [
+      "anxXIII.g",
+      "anxXIII.b",
+      "anxXIII.a",
+      "anxXIII.e",
+      "anxXIII.d"
+     ]
+    },
+    {
+     "id": "q063",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 478,
+     "top": [
+      "anxXIII.f",
+      "art51",
+      "art3.65",
+      "anxXIII.g",
+      "art3.64"
+     ]
+    },
+    {
+     "id": "q064",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 484,
+     "top": [
+      "art53.1.c",
+      "art53.4",
+      "art92.5",
+      "art94",
+      "art91.5"
+     ]
+    },
+    {
+     "id": "q068",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 399,
+     "top": [
+      "art99.6",
+      "art99.1",
+      "art62.2",
+      "art63",
+      "art99.6a"
+     ]
+    },
+    {
+     "id": "q069",
+     "type": "amended",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 396,
+     "top": [
+      "art100.3",
+      "art99.3",
+      "art100.2",
+      "art101.2",
+      "art101.1"
+     ]
+    },
+    {
+     "id": "q072",
+     "type": "rights",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.5,
+     "words": 811,
+     "top": [
+      "art46.2",
+      "art86",
+      "art26.10#w2",
+      "art14.4",
+      "art45.2"
+     ]
+    },
+    {
+     "id": "q074",
+     "type": "date",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 496,
+     "top": [
+      "art57.1",
+      "art57.3",
+      "art57.16",
+      "art57.14",
+      "art58.2.g"
+     ]
+    },
+    {
+     "id": "q075",
+     "type": "amended",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 524,
+     "top": [
+      "art43.1.sp2.d",
+      "art43.1.b",
+      "art43.1.a",
+      "art43.1.sp2.b",
+      "art43.1.sp2.a"
+     ]
+    },
+    {
+     "id": "q076",
+     "type": "amended",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 643,
+     "top": [
+      "art2.2",
+      "art43.3#w1",
+      "art2.13",
+      "art46.7",
+      "art43.3#w2"
+     ]
+    },
+    {
+     "id": "q077",
+     "type": "date",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.2,
+     "words": 654,
+     "top": [
+      "art111.2",
+      "art111.3",
+      "art56.9",
+      "art111.1",
+      "art113"
+     ]
+    },
+    {
+     "id": "q078",
+     "type": "date",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 549,
+     "top": [
+      "art111.2",
+      "art6.4",
+      "art43.4",
+      "art23.2",
+      "art49.1"
+     ]
+    },
+    {
+     "id": "q079",
+     "type": "multi",
+     "recall": 0.5,
+     "hit": false,
+     "rr": 1.0,
+     "words": 384,
+     "top": [
+      "art3.4",
+      "art60.4.h",
+      "art26.2",
+      "art3.8",
+      "art60.4.j"
+     ]
+    },
+    {
+     "id": "q080",
+     "type": "multi",
+     "recall": 0.5,
+     "hit": false,
+     "rr": 1.0,
+     "words": 633,
+     "top": [
+      "art99.3",
+      "art100.2",
+      "art26.5",
+      "art5.1.h",
+      "art5.1.a"
+     ]
+    }
+   ]
+  },
+  "window_chunks": {
+   "questions": 50,
+   "chunks": 523,
+   "recall@5": 0.9,
+   "hit@5": 0.9,
+   "mrr": 0.7988,
+   "words@5": 855.1,
+   "seconds_per_query": 2.49,
+   "index_seconds": 1.1,
+   "per_question": [
+    {
+     "id": "q002",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 862,
+     "top": [
+      "art3#w18",
+      "art50#w2",
+      "art3#w17",
+      "art2#w5",
+      "art3#w15"
+     ]
+    },
+    {
+     "id": "q004",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.3333333333333333,
+     "words": 775,
+     "top": [
+      "art4#w0",
+      "art4#w1",
+      "art3#w16",
+      "art66#w3",
+      "art95#w1"
+     ]
+    },
+    {
+     "id": "q006",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 744,
+     "top": [
+      "art3#w5",
+      "art1#w1",
+      "art3#w4",
+      "art1#w0",
+      "art34#w0"
+     ]
+    },
+    {
+     "id": "q007",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.5,
+     "words": 898,
+     "top": [
+      "art43#w7",
+      "art3#w6",
+      "art43#w6",
+      "art25#w0",
+      "art96#w0"
+     ]
+    },
+    {
+     "id": "q008",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.5,
+     "words": 807,
+     "top": [
+      "art64#w0",
+      "art3#w14",
+      "art75a#w6",
+      "art75a#w8",
+      "art75a#w2"
+     ]
+    },
+    {
+     "id": "q009",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 813,
+     "top": [
+      "art2#w2",
+      "art26#w9",
+      "art74#w2",
+      "art50#w0",
+      "art2#w4"
+     ]
+    },
+    {
+     "id": "q011",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 811,
+     "top": [
+      "art2#w6",
+      "art53#w2",
+      "art2#w5",
+      "art54#w3",
+      "art25#w4"
+     ]
+    },
+    {
+     "id": "q012",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 872,
+     "top": [
+      "art2#w4",
+      "art2#w3",
+      "art3#w20",
+      "art68#w1",
+      "art51#w0"
+     ]
+    },
+    {
+     "id": "q013",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.25,
+     "words": 864,
+     "top": [
+      "art2#w4",
+      "art2#w3",
+      "art2#w2",
+      "art2#w0",
+      "art74#w0"
+     ]
+    },
+    {
+     "id": "q015",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 791,
+     "top": [
+      "art4#w0",
+      "art4#w1",
+      "art66#w3",
+      "art95#w1",
+      "art75a#w5"
+     ]
+    },
+    {
+     "id": "q018",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 885,
+     "top": [
+      "art14#w2",
+      "art14#w0",
+      "art14#w3",
+      "art14#w1",
+      "art15#w1"
+     ]
+    },
+    {
+     "id": "q020",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 832,
+     "top": [
+      "art47#w0",
+      "art18#w0",
+      "art22#w1",
+      "art47#w2",
+      "art23#w2"
+     ]
+    },
+    {
+     "id": "q022",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 908,
+     "top": [
+      "art49#w0",
+      "art49#w1",
+      "art6#w4",
+      "art23#w0",
+      "art47#w0"
+     ]
+    },
+    {
+     "id": "q023",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 916,
+     "top": [
+      "art26#w3",
+      "art26#w4",
+      "anxIII#w2",
+      "art11#w0",
+      "art6#w3"
+     ]
+    },
+    {
+     "id": "q024",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 847,
+     "top": [
+      "art27#w2",
+      "art27#w4",
+      "art27#w3",
+      "art27#w0",
+      "art27#w1"
+     ]
+    },
+    {
+     "id": "q025",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.3333333333333333,
+     "words": 847,
+     "top": [
+      "art27#w4",
+      "art27#w3",
+      "art27#w1",
+      "art27#w0",
+      "art27#w2"
+     ]
+    },
+    {
+     "id": "q026",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 753,
+     "top": [
+      "art26#w9",
+      "art14#w2",
+      "anxIII#w9",
+      "art6#w3",
+      "art26#w6"
+     ]
+    },
+    {
+     "id": "q027",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.2,
+     "words": 944,
+     "top": [
+      "art49#w0",
+      "art80#w2",
+      "art80#w0",
+      "art80#w1",
+      "art6#w3"
+     ]
+    },
+    {
+     "id": "q028",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 673,
+     "top": [
+      "art63#w0",
+      "art17#w4",
+      "art1#w1",
+      "anxVII#w7",
+      "art17#w3"
+     ]
+    },
+    {
+     "id": "q030",
+     "type": "prohibition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 869,
+     "top": [
+      "art5#w4",
+      "art50#w2",
+      "anxIII#w2",
+      "anxIII#w0",
+      "art3#w11"
+     ]
+    },
+    {
+     "id": "q031",
+     "type": "prohibition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 860,
+     "top": [
+      "art5#w2",
+      "art5#w3",
+      "art5#w0",
+      "art5#w1",
+      "art5#w5"
+     ]
+    },
+    {
+     "id": "q032",
+     "type": "prohibition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 871,
+     "top": [
+      "art5#w4",
+      "art3#w10",
+      "art50#w2",
+      "art5#w10",
+      "art5#w11"
+     ]
+    },
+    {
+     "id": "q034",
+     "type": "date",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 874,
+     "top": [
+      "art5#w8",
+      "art5#w3",
+      "art5#w1",
+      "art5#w2",
+      "art50#w4"
+     ]
+    },
+    {
+     "id": "q035",
+     "type": "prohibition",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.125,
+     "words": 860,
+     "top": [
+      "art5#w9",
+      "art5#w10",
+      "art5#w16",
+      "art5#w14",
+      "art5#w11"
+     ]
+    },
+    {
+     "id": "q036",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 879,
+     "top": [
+      "art5#w12",
+      "art5#w11",
+      "art5#w15",
+      "art5#w10",
+      "art26#w6"
+     ]
+    },
+    {
+     "id": "q039",
+     "type": "amended",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 874,
+     "top": [
+      "art5#w8",
+      "art5#w9",
+      "art5#w1",
+      "art50#w1",
+      "art5#w7"
+     ]
+    },
+    {
+     "id": "q040",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 921,
+     "top": [
+      "art6#w0",
+      "art43#w6",
+      "art25#w3",
+      "art6#w1",
+      "art6#w2"
+     ]
+    },
+    {
+     "id": "q041",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 878,
+     "top": [
+      "art6#w2",
+      "art7#w4",
+      "art7#w0",
+      "art6#w3",
+      "art80#w0"
+     ]
+    },
+    {
+     "id": "q044",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 846,
+     "top": [
+      "anxIII#w2",
+      "art6#w3",
+      "art14#w2",
+      "art15#w2",
+      "art14#w0"
+     ]
+    },
+    {
+     "id": "q045",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 785,
+     "top": [
+      "anxIII#w9",
+      "art26#w0",
+      "art15#w1",
+      "art15#w2",
+      "art31#w1"
+     ]
+    },
+    {
+     "id": "q048",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 909,
+     "top": [
+      "art19#w0",
+      "art26#w3",
+      "art26#w2",
+      "art18#w0",
+      "art23#w2"
+     ]
+    },
+    {
+     "id": "q049",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 909,
+     "top": [
+      "art26#w3",
+      "art19#w0",
+      "art26#w2",
+      "art18#w0",
+      "art23#w2"
+     ]
+    },
+    {
+     "id": "q050",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 929,
+     "top": [
+      "art73#w0",
+      "art73#w1",
+      "art73#w2",
+      "art73#w4",
+      "art73#w3"
+     ]
+    },
+    {
+     "id": "q051",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 927,
+     "top": [
+      "art73#w1",
+      "art73#w0",
+      "art73#w4",
+      "art73#w2",
+      "art60#w9"
+     ]
+    },
+    {
+     "id": "q053",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 898,
+     "top": [
+      "art50#w0",
+      "art4#w0",
+      "anxIV#w1",
+      "art50#w1",
+      "art50#w3"
+     ]
+    },
+    {
+     "id": "q055",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 800,
+     "top": [
+      "art50#w3",
+      "art3#w18",
+      "art50#w2",
+      "art75d#w1",
+      "art75d#w2"
+     ]
+    },
+    {
+     "id": "q059",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 935,
+     "top": [
+      "art53#w0",
+      "art53#w2",
+      "art53#w1",
+      "art55#w0",
+      "art55#w1"
+     ]
+    },
+    {
+     "id": "q062",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 838,
+     "top": [
+      "anxXIII#w0",
+      "art52#w2",
+      "art51#w0",
+      "art52#w1",
+      "anxXIII#w1"
+     ]
+    },
+    {
+     "id": "q063",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 827,
+     "top": [
+      "anxXIII#w1",
+      "art51#w0",
+      "art3#w21",
+      "art3#w20",
+      "art9#w4"
+     ]
+    },
+    {
+     "id": "q064",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 820,
+     "top": [
+      "art53#w1",
+      "art94#w0",
+      "art53#w2",
+      "art92#w1",
+      "art53#w0"
+     ]
+    },
+    {
+     "id": "q068",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 843,
+     "top": [
+      "art99#w3",
+      "art99#w0",
+      "art62#w1",
+      "art62#w0",
+      "art63#w0"
+     ]
+    },
+    {
+     "id": "q069",
+     "type": "amended",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 742,
+     "top": [
+      "art3#w5",
+      "art1#w1",
+      "art3#w4",
+      "art101#w0",
+      "art100#w2"
+     ]
+    },
+    {
+     "id": "q072",
+     "type": "rights",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.5,
+     "words": 926,
+     "top": [
+      "art46#w1",
+      "art86#w0",
+      "art14#w2",
+      "art26#w7",
+      "art26#w6"
+     ]
+    },
+    {
+     "id": "q074",
+     "type": "date",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 870,
+     "top": [
+      "art57#w0",
+      "art57#w11",
+      "art57#w1",
+      "art57#w10",
+      "art57#w9"
+     ]
+    },
+    {
+     "id": "q075",
+     "type": "amended",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 900,
+     "top": [
+      "art43#w0",
+      "art43#w3",
+      "art43#w6",
+      "art8#w0",
+      "art7#w0"
+     ]
+    },
+    {
+     "id": "q076",
+     "type": "amended",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 906,
+     "top": [
+      "art43#w6",
+      "art43#w4",
+      "art2#w6",
+      "art60#w1",
+      "art60a#w1"
+     ]
+    },
+    {
+     "id": "q077",
+     "type": "date",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.2,
+     "words": 723,
+     "top": [
+      "art111#w1",
+      "art2#w7",
+      "art111#w2",
+      "art111#w0",
+      "art113#w0"
+     ]
+    },
+    {
+     "id": "q078",
+     "type": "date",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 928,
+     "top": [
+      "art111#w1",
+      "art6#w4",
+      "art24#w1",
+      "art25#w1",
+      "art43#w6"
+     ]
+    },
+    {
+     "id": "q079",
+     "type": "multi",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 904,
+     "top": [
+      "art3#w1",
+      "art60#w6",
+      "art3#w2",
+      "art26#w0",
+      "art26#w2"
+     ]
+    },
+    {
+     "id": "q080",
+     "type": "multi",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 860,
+     "top": [
+      "art99#w1",
+      "art100#w2",
+      "art5#w7",
+      "art5#w8",
+      "art5#w6"
+     ]
+    }
+   ]
+  },
+  "no_header": {
+   "questions": 50,
+   "chunks": 906,
+   "recall@5": 0.83,
+   "hit@5": 0.82,
+   "mrr": 0.7587,
+   "words@5": 467.2,
+   "seconds_per_query": 2.59,
+   "index_seconds": 130.4,
+   "per_question": [
+    {
+     "id": "q002",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 395,
+     "top": [
+      "art3.60",
+      "art50.4",
+      "art3.57",
+      "art3.36",
+      "art3.52"
+     ]
+    },
+    {
+     "id": "q004",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 425,
+     "top": [
+      "art3.56",
+      "art58.2.e",
+      "art58.2.i",
+      "art4",
+      "art66.f"
+     ]
+    },
+    {
+     "id": "q006",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 468,
+     "top": [
+      "art3.14b",
+      "art3.14a",
+      "art58.2.f",
+      "art1",
+      "art34"
+     ]
+    },
+    {
+     "id": "q007",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 717,
+     "top": [
+      "art3.23",
+      "art43.4",
+      "art25.1",
+      "art12",
+      "art59.1.a"
+     ]
+    },
+    {
+     "id": "q008",
+     "type": "definition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 261,
+     "top": [
+      "art3.47",
+      "art56.8",
+      "art56.3",
+      "art56.5",
+      "art57.14"
+     ]
+    },
+    {
+     "id": "q009",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 353,
+     "top": [
+      "art2.3",
+      "art3.66",
+      "art26.11",
+      "art5.1.bb",
+      "art3.11"
+     ]
+    },
+    {
+     "id": "q011",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 409,
+     "top": [
+      "art2.12",
+      "art53.2",
+      "art54.6",
+      "art25.4",
+      "art100.3"
+     ]
+    },
+    {
+     "id": "q012",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 297,
+     "top": [
+      "art2.6",
+      "art2.8",
+      "art3.63",
+      "art91.3",
+      "art52.4"
+     ]
+    },
+    {
+     "id": "q013",
+     "type": "scope",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.3333333333333333,
+     "words": 494,
+     "top": [
+      "art2.3",
+      "art74.1",
+      "art2.1",
+      "art26.8",
+      "art47.3"
+     ]
+    },
+    {
+     "id": "q015",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 553,
+     "top": [
+      "art4",
+      "art3.56",
+      "art66.f",
+      "art95.2",
+      "art92.5"
+     ]
+    },
+    {
+     "id": "q018",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.5,
+     "words": 597,
+     "top": [
+      "art14.1",
+      "art14.4",
+      "art15.4",
+      "art14.2",
+      "art20"
+     ]
+    },
+    {
+     "id": "q020",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 514,
+     "top": [
+      "art47.1",
+      "art23.5",
+      "art18",
+      "art47.4",
+      "art22.3.b"
+     ]
+    },
+    {
+     "id": "q022",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 350,
+     "top": [
+      "art49.1",
+      "art49.2",
+      "art49.3",
+      "art24.1",
+      "art23.1"
+     ]
+    },
+    {
+     "id": "q023",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 368,
+     "top": [
+      "art26.7",
+      "art49.3",
+      "anxIII.4",
+      "art26.8",
+      "art9.8"
+     ]
+    },
+    {
+     "id": "q024",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.25,
+     "words": 475,
+     "top": [
+      "art27.2",
+      "art27.4",
+      "art27.5",
+      "art27.1.c",
+      "art27.1.d"
+     ]
+    },
+    {
+     "id": "q025",
+     "type": "obligation",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.14285714285714285,
+     "words": 372,
+     "top": [
+      "art27.4",
+      "art27.5",
+      "anxVIII.s3.4",
+      "art27.2",
+      "art7.2.e"
+     ]
+    },
+    {
+     "id": "q026",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 672,
+     "top": [
+      "art26.11",
+      "anxIII.4",
+      "art14.5",
+      "art6.3",
+      "art14.4"
+     ]
+    },
+    {
+     "id": "q027",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 434,
+     "top": [
+      "art6.4",
+      "art43.2",
+      "art6.3",
+      "art60.2",
+      "art43.1.sp2.c"
+     ]
+    },
+    {
+     "id": "q028",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 510,
+     "top": [
+      "art63",
+      "art3.14a",
+      "anxVII#t0.w0",
+      "art17.1.e",
+      "art17.4"
+     ]
+    },
+    {
+     "id": "q030",
+     "type": "prohibition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 372,
+     "top": [
+      "art5.1.f",
+      "art26.7",
+      "art3.39",
+      "art50.3",
+      "anxIII.4"
+     ]
+    },
+    {
+     "id": "q031",
+     "type": "prohibition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 518,
+     "top": [
+      "art5.1.c",
+      "art5.1.b",
+      "art5.1.g",
+      "art5.1.a",
+      "art5.1.d"
+     ]
+    },
+    {
+     "id": "q032",
+     "type": "prohibition",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 489,
+     "top": [
+      "art5.1.e",
+      "art50.3",
+      "art5.2#t0",
+      "art3.34",
+      "art26.10#w2"
+     ]
+    },
+    {
+     "id": "q034",
+     "type": "date",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 361,
+     "top": [
+      "art5.1.ba",
+      "art111.4",
+      "art50.4",
+      "art2.10",
+      "art75c.9"
+     ]
+    },
+    {
+     "id": "q035",
+     "type": "prohibition",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.16666666666666666,
+     "words": 463,
+     "top": [
+      "art5.2.a",
+      "art5.2.b",
+      "art5.2#t0",
+      "art5.7",
+      "art5.4"
+     ]
+    },
+    {
+     "id": "q036",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 790,
+     "top": [
+      "art5.3#w0",
+      "art26.10#w0",
+      "art26.10#w1",
+      "art5.3#w1",
+      "art5.2#t0"
+     ]
+    },
+    {
+     "id": "q039",
+     "type": "amended",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 489,
+     "top": [
+      "art5.1b",
+      "art5.1.ba",
+      "art50.2",
+      "art50.4",
+      "art5.1.e"
+     ]
+    },
+    {
+     "id": "q040",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.5,
+     "words": 459,
+     "top": [
+      "art25.3",
+      "art6.1",
+      "art6.2",
+      "art43.3#w3",
+      "art2.2"
+     ]
+    },
+    {
+     "id": "q041",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 492,
+     "top": [
+      "art6.3",
+      "art6.4",
+      "art7.3",
+      "art7.1",
+      "art60.2"
+     ]
+    },
+    {
+     "id": "q044",
+     "type": "classification",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.06666666666666667,
+     "words": 463,
+     "top": [
+      "art75.1e",
+      "art14.1",
+      "art9.6",
+      "art15.5",
+      "art80.1"
+     ]
+    },
+    {
+     "id": "q045",
+     "type": "classification",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 656,
+     "top": [
+      "anxIII.8",
+      "art77.3",
+      "art25.4",
+      "art15.5",
+      "art15.4"
+     ]
+    },
+    {
+     "id": "q048",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 562,
+     "top": [
+      "art19",
+      "art26.6",
+      "art47.1",
+      "art23.5",
+      "art18"
+     ]
+    },
+    {
+     "id": "q049",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 570,
+     "top": [
+      "art26.6",
+      "art19",
+      "art23.5",
+      "art47.1",
+      "art12"
+     ]
+    },
+    {
+     "id": "q050",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 342,
+     "top": [
+      "art73.2",
+      "art73.4",
+      "art73.6",
+      "art73.3",
+      "art73.1"
+     ]
+    },
+    {
+     "id": "q051",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 393,
+     "top": [
+      "art73.4",
+      "art73.2",
+      "art73.9",
+      "art73.6",
+      "art3.49"
+     ]
+    },
+    {
+     "id": "q053",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 501,
+     "top": [
+      "art50.1",
+      "art50.4",
+      "art91.2",
+      "art50.2",
+      "anxXIII.g"
+     ]
+    },
+    {
+     "id": "q055",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 345,
+     "top": [
+      "art50.4",
+      "art3.60",
+      "art55.3",
+      "art53.7",
+      "art75d.4"
+     ]
+    },
+    {
+     "id": "q059",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.5,
+     "words": 448,
+     "top": [
+      "art55.1",
+      "art53.1.b",
+      "art53.3",
+      "art53.4",
+      "art54.6"
+     ]
+    },
+    {
+     "id": "q062",
+     "type": "classification",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.14285714285714285,
+     "words": 491,
+     "top": [
+      "art52.5",
+      "art52.4",
+      "art51",
+      "art52.6",
+      "art52.3"
+     ]
+    },
+    {
+     "id": "q063",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 447,
+     "top": [
+      "anxXIII.f",
+      "art51",
+      "art3.65",
+      "anxXIII.g",
+      "anxXIII.d"
+     ]
+    },
+    {
+     "id": "q064",
+     "type": "obligation",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 414,
+     "top": [
+      "art53.1.c",
+      "art53.4",
+      "art55.2",
+      "art92.5",
+      "art53.1.b"
+     ]
+    },
+    {
+     "id": "q068",
+     "type": "number",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 355,
+     "top": [
+      "art99.6",
+      "art99.1",
+      "art58.2.d",
+      "art62.2",
+      "art63"
+     ]
+    },
+    {
+     "id": "q069",
+     "type": "amended",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 443,
+     "top": [
+      "art100.3",
+      "art3.14b",
+      "art57.12",
+      "art101.1",
+      "art80.4"
+     ]
+    },
+    {
+     "id": "q072",
+     "type": "rights",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.3333333333333333,
+     "words": 719,
+     "top": [
+      "art46.2",
+      "art26.10#w1",
+      "art86",
+      "art14.4",
+      "art24.2"
+     ]
+    },
+    {
+     "id": "q074",
+     "type": "date",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 385,
+     "top": [
+      "art57.1",
+      "art57.3",
+      "art59.1.c",
+      "art58.3",
+      "art58.2.g"
+     ]
+    },
+    {
+     "id": "q075",
+     "type": "amended",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 419,
+     "top": [
+      "art43.1.a",
+      "art43.1.sp2.b",
+      "art43.1.sp2.a",
+      "art43.1.sp2.c",
+      "art43.1.sp2.d"
+     ]
+    },
+    {
+     "id": "q076",
+     "type": "amended",
+     "recall": 0.0,
+     "hit": false,
+     "rr": 0.0,
+     "words": 540,
+     "top": [
+      "art2.13",
+      "art2.2",
+      "art43.3#w1",
+      "art46.7",
+      "art72.4"
+     ]
+    },
+    {
+     "id": "q077",
+     "type": "date",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 0.5,
+     "words": 420,
+     "top": [
+      "art111.3",
+      "art113",
+      "art111.4",
+      "art3.47",
+      "art111.2"
+     ]
+    },
+    {
+     "id": "q078",
+     "type": "date",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 468,
+     "top": [
+      "art111.2",
+      "art24.1",
+      "art23.2",
+      "art24.2",
+      "art23.1"
+     ]
+    },
+    {
+     "id": "q079",
+     "type": "multi",
+     "recall": 0.5,
+     "hit": false,
+     "rr": 0.5,
+     "words": 456,
+     "top": [
+      "art60.4.h",
+      "art3.4",
+      "art60.4.j",
+      "art73.5",
+      "art4"
+     ]
+    },
+    {
+     "id": "q080",
+     "type": "multi",
+     "recall": 1.0,
+     "hit": true,
+     "rr": 1.0,
+     "words": 424,
+     "top": [
+      "art99.3",
+      "art100.2",
+      "art100.3",
+      "art99.4",
+      "art5.1.h"
+     ]
+    }
+   ]
+  }
+ },
+ "provenance": {
+  "created": "2026-10-26T13:35:16Z",
+  "commit": "d9411f3",
+  "dirty": false,
+  "document_sha256": "5e7719f77e8a606b257dc25958ee3222c4383300a5a34270a5b850a2ce8b8715",
+  "questions_sha256": "43df4e47cfd1eb1ceece91941b4f2a9bcef156f8d2f364eda28ea4fc2043c1ab"
+ }
+}
