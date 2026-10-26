@@ -1,0 +1,1173 @@
+=== Mon Oct 26 06:26:14 PM UTC 2026 kaggle_run.sh dev, commit c310f89
+name, memory.total [MiB]
+Tesla T4, 15360 MiB
+Tesla T4, 15360 MiB
+llama.cpp b11898 for compute capability 75
+Cloning into '/tmp/llama/llama.cpp'...
+Note: switching to '8b28c2394324465bf7727089e7eaf7aec9442d6a'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- llama.cpp version: 0.7.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Found Git: /usr/bin/git (found version "2.43.0")
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/cc
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: x86_64
+-- GGML_SYSTEM_ARCH: x86
+-- Found OpenMP_C: -fopenmp (found version "4.5")
+-- Found OpenMP_CXX: -fopenmp (found version "4.5")
+-- Found OpenMP: TRUE (found version "4.5")
+-- Including CPU backend
+-- x86 detected
+-- Adding CPU backend variant ggml-cpu: -march=native 
+-- Found CUDAToolkit: /usr/local/cuda/targets/x86_64-linux/include (found version "12.8.93")
+-- CUDA Toolkit found
+-- The CUDA compiler identification is NVIDIA 12.8.93 with host compiler GNU 13.3.0
+-- Detecting CUDA compiler ABI info
+-- Detecting CUDA compiler ABI info - done
+-- Check for working CUDA compiler: /usr/local/cuda/bin/nvcc - skipped
+-- Detecting CUDA compile features
+-- Detecting CUDA compile features - done
+-- Using CMAKE_CUDA_ARCHITECTURES=75 CMAKE_CUDA_ARCHITECTURES_NATIVE=75-real
+-- FlashAttention K-V type combinations: f16-f16;q4_0-q4_0;q8_0-q8_0;bf16-bf16
+-- Found NCCL: /usr/lib/x86_64-linux-gnu/libnccl.so
+-- CUDA host compiler is GNU 13.3.0
+-- Including CUDA backend
+-- ggml version: 0.27.0
+-- ggml commit:  8b28c23
+-- Generating embedded license file for target: llama-app
+-- Configuring done (8.7s)
+CMake Error at ggml/src/ggml-cuda/CMakeLists.txt:181 (target_link_libraries):
+  Target "ggml-cuda" links to:
+
+    CUDA::cuda_driver
+
+  but the target was not found.  Possible reasons include:
+
+    * There is a typo in the target name.
+    * A find_package call is missing for an IMPORTED target.
+    * An ALIAS target is missing.
+
+
+
+-- Generating done (0.3s)
+CMake Generate step failed.  Build files cannot be regenerated correctly.
+=== Mon Oct 26 06:28:56 PM UTC 2026 kaggle_run.sh dev, commit c9c5933
+name, memory.total [MiB]
+Tesla T4, 15360 MiB
+Tesla T4, 15360 MiB
+nvcc: Build cuda_12.8.r12.8/compiler.35583870_0; cmake version 3.31.10; 4 cores
+llama.cpp b11898 for compute capability 75
+-- llama.cpp version: 0.7.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: x86_64
+-- GGML_SYSTEM_ARCH: x86
+-- Including CPU backend
+-- x86 detected
+-- Adding CPU backend variant ggml-cpu: -march=native 
+-- CUDA Toolkit found
+-- Using CMAKE_CUDA_ARCHITECTURES=75 CMAKE_CUDA_ARCHITECTURES_NATIVE=75-real
+-- FlashAttention K-V type combinations: f16-f16;q4_0-q4_0;q8_0-q8_0;bf16-bf16
+-- CUDA host compiler is GNU 13.3.0
+-- Including CUDA backend
+-- ggml version: 0.27.0
+-- ggml commit:  8b28c23
+-- Generating embedded license file for target: llama-app
+-- Configuring done (0.2s)
+-- Generating done (0.3s)
+-- Build files have been written to: /tmp/llama/llama.cpp/build
+[  1%] Building CXX object vendor/hash/CMakeFiles/vendor-hash.dir/hash.cpp.o
+[  1%] Building C object ggml/src/CMakeFiles/ggml-base.dir/ggml.c.o
+[  1%] Building CXX object vendor/cpp-httplib/CMakeFiles/cpp-httplib.dir/httplib.cpp.o
+[  1%] Building CXX object common/CMakeFiles/llama-common-base.dir/build-info.cpp.o
+[  1%] Building C object vendor/hash/CMakeFiles/vendor-hash.dir/xxhash/xxhash.c.o
+[  1%] Linking CXX static library libllama-common-base.a
+[  1%] Built target llama-common-base
+[  1%] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/ggml.cpp.o
+[  1%] Building CXX object vendor/hash/CMakeFiles/vendor-hash.dir/sha1/sha1.c.o
+[  1%] Provisioning UI assets
+-- UI: downloading from b1: https://huggingface.co/buckets/ggml-org/llama-ui/resolve/b1/dist.tar.gz
+-- UI: download dist.tar.gz.sha256 from b1 failed: "HTTP response code said error"
+-- UI: downloading from latest: https://huggingface.co/buckets/ggml-org/llama-ui/resolve/latest/dist.tar.gz
+-- UI: archive verified and extracted
+-- UI: HF download succeeded, stamp updated (ggml-org/llama-ui|b1, resolved: latest)
+[  1%] Building C object vendor/hash/CMakeFiles/vendor-hash.dir/sha256/sha256.c.o
+[  2%] Linking CXX static library libvendor-hash.a
+[  2%] Built target vendor-hash
+[  2%] Building C object ggml/src/CMakeFiles/ggml-base.dir/ggml-alloc.c.o
+-- UI: gzip compression applied (/tmp/llama/llama.cpp/build/tools/ui/ui-gzip/_gzip)
+[  3%] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/ggml-backend.cpp.o
+[  3%] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/ggml-backend-meta.cpp.o
+[  3%] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/ggml-opt.cpp.o
+[  3%] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/ggml-threading.cpp.o
+[  4%] Building C object ggml/src/CMakeFiles/ggml-base.dir/ggml-quants.c.o
+[  4%] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/gguf.cpp.o
+-- UI: embedded 70 assets
+[  4%] Built target llama-ui-assets
+[  4%] Building CXX object tools/ui/CMakeFiles/llama-ui.dir/ui.cpp.o
+[  4%] Linking CXX static library libllama-ui.a
+[  4%] Built target llama-ui
+[  4%] Linking CXX static library libggml-base.a
+[  4%] Built target ggml-base
+[  4%] Building C object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.c.o
+[  4%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.cpp.o
+[  4%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/acc.cu.o
+[  5%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/repack.cpp.o
+[  5%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/hbm.cpp.o
+[  6%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/add-id.cu.o
+[  6%] Building C object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/quants.c.o
+[  6%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/allreduce.cu.o
+[  6%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/arange.cu.o
+[  6%] Linking CXX static library libcpp-httplib.a
+[  6%] Built target cpp-httplib
+[  6%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/traits.cpp.o
+[  8%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/amx.cpp.o
+[  8%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/mmq.cpp.o
+[  8%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/tiled/tiled.cpp.o
+[  8%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/argmax.cu.o
+[  8%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/tiled/tiled-kernel.cpp.o
+[  9%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/argsort.cu.o
+[ 10%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/binary-ops.cpp.o
+[ 10%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/unary-ops.cpp.o
+[ 10%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/vec.cpp.o
+[ 10%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/binbcast.cu.o
+[ 10%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/clamp.cu.o
+[ 10%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ops.cpp.o
+[ 11%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/llamafile/sgemm.cpp.o
+[ 11%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/col2im-1d.cu.o
+[ 11%] Building C object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/x86/quants.c.o
+[ 11%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/x86/repack.cpp.o
+[ 12%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/concat.cu.o
+[ 12%] Linking CXX static library libggml-cpu.a
+[ 12%] Built target ggml-cpu
+[ 12%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/conv-transpose-1d.cu.o
+[ 12%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/conv2d-dw.cu.o
+[ 12%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/conv2d-transpose.cu.o
+[ 12%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/conv2d.cu.o
+[ 13%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/conv3d.cu.o
+[ 13%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/convert.cu.o
+[ 13%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/count-equal.cu.o
+[ 13%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/cpy.cu.o
+[ 15%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/cross-entropy-loss.cu.o
+[ 15%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/cumsum.cu.o
+[ 15%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/diag.cu.o
+[ 15%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/diagmask.cu.o
+[ 16%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/dsv4-hc.cu.o
+[ 16%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/fattn-tile.cu.o
+[ 16%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/fattn.cu.o
+[ 16%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/fill.cu.o
+[ 17%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/fwht.cu.o
+[ 17%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/gated-delta-net-mma.cu.o
+[ 17%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/gated_delta_net.cu.o
+[ 17%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/getrows.cu.o
+[ 17%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/ggml-cuda.cu.o
+[ 18%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/gla.cu.o
+[ 18%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/im2col.cu.o
+[ 18%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/lightning-indexer.cu.o
+[ 18%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/mean.cu.o
+[ 19%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/mmf.cu.o
+[ 19%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/mmid.cu.o
+[ 19%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/mmq.cu.o
+[ 19%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/mmvf.cu.o
+[ 20%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/mmvq.cu.o
+[ 20%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/moe-weighted-reduction.cu.o
+[ 20%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/norm.cu.o
+[ 20%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/opt-step-adamw.cu.o
+[ 20%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/opt-step-sgd.cu.o
+[ 22%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/out-prod.cu.o
+[ 22%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/pad.cu.o
+[ 22%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/pad_reflect_1d.cu.o
+[ 22%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/pool1d.cu.o
+[ 23%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/pool2d.cu.o
+[ 23%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/quantize.cu.o
+[ 23%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/roll.cu.o
+[ 23%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/rope.cu.o
+[ 24%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/scale.cu.o
+[ 24%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/set-rows.cu.o
+[ 24%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/set.cu.o
+[ 24%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/snake.cu.o
+[ 25%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/softcap.cu.o
+[ 25%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/softmax.cu.o
+[ 25%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/solve_tri.cu.o
+[ 25%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/ssm-conv.cu.o
+[ 25%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/ssm-scan.cu.o
+[ 26%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/sum.cu.o
+[ 26%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/sumrows.cu.o
+[ 26%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/top-k-mask.cu.o
+[ 26%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/top-k.cu.o
+[ 27%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/topk-moe.cu.o
+[ 27%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/tri.cu.o
+[ 27%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/tsembd.cu.o
+[ 27%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/unary.cu.o
+[ 29%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/upscale.cu.o
+[ 29%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/wkv.cu.o
+[ 29%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq112-dv112.cu.o
+[ 29%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq128-dv128.cu.o
+[ 30%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq192-dv128.cu.o
+[ 30%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq256-dv256.cu.o
+[ 30%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq320-dv256.cu.o
+[ 30%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq40-dv40.cu.o
+[ 30%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq512-dv512.cu.o
+[ 31%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq576-dv512.cu.o
+[ 31%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq64-dv64.cu.o
+[ 31%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq72-dv72.cu.o
+[ 31%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq80-dv80.cu.o
+[ 32%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq96-dv96.cu.o
+[ 32%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_1-ncols2_16.cu.o
+[ 32%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_1-ncols2_32.cu.o
+[ 32%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_1-ncols2_8.cu.o
+[ 33%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_16-ncols2_1.cu.o
+[ 33%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_16-ncols2_2.cu.o
+[ 33%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_16-ncols2_4.cu.o
+[ 33%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_2-ncols2_16.cu.o
+[ 33%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_2-ncols2_32.cu.o
+[ 34%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_2-ncols2_4.cu.o
+[ 34%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_2-ncols2_8.cu.o
+[ 34%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_32-ncols2_1.cu.o
+[ 34%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_32-ncols2_2.cu.o
+[ 36%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_4-ncols2_16.cu.o
+[ 36%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_4-ncols2_2.cu.o
+[ 36%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_4-ncols2_4.cu.o
+[ 36%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_4-ncols2_8.cu.o
+[ 37%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_64-ncols2_1.cu.o
+[ 37%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_8-ncols2_1.cu.o
+[ 37%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_8-ncols2_2.cu.o
+[ 37%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_8-ncols2_4.cu.o
+[ 38%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_8-ncols2_8.cu.o
+[ 38%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq1_s.cu.o
+[ 38%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq2_s.cu.o
+[ 38%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq2_xs.cu.o
+[ 38%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq2_xxs.cu.o
+[ 39%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq3_s.cu.o
+[ 39%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq3_xxs.cu.o
+[ 39%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq4_nl.cu.o
+[ 39%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq4_xs.cu.o
+[ 40%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-mxfp4.cu.o
+[ 40%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-nvfp4.cu.o
+[ 40%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q1_0.cu.o
+[ 40%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q2_0.cu.o
+[ 41%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q2_k.cu.o
+[ 41%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q3_k.cu.o
+[ 41%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q4_0.cu.o
+[ 41%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q4_1.cu.o
+[ 41%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q4_k.cu.o
+[ 43%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q5_0.cu.o
+[ 43%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q5_1.cu.o
+[ 43%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q5_k.cu.o
+[ 43%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q6_k.cu.o
+[ 44%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q8_0.cu.o
+[ 44%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_1.cu.o
+[ 44%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_10.cu.o
+[ 44%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_11.cu.o
+[ 45%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_12.cu.o
+[ 45%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_13.cu.o
+[ 45%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_14.cu.o
+[ 45%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_15.cu.o
+[ 46%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_16.cu.o
+[ 46%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_2.cu.o
+[ 46%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_3.cu.o
+[ 46%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_4.cu.o
+[ 46%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_5.cu.o
+[ 47%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_6.cu.o
+[ 47%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_7.cu.o
+[ 47%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_8.cu.o
+[ 47%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_9.cu.o
+[ 48%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-vec-instance-f16-f16.cu.o
+[ 48%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-vec-instance-q4_0-q4_0.cu.o
+[ 48%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-vec-instance-q8_0-q8_0.cu.o
+[ 48%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-vec-instance-bf16-bf16.cu.o
+[ 50%] Linking CXX static library libggml-cuda.a
+[ 50%] Built target ggml-cuda
+[ 50%] Building CXX object ggml/src/CMakeFiles/ggml.dir/ggml-backend-dl.cpp.o
+[ 50%] Building CXX object ggml/src/CMakeFiles/ggml.dir/ggml-backend-reg.cpp.o
+[ 51%] Linking CXX static library libggml.a
+[ 51%] Built target ggml
+[ 51%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_10_cxx.cxx.o
+[ 51%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_8_cxx.cxx.o
+[ 51%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_9_cxx.cxx.o
+[ 51%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_7_cxx.cxx.o
+[ 52%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_6_cxx.cxx.o
+[ 52%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_5_cxx.cxx.o
+[ 52%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_4_cxx.cxx.o
+[ 52%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_3_cxx.cxx.o
+[ 53%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_2_cxx.cxx.o
+[ 53%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_1_cxx.cxx.o
+[ 53%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_0_cxx.cxx.o
+[ 53%] Building CXX object src/CMakeFiles/llama.dir/llama.cpp.o
+[ 54%] Building CXX object src/CMakeFiles/llama.dir/llama-adapter.cpp.o
+[ 54%] Building CXX object src/CMakeFiles/llama.dir/llama-arch.cpp.o
+[ 54%] Building CXX object src/CMakeFiles/llama.dir/llama-batch.cpp.o
+[ 54%] Building CXX object src/CMakeFiles/llama.dir/llama-chat.cpp.o
+[ 55%] Building CXX object src/CMakeFiles/llama.dir/llama-context.cpp.o
+[ 55%] Building CXX object src/CMakeFiles/llama.dir/llama-cparams.cpp.o
+[ 55%] Building CXX object src/CMakeFiles/llama.dir/llama-grammar.cpp.o
+[ 55%] Building CXX object src/CMakeFiles/llama.dir/llama-graph.cpp.o
+[ 55%] Building CXX object src/CMakeFiles/llama.dir/llama-hparams.cpp.o
+[ 56%] Building CXX object src/CMakeFiles/llama.dir/llama-impl.cpp.o
+[ 56%] Building CXX object src/CMakeFiles/llama.dir/llama-io.cpp.o
+[ 56%] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache.cpp.o
+[ 56%] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache-iswa.cpp.o
+[ 58%] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache-dsa.cpp.o
+[ 58%] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache-dsa-iswa.cpp.o
+[ 58%] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache-msa.cpp.o
+[ 58%] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache-dsv4.cpp.o
+[ 59%] Building CXX object src/CMakeFiles/llama.dir/llama-memory.cpp.o
+[ 59%] Building CXX object src/CMakeFiles/llama.dir/llama-moe-cache.cpp.o
+[ 59%] Building CXX object src/CMakeFiles/llama.dir/llama-memory-hybrid.cpp.o
+[ 59%] Building CXX object src/CMakeFiles/llama.dir/llama-memory-hybrid-iswa.cpp.o
+[ 60%] Building CXX object src/CMakeFiles/llama.dir/llama-memory-hybrid-idx.cpp.o
+[ 60%] Building CXX object src/CMakeFiles/llama.dir/llama-memory-recurrent.cpp.o
+[ 60%] Building CXX object src/CMakeFiles/llama.dir/llama-mmap.cpp.o
+[ 60%] Building CXX object src/CMakeFiles/llama.dir/llama-model-loader.cpp.o
+[ 60%] Building CXX object src/CMakeFiles/llama.dir/llama-model-saver.cpp.o
+[ 61%] Building CXX object src/CMakeFiles/llama.dir/llama-model.cpp.o
+[ 61%] Building CXX object src/CMakeFiles/llama.dir/llama-quant.cpp.o
+[ 61%] Building CXX object src/CMakeFiles/llama.dir/llama-sampler.cpp.o
+[ 61%] Building CXX object src/CMakeFiles/llama.dir/llama-vocab.cpp.o
+[ 62%] Building CXX object src/CMakeFiles/llama.dir/unicode-data.cpp.o
+[ 62%] Building CXX object src/CMakeFiles/llama.dir/unicode.cpp.o
+[ 62%] Linking CXX static library libllama.a
+[ 62%] Built target llama
+[ 63%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/mtmd.cpp.o
+[ 65%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/mtmd-audio.cpp.o
+[ 65%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/parsers.cpp.o
+[ 65%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/cohere2moe.cpp.o
+[ 65%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/mtmd-image.cpp.o
+[ 65%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/deepseek.cpp.o
+[ 65%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/functionary-v3-2.cpp.o
+[ 65%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/gemma4.cpp.o
+[ 65%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/mtmd-helper.cpp.o
+[ 66%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/mtmd-helper-gen.cpp.o
+[ 67%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/gigachat-v3.cpp.o
+[ 67%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/gpt-oss.cpp.o
+[ 67%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/harmony-xml.cpp.o
+[ 67%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/clip.cpp.o
+[ 67%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/cogvlm.cpp.o
+[ 67%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/k2-horizon.cpp.o
+[ 68%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/kimi-k2.cpp.o
+[ 68%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/conformer.cpp.o
+[ 68%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/kimi-k3.cpp.o
+[ 68%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/ling3.cpp.o
+[ 69%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/deepseek4v.cpp.o
+[ 69%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/lfm2.cpp.o
+[ 70%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/llm-jp-harmony.cpp.o
+[ 70%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/minicpm5.cpp.o
+[ 70%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/minimax-m3.cpp.o
+[ 70%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/dots3note.cpp.o
+[ 70%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/dotsocr.cpp.o
+[ 70%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/exaone4_5.cpp.o
+[ 70%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/ministral3.cpp.o
+[ 70%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/muse-glimmer.cpp.o
+[ 70%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/gemma4a.cpp.o
+[ 72%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/gemma4v.cpp.o
+[ 72%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/gemma4ua.cpp.o
+[ 73%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/muse-spark.cpp.o
+[ 73%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/gemma4uv.cpp.o
+[ 73%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/qwen3-coder.cpp.o
+[ 73%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/translate-gemma.cpp.o
+[ 73%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/glm4v.cpp.o
+[ 74%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/granite-speech.cpp.o
+[ 74%] Building CXX object common/CMakeFiles/llama-common.dir/arg.cpp.o
+[ 75%] Building CXX object common/CMakeFiles/llama-common.dir/chat-auto-parser-generator.cpp.o
+[ 75%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/granite4-vision.cpp.o
+[ 75%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/hunyuanvl.cpp.o
+[ 75%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/internvl.cpp.o
+[ 76%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/kimivl.cpp.o
+[ 76%] Building CXX object common/CMakeFiles/llama-common.dir/chat-auto-parser-helpers.cpp.o
+[ 76%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/kimik25.cpp.o
+[ 76%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/nemotron-v2-vl.cpp.o
+[ 76%] Building CXX object common/CMakeFiles/llama-common.dir/chat-diff-analyzer.cpp.o
+[ 76%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/nemotron-omni.cpp.o
+[ 77%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/muse-glimmer.cpp.o
+[ 77%] Building CXX object common/CMakeFiles/llama-common.dir/chat-peg-parser.cpp.o
+[ 77%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/muse-spark-audio.cpp.o
+[ 77%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/llama4.cpp.o
+[ 77%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/llava.cpp.o
+[ 77%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/minicpmv.cpp.o
+[ 79%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/paddleocr.cpp.o
+[ 79%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/pixtral.cpp.o
+[ 80%] Building CXX object common/CMakeFiles/llama-common.dir/chat.cpp.o
+[ 80%] Building CXX object common/CMakeFiles/llama-common.dir/common.cpp.o
+[ 80%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/qwen2vl.cpp.o
+[ 80%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/sensenova-u1.cpp.o
+[ 81%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/minimax-m3.cpp.o
+[ 81%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/qwen3vl.cpp.o
+[ 81%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/ling3vl.cpp.o
+[ 81%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/mimovl.cpp.o
+[ 82%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/qwen3a.cpp.o
+[ 82%] Building CXX object common/CMakeFiles/llama-common.dir/console.cpp.o
+[ 82%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/mimo-audio.cpp.o
+[ 82%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/qwen3tts-spkenc.cpp.o
+[ 82%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/qwen3tts-gen.cpp.o
+[ 82%] Building CXX object common/CMakeFiles/llama-common.dir/debug.cpp.o
+[ 82%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/pockettts-seanet.cpp.o
+[ 83%] Building CXX object common/CMakeFiles/llama-common.dir/download.cpp.o
+[ 83%] Building CXX object common/CMakeFiles/llama-common.dir/fit.cpp.o
+[ 84%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/pockettts-spkenc.cpp.o
+[ 84%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/pockettts-gen.cpp.o
+[ 84%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/soprano.cpp.o
+[ 84%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/step3vl.cpp.o
+[ 84%] Building CXX object common/CMakeFiles/llama-common.dir/file-lock.cpp.o
+[ 86%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/siglip.cpp.o
+[ 86%] Building CXX object common/CMakeFiles/llama-common.dir/hf-cache.cpp.o
+[ 86%] Building CXX object common/CMakeFiles/llama-common.dir/imatrix-loader.cpp.o
+[ 86%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/whisper-enc.cpp.o
+[ 86%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/voxtral-rt.cpp.o
+[ 87%] Building CXX object common/CMakeFiles/llama-common.dir/json-schema-to-grammar.cpp.o
+[ 87%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/deepseekocr.cpp.o
+[ 88%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/deepseekocr2.cpp.o
+[ 88%] Building CXX object common/CMakeFiles/llama-common.dir/json-schema.cpp.o
+[ 88%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/mobilenetv5.cpp.o
+[ 88%] Building CXX object common/CMakeFiles/llama-common.dir/json.cpp.o
+[ 88%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/youtuvl.cpp.o
+[ 88%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/yasa2.cpp.o
+[ 89%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/parakeet.cpp.o
+[ 89%] Building CXX object common/CMakeFiles/llama-common.dir/llguidance.cpp.o
+[ 89%] Linking CXX static library libmtmd.a
+[ 89%] Built target mtmd
+[ 90%] Building CXX object common/CMakeFiles/llama-common.dir/log.cpp.o
+[ 90%] Building CXX object common/CMakeFiles/llama-common.dir/ngram-cache.cpp.o
+[ 90%] Building CXX object common/CMakeFiles/llama-common.dir/ngram-map.cpp.o
+[ 90%] Building CXX object common/CMakeFiles/llama-common.dir/ngram-mod.cpp.o
+[ 91%] Building CXX object common/CMakeFiles/llama-common.dir/peg-parser.cpp.o
+[ 91%] Building CXX object common/CMakeFiles/llama-common.dir/preset.cpp.o
+[ 91%] Building CXX object common/CMakeFiles/llama-common.dir/reasoning-budget.cpp.o
+[ 91%] Building CXX object common/CMakeFiles/llama-common.dir/sampling.cpp.o
+[ 91%] Building CXX object common/CMakeFiles/llama-common.dir/speculative.cpp.o
+[ 93%] Building CXX object common/CMakeFiles/llama-common.dir/subproc.cpp.o
+[ 93%] Building CXX object common/CMakeFiles/llama-common.dir/trie.cpp.o
+[ 93%] Building CXX object common/CMakeFiles/llama-common.dir/unicode.cpp.o
+[ 93%] Building CXX object common/CMakeFiles/llama-common.dir/jinja/lexer.cpp.o
+[ 94%] Building CXX object common/CMakeFiles/llama-common.dir/jinja/parser.cpp.o
+[ 94%] Building CXX object common/CMakeFiles/llama-common.dir/jinja/runtime.cpp.o
+[ 94%] Building CXX object common/CMakeFiles/llama-common.dir/jinja/value.cpp.o
+[ 94%] Building CXX object common/CMakeFiles/llama-common.dir/jinja/string.cpp.o
+[ 95%] Building CXX object common/CMakeFiles/llama-common.dir/jinja/caps.cpp.o
+[ 95%] Linking CXX static library libllama-common.a
+[ 95%] Built target llama-common
+[ 95%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-chat.cpp.o
+[ 95%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-task.cpp.o
+[ 95%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-queue.cpp.o
+[ 96%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-common.cpp.o
+[ 96%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-decision.cpp.o
+[ 96%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-context.cpp.o
+[ 96%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-stream.cpp.o
+[ 97%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-tools.cpp.o
+[ 97%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-mcp.cpp.o
+[ 97%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-schema.cpp.o
+[ 97%] Linking CXX static library libserver-context.a
+[ 97%] Built target server-context
+[ 97%] Building CXX object tools/server/CMakeFiles/llama-server-impl.dir/server.cpp.o
+[ 97%] Building CXX object tools/server/CMakeFiles/llama-server-impl.dir/server-connect.cpp.o
+[ 97%] Building CXX object tools/server/CMakeFiles/llama-server-impl.dir/server-http.cpp.o
+[ 98%] Building CXX object tools/server/CMakeFiles/llama-server-impl.dir/server-models.cpp.o
+[ 98%] Linking CXX static library libllama-server-impl.a
+[ 98%] Built target llama-server-impl
+[ 98%] Building CXX object tools/server/CMakeFiles/llama-server.dir/main.cpp.o
+[100%] Linking CXX executable ../../bin/llama-server
+[100%] Built target llama-server
+version: 0.7.0-dev (build 1, commit 8b28c23)
+built with GNU 13.3.0 for Linux x86_64
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 5 files:  20%|██        | 1/5 [00:00<00:00,  7.41it/s]Fetching 5 files: 100%|██████████| 5/5 [00:01<00:00,  4.38it/s]Fetching 5 files: 100%|██████████| 5/5 [00:01<00:00,  4.49it/s]
+Fetching 18 files:   0%|          | 0/18 [00:00<?, ?it/s]Fetching 18 files:  22%|██▏       | 4/18 [00:00<00:00, 38.31it/s]Fetching 18 files:  61%|██████    | 11/18 [00:00<00:00, 55.53it/s]Fetching 18 files: 100%|██████████| 18/18 [00:00<00:00, 60.23it/s]
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:  40%|████      | 2/5 [00:00<00:00, 19.10it/s]Fetching 5 files: 100%|██████████| 5/5 [00:01<00:00,  3.89it/s]Fetching 5 files: 100%|██████████| 5/5 [00:01<00:00,  4.30it/s]
+qwen3.5-0.8b q002: 1.25s '[1] Article 3 - Definitions (Chapter I - General provisions)\nFor the purposes of'
+qwen3.5-0.8b q004: 2.73s "[1] Article 3 - Definitions (Chapter I - General provisions)\n(56) 'AI literacy' "
+qwen3.5-0.8b q006: 2.42s "[1] Article 3 - Definitions (Chapter I - General provisions)\n(14b) 'small mid-ca"
+qwen3.5-0.8b q007: 2.06s "[2] Article 3 - Definitions (Chapter I - General provisions)\n(23) 'substantial m"
+qwen3.5-0.8b q008: 0.95s "The AI Office is the Commission's function of contributing to the implementation"
+qwen3.5-0.8b q009: 2.34s 'The AI Act does not apply to AI systems used exclusively for military or defence'
+qwen3.5-0.8b q011: 2.41s 'Yes, AI systems released under free and open-source licences are exempt from the'
+qwen3.5-0.8b q012: 0.75s 'The AI Act does not cover AI models built solely for scientific research and dev'
+qwen3.5-0.8b q013: 1.33s 'The AI Act does not apply to your company because your AI system is not placed o'
+qwen3.5-0.8b q015: 0.81s 'Companies have to take measures to support the development of AI literacy of the'
+qwen3.5-0.8b q018: 1.0s 'The people overseeing a high-risk AI system shall be enabled to properly underst'
+qwen3.5-0.8b q020: 2.38s 'The provider shall keep the EU declaration of conformity up-to-date as appropria'
+qwen3.5-0.8b q022: 0.79s 'Before placing a high-risk AI system on the market, importers must ensure the sy'
+qwen3.5-0.8b q023: 0.65s "Yes, as an employer, you must inform your workers' representatives and the affec"
+qwen3.5-0.8b q024: 0.31s 'The AI Act provisions provided do not answer this question.'
+qwen3.5-0.8b q025: 2.4s 'The fundamental rights impact assessment for high-risk AI systems must include t'
+qwen3.5-0.8b q026: 2.47s 'Yes, people generally have to be informed when a high-risk AI system is used to '
+qwen3.5-0.8b q027: 1.51s 'A provider who concludes that an AI system is not high-risk shall document its a'
+qwen3.5-0.8b q028: 0.8s 'Yes, SMEs, including start-ups, may comply with certain elements of the quality '
+qwen3.5-0.8b q030: 0.58s 'The AI Act prohibits the placing on the market or use of AI systems to infer emo'
+qwen3.5-0.8b q031: 0.36s 'The AI Act provisions provided do not answer this question.'
+qwen3.5-0.8b q032: 0.51s '[1] The placing on the market, the putting into service for this specific purpos'
+qwen3.5-0.8b q034: 0.64s 'The ban on AI-generated non-consensual intimate imagery applies to the placing o'
+qwen3.5-0.8b q035: 1.45s "The use of 'real-time' remote biometric identification systems in publicly acces"
+qwen3.5-0.8b q036: 0.37s 'The AI Act passages provided do not answer this question.'
+qwen3.5-0.8b q039: 0.34s 'The AI Act provisions provided do not answer this question.'
+qwen3.5-0.8b q040: 0.71s 'An AI system is considered high-risk if it is intended to be used as a safety co'
+qwen3.5-0.8b q041: 1.05s 'An AI system listed in Annex III is not considered high-risk under the following'
+qwen3.5-0.8b q044: 0.96s 'The provided text does not explicitly state whether AI tools that detect cheatin'
+qwen3.5-0.8b q045: 0.99s 'No, software that only organises the logistics of a political campaign is not a '
+qwen3.5-0.8b q048: 2.51s 'Providers of high-risk AI systems shall keep the logs referred to in Article 12('
+qwen3.5-0.8b q049: 0.92s 'Deployers of high-risk AI systems shall keep the logs automatically generated by'
+qwen3.5-0.8b q050: 0.77s 'A provider must report a serious incident immediately after establishing a causa'
+qwen3.5-0.8b q051: 0.63s 'The reporting deadline for a serious incident involving a high-risk AI system le'
+qwen3.5-0.8b q053: 1.17s 'The AI Act does not explicitly mandate that a chatbot must explicitly state that'
+qwen3.5-0.8b q055: 2.48s '[1] Article 50 states that deployers of an AI system generating or manipulating '
+qwen3.5-0.8b q059: 1.4s 'The obligations of providers of general-purpose AI models include drawing up and'
+qwen3.5-0.8b q062: 1.19s 'The Commission can use the following criteria to decide that a general-purpose A'
+qwen3.5-0.8b q063: 0.56s 'According to Article 51(2), a general-purpose AI model is presumed to have high '
+qwen3.5-0.8b q064: 0.62s 'Yes, general-purpose AI providers must comply with Union law on copyright and re'
+qwen3.5-0.8b q068: 0.89s 'The maximum fines for SMEs are determined by the lower of three specific percent'
+qwen3.5-0.8b q069: 0.64s 'The provided text does not contain any information regarding the specific relief'
+qwen3.5-0.8b q072: 1.49s 'Yes, you can obtain an explanation.\n[2] Article 86 - Right to explanation of ind'
+qwen3.5-0.8b q074: 0.55s 'According to Article 57, Member States must establish at least one AI regulatory'
+qwen3.5-0.8b q075: 0.63s 'The high-risk requirements apply to AI systems listed in Annex III when the prov'
+qwen3.5-0.8b q076: 0.54s 'The high-risk rules start applying to AI systems covered by the product legislat'
+qwen3.5-0.8b q077: 2.49s 'The AI Act applies to operators of high-risk AI systems placed on the market or '
+qwen3.5-0.8b q078: 1.57s 'High-risk AI systems that were already on the market before the high-risk rules '
+qwen3.5-0.8b q079: 0.78s 'The difference between a provider and a deployer is defined in Article 3 of the '
+qwen3.5-0.8b q080: 0.77s 'The maximum administrative fine for a prohibited AI practice is EUR 35 000 000, '
+qwen3.5-0.8b q082: 1.01s 'The cost to register a high-risk AI system in the EU database is not explicitly '
+qwen3.5-0.8b q084: 0.74s 'The provided text does not contain information regarding tax incentives for AI s'
+qwen3.5-0.8b q087: 0.6s 'The provided text does not contain information regarding minimum wages for data '
+qwen3.5-0.8b q088: 0.78s 'The EU AI Act does not recommend a specific AI chatbot for citizens; instead, it'
+qwen3.5-0.8b q089: 0.44s 'The United Kingdom must implement the AI Act by 2 May 2025, as this date is the '
+qwen3.5-2b q002: 1.34s 'A deep fake is defined as AI-generated or manipulated image, audio, or video con'
+qwen3.5-2b q004: 1.57s 'The Act defines AI literacy as the skills, knowledge, and understanding that ena'
+qwen3.5-2b q006: 1.28s 'A small mid-cap enterprise (SMC) is defined in Article 3 of the Regulation as a '
+qwen3.5-2b q007: 1.13s 'A change to an AI system is a "substantial modification" if it occurs after the '
+qwen3.5-2b q008: 1.01s "The AI Office is the Commission's function of contributing to the implementation"
+qwen3.5-2b q009: 1.27s 'The AI Act does not apply to AI systems used exclusively for military, defence, '
+qwen3.5-2b q011: 1.58s 'AI systems released under free and open-source licences are exempt from the regu'
+qwen3.5-2b q012: 0.91s 'No, an AI model built solely for scientific research and development is not cove'
+qwen3.5-2b q013: 0.86s 'The AI Act applies to your company because you are a provider or importer of AI '
+qwen3.5-2b q015: 1.23s 'Companies must take measures to support the development of AI literacy for their'
+qwen3.5-2b q018: 1.37s 'Natural persons assigned human oversight to high-risk AI systems must be enabled'
+qwen3.5-2b q020: 1.15s 'The provider must keep the EU declaration of conformity for a period of 10 years'
+qwen3.5-2b q022: 0.85s 'Before placing a high-risk AI system on the market, the provider or their author'
+qwen3.5-2b q023: 1.08s "Yes, as an employer, you must inform your workers' representatives and affected "
+qwen3.5-2b q024: 0.95s 'Deployers that are bodies governed by public law or private entities providing p'
+qwen3.5-2b q025: 1.04s 'The fundamental rights impact assessment must include the measures to be taken i'
+qwen3.5-2b q026: 1.35s 'Yes, deployers of high-risk AI systems must inform natural persons that they are'
+qwen3.5-2b q027: 1.44s 'If a provider determines that an AI system listed in Annex III is not high-risk,'
+qwen3.5-2b q028: 1.44s 'Yes, SMEs may comply with certain elements of the quality management system requ'
+qwen3.5-2b q030: 0.83s 'Your employer cannot use AI to infer your emotions at work unless the use is int'
+qwen3.5-2b q031: 1.13s 'Yes, the use of AI systems for the evaluation or classification of natural perso'
+qwen3.5-2b q032: 0.86s 'No, it is prohibited to place on the market, put into service, or use AI systems'
+qwen3.5-2b q034: 1.09s 'The ban on AI-generated non-consensual intimate imagery applies from the date of'
+qwen3.5-2b q035: 1.29s 'Yes, police may use real-time facial recognition in public spaces, but only for '
+qwen3.5-2b q036: 0.69s 'If the police start using a real-time remote biometric identification system in '
+qwen3.5-2b q039: 1.17s 'Under the new AI Act, an AI system that manipulates an identifiable natural pers'
+qwen3.5-2b q040: 0.9s 'An AI system is considered high-risk if it is intended to be used as a safety co'
+qwen3.5-2b q041: 1.2s 'An AI system listed in Annex III is not considered high-risk if it does not pose'
+qwen3.5-2b q044: 0.91s 'AI tools that detect cheating during exams are not classified as high-risk syste'
+qwen3.5-2b q045: 1.07s 'No, software that only organises the logistics of a political campaign is not a '
+qwen3.5-2b q048: 1.18s 'Providers of high-risk AI systems must keep automatically generated logs for a p'
+qwen3.5-2b q049: 1.0s 'Deployers of high-risk AI systems must keep logs for a period of at least six mo'
+qwen3.5-2b q050: 1.27s 'The provider must report a serious incident immediately after establishing a cau'
+qwen3.5-2b q051: 0.88s 'The reporting deadline for a serious incident involving a high-risk AI system th'
+qwen3.5-2b q053: 0.94s 'Yes, providers must ensure that AI systems interacting directly with natural per'
+qwen3.5-2b q055: 1.16s 'You must disclose that your deepfake video has been artificially generated or ma'
+qwen3.5-2b q059: 1.39s 'Providers of general-purpose AI models must draw up, keep up-to-date, and make a'
+qwen3.5-2b q062: 0.87s 'The Commission may consider several criteria to determine if a general-purpose A'
+qwen3.5-2b q063: 0.66s 'A general-purpose AI model is presumed to have a high impact on the internal mar'
+qwen3.5-2b q064: 0.97s 'Yes, providers of general-purpose AI models must put in place a policy to comply'
+qwen3.5-2b q068: 1.5s 'The maximum fines for SMEs and start-ups are determined by the lower of the perc'
+qwen3.5-2b q069: 1.5s 'The AI Act does not provide any specific relief for small mid-cap companies. Fin'
+qwen3.5-2b q072: 1.36s 'You have the right to obtain clear and meaningful explanations from the deployer'
+qwen3.5-2b q074: 0.99s 'Each EU Member State must establish at least one AI regulatory sandbox at its na'
+qwen3.5-2b q075: 1.17s 'The high-risk requirements apply to AI systems listed in Annex III [1][2][3][4]['
+qwen3.5-2b q076: 0.83s 'The high-risk rules for AI systems covered by Union harmonisation legislation li'
+qwen3.5-2b q077: 1.48s 'The AI Act applies from 2 August 2026, except for specific chapters that apply e'
+qwen3.5-2b q078: 1.19s 'High-risk AI systems placed on the market before the date of application of Chap'
+qwen3.5-2b q079: 1.3s 'The Act defines a **provider** as a natural or legal person, public authority, a'
+qwen3.5-2b q080: 0.88s 'The maximum fine for non-compliance with prohibited AI practices is up to EUR 35'
+qwen3.5-2b q082: 1.04s 'The Act does not specify a monetary cost for registering a high-risk AI system i'
+qwen3.5-2b q084: 0.83s 'The AI Act does not provide any tax incentives for AI start-ups. The Act focuses'
+qwen3.5-2b q087: 0.77s 'The AI Act does not set a minimum wage for data annotators. The Act focuses on d'
+qwen3.5-2b q088: 0.38s 'The provided passages do not answer this question.'
+qwen3.5-2b q089: 0.65s "The AI Act does not contain any information regarding the United Kingdom's imple"
+gemma-4-e2b q002: 1.5s "A 'deep fake' is defined as AI-generated or manipulated image, audio or video co"
+gemma-4-e2b q004: 1.96s 'AI literacy means skills, knowledge, and understanding that enable providers, de'
+gemma-4-e2b q006: 1.05s 'A small mid-cap enterprise or SMC is defined as a small mid-cap enterprise as de'
+gemma-4-e2b q007: 1.93s 'A "substantial modification" means a change to an AI system after it has been pl'
+gemma-4-e2b q008: 1.64s "The AI Office is the Commission's function responsible for contributing to the i"
+gemma-4-e2b q009: 1.39s 'The AI Act does not apply to AI systems where they are placed on the market, put'
+gemma-4-e2b q011: 2.42s 'AI systems released under free and open-source licences are not exempt from the '
+gemma-4-e2b q012: 1.37s 'Yes, an AI system or AI model specifically developed and put into service for th'
+gemma-4-e2b q013: 1.9s 'Yes, the AI Act applies to your company under certain conditions. It applies to '
+gemma-4-e2b q015: 1.95s 'Providers and deployers of AI systems must take measures to support the developm'
+gemma-4-e2b q018: 2.65s 'Natural persons to whom human oversight is assigned must be enabled to properly '
+gemma-4-e2b q020: 2.23s 'The provider must keep a written machine readable, physical or electronically si'
+gemma-4-e2b q022: 2.58s 'The provider or, where applicable, the authorised representative must register t'
+gemma-4-e2b q023: 1.47s "Yes, deployers who are employers must inform workers' representatives and the af"
+gemma-4-e2b q024: 1.86s 'Deployers that are bodies governed by public law, or are private entities provid'
+gemma-4-e2b q025: 1.54s 'A fundamental rights impact assessment for a high-risk AI system must include th'
+gemma-4-e2b q026: 1.15s 'Yes, deployers of high-risk AI systems that make decisions or assist in making d'
+gemma-4-e2b q027: 1.32s 'If a provider considers an AI system referred to in Annex III not high-risk, the'
+gemma-4-e2b q028: 2.21s 'Yes, small and medium-sized enterprises, including start-ups, may comply with ce'
+gemma-4-e2b q030: 3.19s 'The placing on the market, putting into service, or using AI systems to infer em'
+gemma-4-e2b q031: 2.46s 'Yes, the placing on the market, putting into service, or use of AI systems for t'
+gemma-4-e2b q032: 1.01s 'No, the placing on the market, putting into service for a specific purpose, or t'
+gemma-4-e2b q034: 1.22s 'The ban on placing on the market, putting into service, or using an AI system th'
+gemma-4-e2b q035: 2.08s "Yes, the use of 'real-time' remote biometric identification systems in publicly "
+gemma-4-e2b q036: 1.45s "If the use of a 'real-time' remote biometric identification system in publicly a"
+gemma-4-e2b q039: 1.18s 'An AI system that manipulates material in a way that does not increase the expos'
+gemma-4-e2b q040: 1.78s 'An AI system is considered high-risk if it is intended to be used as a safety co'
+gemma-4-e2b q041: 2.83s 'An AI system referred to in Annex III shall not be considered high-risk if it do'
+gemma-4-e2b q044: 0.56s 'The provided passages do not contain information about AI tools that detect chea'
+gemma-4-e2b q045: 1.49s 'No, software that only organises the logistics of a political campaign is not co'
+gemma-4-e2b q048: 2.04s 'Providers of high-risk AI systems must keep the automatically generated logs to '
+gemma-4-e2b q049: 1.79s 'Deployers of high-risk AI systems must keep the logs automatically generated by '
+gemma-4-e2b q050: 2.39s 'The reporting timeline depends on the nature of the incident. Generally, the rep'
+gemma-4-e2b q051: 1.48s 'If a serious incident involving the death of a person occurs, the report must be'
+gemma-4-e2b q053: 1.58s 'Providers of AI systems intended to interact directly with natural persons must '
+gemma-4-e2b q055: 2.18s 'If you deploy an AI system that generates or manipulates image, audio, or video '
+gemma-4-e2b q059: 3.24s 'Providers of general-purpose AI models have several obligations. They must draw '
+gemma-4-e2b q062: 3.52s 'The Commission shall take several criteria into account when determining if a ge'
+gemma-4-e2b q063: 1.0s 'A general-purpose AI model is presumed to have a high impact on the internal mar'
+gemma-4-e2b q064: 1.45s 'Yes, providers of general-purpose AI models must put in place a policy to comply'
+gemma-4-e2b q068: 2.03s 'For SMEs, including start-ups, each fine referred to in Article 99 shall be up t'
+gemma-4-e2b q069: 0.59s 'The provided passages do not contain information about relief on AI Act fines fo'
+gemma-4-e2b q072: 2.61s 'If a decision is taken by a deployer based on the output of a high-risk AI syste'
+gemma-4-e2b q074: 1.05s 'Member States must ensure that they establish at least one AI regulatory sandbox'
+gemma-4-e2b q075: 0.84s 'The high-risk requirements apply to high-risk AI systems listed in point 1 of An'
+gemma-4-e2b q076: 2.77s 'For AI systems classified as high-risk AI systems in accordance with Article 6(1'
+gemma-4-e2b q077: 1.99s 'The Regulation shall enter into force on the twentieth day following its publica'
+gemma-4-e2b q078: 2.13s 'Yes, high-risk AI systems already on the market or put into service may have to '
+gemma-4-e2b q079: 1.32s 'A provider is defined as a term that includes a product manufacturer, deployer, '
+gemma-4-e2b q080: 2.45s 'The maximum administrative fine for non-compliance with the prohibition of AI pr'
+gemma-4-e2b q082: 0.44s 'The provided passages do not answer this question.'
+gemma-4-e2b q084: 1.02s 'The AI Act provides that access to AI regulatory sandboxes is free of charge for'
+gemma-4-e2b q087: 0.53s 'The AI Act passages provided do not answer this question.'
+gemma-4-e2b q088: 0.45s 'The AI Act passages provided do not answer this question.'
+gemma-4-e2b q089: 0.57s 'The provided passages do not specify by when the United Kingdom must implement t'
+qwen3.5-4b q002: 1.73s "The regulation defines a 'deep fake' as AI-generated or manipulated image, audio"
+qwen3.5-4b q004: 2.89s 'The Act defines AI literacy as skills, knowledge, and understanding that enable '
+qwen3.5-4b q006: 2.63s 'A small mid-cap enterprise (SMC) is defined in the AI Act as a small mid-cap ent'
+qwen3.5-4b q007: 3.56s 'A change to an AI system is a "substantial modification" if it occurs after the '
+qwen3.5-4b q008: 2.44s "The AI Office is defined as the Commission's function of contributing to the imp"
+qwen3.5-4b q009: 1.79s 'No, the AI Act does not apply to AI systems used exclusively for military, defen'
+qwen3.5-4b q011: 3.31s 'AI systems released under free and open-source licences are generally exempt fro'
+qwen3.5-4b q012: 2.25s 'No, an AI model built solely for scientific research and development is not cove'
+qwen3.5-4b q013: 2.07s 'Yes, the AI Act applies to your company because the output of your AI system is '
+qwen3.5-4b q015: 3.12s 'Providers and deployers of AI systems must take measures to support the developm'
+qwen3.5-4b q018: 3.1s 'People overseeing a high-risk AI system must be able to properly understand its '
+qwen3.5-4b q020: 2.35s 'The provider must keep the EU declaration of conformity for 10 years after the h'
+qwen3.5-4b q022: 2.83s 'Before placing a high-risk AI system on the market, the provider or, where appli'
+qwen3.5-4b q023: 2.58s "Yes, as an employer you must inform workers' representatives and affected worker"
+qwen3.5-4b q024: 2.63s 'Deployers that are bodies governed by public law or private entities providing p'
+qwen3.5-4b q025: 2.98s 'A fundamental rights impact assessment must include the categories of natural pe'
+qwen3.5-4b q026: 3.66s 'Yes, deployers of high-risk AI systems must inform natural persons that they are'
+qwen3.5-4b q027: 2.96s 'If a provider concludes that its Annex III AI system is not high-risk, it must d'
+qwen3.5-4b q028: 3.22s 'Yes, small and medium-sized enterprises (SMEs) may comply with certain elements '
+qwen3.5-4b q030: 2.84s 'Your employer is generally prohibited from using AI to infer your emotions at wo'
+qwen3.5-4b q031: 2.38s 'Yes, the use of AI systems for social scoring is prohibited. This ban applies to'
+qwen3.5-4b q032: 1.65s 'No, it is not allowed to build a facial recognition database by scraping photos '
+qwen3.5-4b q034: 0.77s 'The provided passages do not answer this question.'
+qwen3.5-4b q035: 0.87s 'The AI Act passages provided do not answer this question.'
+qwen3.5-4b q036: 2.71s 'If the police start using real-time remote biometric identification in an emerge'
+qwen3.5-4b q039: 3.01s 'No, such an action does not count as manipulation for the purposes of the ban if'
+qwen3.5-4b q040: 3.25s 'An AI system is considered high-risk if it is a safety component of a product co'
+qwen3.5-4b q041: 2.99s 'An AI system listed in Annex III is not considered high-risk if it does not pose'
+qwen3.5-4b q044: 2.98s 'AI tools that detect cheating during exams are not automatically classified as h'
+qwen3.5-4b q045: 2.0s 'No, software that only organises the logistics of a political campaign is not co'
+qwen3.5-4b q048: 2.76s 'Providers of high-risk AI systems must keep automatically generated logs for a p'
+qwen3.5-4b q049: 2.2s 'Deployers of high-risk AI systems must keep automatically generated logs for a p'
+qwen3.5-4b q050: 2.82s 'A provider must report a serious incident immediately after establishing a causa'
+qwen3.5-4b q051: 2.97s 'If a serious incident involving a high-risk AI system leads to a death, the repo'
+qwen3.5-4b q053: 2.72s 'Yes, providers must ensure that AI systems intended to interact directly with na'
+qwen3.5-4b q055: 3.06s 'If you deploy an AI system that generates a deepfake video, you must disclose th'
+qwen3.5-4b q059: 2.7s 'Providers of general-purpose AI models must draw up and keep up-to-date technica'
+qwen3.5-4b q062: 2.81s 'The Commission can use the following criteria to determine if a general-purpose '
+qwen3.5-4b q063: 2.91s 'A model is presumed to have a high impact on the internal market if it has been '
+qwen3.5-4b q064: 2.51s 'Yes, providers of general-purpose AI models must comply with copyright opt-outs.'
+qwen3.5-4b q068: 2.78s 'For SMEs, including start-ups, the maximum fine is the lower of the percentages '
+qwen3.5-4b q069: 2.43s 'The provided passages do not mention any specific relief, exemptions, or reduced'
+qwen3.5-4b q072: 2.59s 'Yes, you have the right to obtain clear and meaningful explanations of the role '
+qwen3.5-4b q074: 2.53s 'Each EU country must ensure that at least one AI regulatory sandbox is operation'
+qwen3.5-4b q075: 0.94s 'The provided passages do not answer the question.'
+qwen3.5-4b q076: 2.72s 'The provided passages do not specify a start date for when the high-risk rules a'
+qwen3.5-4b q077: 1.23s 'The AI Act applies in general from 2 August 2026. [5]'
+qwen3.5-4b q078: 3.25s 'High-risk AI systems placed on the market or put into service before the date of'
+qwen3.5-4b q079: 2.63s 'A provider is not explicitly defined in the provided passages, but an operator i'
+qwen3.5-4b q080: 3.7s 'The maximum fine for non-compliance with the prohibition of prohibited AI practi'
+qwen3.5-4b q082: 2.32s 'The provided passages do not state any fees or costs for registering a high-risk'
+qwen3.5-4b q084: 0.98s 'The AI Act passages provided do not answer this question.'
+qwen3.5-4b q087: 1.07s 'The AI Act passages provided do not answer this question.'
+qwen3.5-4b q088: 1.79s 'The provided passages do not mention any specific AI chatbot that the EU officia'
+qwen3.5-4b q089: 0.95s 'The provided passages do not answer this question.'
+qwen3.5-9b q002: 2.49s "The regulation defines a 'deep fake' as AI-generated or manipulated image, audio"
+qwen3.5-9b q004: 3.09s "The Act defines 'AI literacy' as skills, knowledge, and understanding that allow"
+qwen3.5-9b q006: 2.3s 'A small mid-cap enterprise (SMC) is defined as a small mid-cap enterprise as def'
+qwen3.5-9b q007: 6.16s 'A change to an AI system is a "substantial modification" if it is a change after'
+qwen3.5-9b q008: 3.93s "The AI Office is the Commission's function of contributing to the implementation"
+qwen3.5-9b q009: 3.65s 'No, the AI Act does not apply to AI systems used exclusively for military, defen'
+qwen3.5-9b q011: 5.2s 'AI systems released under free and open-source licences are generally exempt fro'
+qwen3.5-9b q012: 3.11s 'No, an AI model specifically developed and put into service for the sole purpose'
+qwen3.5-9b q013: 3.54s 'Yes, the AI Act applies to you because it covers providers and deployers located'
+qwen3.5-9b q015: 5.52s 'Companies, acting as providers or deployers of AI systems, must take measures to'
+qwen3.5-9b q018: 5.11s 'People overseeing a high-risk AI system should be able to properly understand th'
+qwen3.5-9b q020: 3.0s 'The provider must keep the EU declaration of conformity for 10 years after the h'
+qwen3.5-9b q022: 3.97s 'Before placing a high-risk AI system on the market, the provider or, where appli'
+qwen3.5-9b q023: 4.17s 'Yes, as an employer deploying a high-risk AI system at the workplace, you must i'
+qwen3.5-9b q024: 4.18s 'Deployers must carry out a fundamental rights impact assessment if they are bodi'
+qwen3.5-9b q025: 4.38s 'A fundamental rights impact assessment must include the categories of natural pe'
+qwen3.5-9b q026: 4.86s 'Yes, deployers of high-risk AI systems that make decisions or assist in making d'
+qwen3.5-9b q027: 2.89s 'If a provider concludes that an AI system referred to in Annex III is not high-r'
+qwen3.5-9b q028: 7.08s 'Yes, SMEs may comply with certain elements of the quality management system requ'
+qwen3.5-9b q030: 4.84s 'No, your employer generally cannot use AI to infer your emotions at work because'
+qwen3.5-9b q031: 3.98s 'Yes, the social scoring of people is banned under the EU AI Act. Article 5 prohi'
+qwen3.5-9b q032: 2.82s 'No, it is not allowed. Article 5 explicitly prohibits the placing on the market,'
+qwen3.5-9b q034: 1.07s 'The provided passages do not answer this question.'
+qwen3.5-9b q035: 4.61s "Yes, the use of 'real-time' remote biometric identification systems in publicly "
+qwen3.5-9b q036: 3.0s "If the police start using a 'real-time' remote biometric identification system i"
+qwen3.5-9b q039: 3.67s 'No, under the new ban, an AI system that manipulates material in a way that does'
+qwen3.5-9b q040: 5.45s 'An AI system is considered high-risk if it is intended to be used as a safety co'
+qwen3.5-9b q041: 5.25s 'An AI system referred to in Annex III is not considered high-risk if it does not'
+qwen3.5-9b q044: 1.32s 'The provided passages do not answer this question.'
+qwen3.5-9b q045: 3.89s 'No, software that only organises the logistics of a political campaign is not co'
+qwen3.5-9b q048: 3.24s 'Providers of high-risk AI systems must keep automatically generated logs for a p'
+qwen3.5-9b q049: 3.74s 'Deployers of high-risk AI systems must keep the logs automatically generated by '
+qwen3.5-9b q050: 4.88s 'A provider must report a serious incident immediately after establishing a causa'
+qwen3.5-9b q051: 3.05s "If a serious incident involving a high-risk AI system leads to someone's death, "
+qwen3.5-9b q053: 4.43s 'Yes, providers must ensure that AI systems intended to interact directly with na'
+qwen3.5-9b q055: 6.07s 'If you publish a deepfake video, you must disclose that the content has been art'
+qwen3.5-9b q059: 6.71s 'Providers of general-purpose AI models must draw up and keep up-to-date technica'
+qwen3.5-9b q062: 4.45s 'The Commission can use the following criteria to determine if a general-purpose '
+qwen3.5-9b q063: 3.06s 'A general-purpose AI model is presumed to have a high impact on the internal mar'
+qwen3.5-9b q064: 3.2s 'Yes, providers of general-purpose AI models must put in place a policy to comply'
+qwen3.5-9b q068: 1.23s 'The AI Act passages provided do not answer this question.'
+qwen3.5-9b q069: 3.0s 'The provided passages do not contain information about whether small mid-cap com'
+qwen3.5-9b q072: 4.52s 'Yes, you have the right to obtain a clear and meaningful explanation from the de'
+qwen3.5-9b q074: 3.04s 'Each EU country must have at least one AI regulatory sandbox operational by 2 Au'
+qwen3.5-9b q075: 1.35s 'The provided passages do not answer this question.'
+qwen3.5-9b q076: 2.69s 'The provided passages do not contain information about the specific start date w'
+qwen3.5-9b q077: 1.83s 'The AI Act applies in general from 2 August 2026 [5].'
+qwen3.5-9b q078: 3.71s 'Yes, high-risk AI systems placed on the market or put into service before the da'
+qwen3.5-9b q079: 4.78s "The provided passages do not define the term 'provider', but they define a 'depl"
+qwen3.5-9b q080: 5.32s 'The maximum fine for non-compliance with the prohibition of AI practices under A'
+qwen3.5-9b q082: 1.38s 'The AI Act passages provided do not answer this question.'
+qwen3.5-9b q084: 1.43s 'The AI Act passages provided do not answer this question.'
+qwen3.5-9b q087: 1.49s 'The AI Act passages provided do not answer this question.'
+qwen3.5-9b q088: 1.26s 'The AI Act passages provided do not answer this question.'
+qwen3.5-9b q089: 1.44s 'The AI Act passages provided do not answer this question.'
+gemma-4-e4b q002: 1.79s "A 'deep fake' is defined as AI-generated or manipulated image, audio, or video c"
+gemma-4-e4b q004: 1.85s "'AI literacy' means the skills, knowledge, and understanding that enable provide"
+gemma-4-e4b q006: 1.5s "A 'small mid-cap enterprise' or 'SMC' is defined as a small mid-cap enterprise a"
+gemma-4-e4b q007: 4.12s 'A "substantial modification" is a change to an AI system after it has been place'
+gemma-4-e4b q008: 2.36s "The 'AI Office' is the Commission’s function responsible for contributing to the"
+gemma-4-e4b q009: 2.32s 'This Regulation does not apply to AI systems where and in so far they are placed'
+gemma-4-e4b q011: 5.33s 'AI systems released under free and open-source licences are not exempt from the '
+gemma-4-e4b q012: 2.5s 'AI systems or AI models, including their output, specifically developed and put '
+gemma-4-e4b q013: 1.69s 'Yes, the AI Act applies to providers and deployers of AI systems that have their'
+gemma-4-e4b q015: 3.06s 'Providers and deployers of AI systems must take measures to support the developm'
+gemma-4-e4b q018: 4.26s 'Natural persons assigned human oversight must be enabled to properly understand '
+gemma-4-e4b q020: 2.31s 'The provider must keep the EU declaration of conformity at the disposal of the n'
+gemma-4-e4b q022: 2.49s 'The provider or, where applicable, the authorised representative must register t'
+gemma-4-e4b q023: 3.22s "As an employer, you must inform workers' representatives and the affected worker"
+gemma-4-e4b q024: 2.49s 'Deployers must perform an assessment of the impact on fundamental rights prior t'
+gemma-4-e4b q025: 3.68s 'For a fundamental rights impact assessment, deployers must perform an assessment'
+gemma-4-e4b q026: 3.72s 'Deployers of high-risk AI systems listed in Annex III that make decisions or ass'
+gemma-4-e4b q027: 3.27s 'A provider who considers that an AI system referred to in Annex III is not high-'
+gemma-4-e4b q028: 3.3s 'SMEs, including start-ups, may comply with certain elements of the quality manag'
+gemma-4-e4b q030: 3.31s 'The use of AI systems to infer emotions of a natural person in workplace institu'
+gemma-4-e4b q031: 2.22s 'The use of AI systems for the evaluation or classification of natural persons or'
+gemma-4-e4b q032: 1.09s 'The use of AI systems that create or expand facial recognition databases through'
+gemma-4-e4b q034: 0.82s 'The provided passages do not state when the ban on AI-generated non-consensual i'
+gemma-4-e4b q035: 3.42s "The use of 'real-time' remote biometric identification systems in publicly acces"
+gemma-4-e4b q036: 3.38s "In a duly justified situation of urgency, the use of a 'real-time' remote biomet"
+gemma-4-e4b q039: 2.6s 'An AI system that manipulates material in a way that does not increase the expos'
+gemma-4-e4b q040: 2.96s 'An AI system is considered high-risk if it is intended to be used as a safety co'
+gemma-4-e4b q041: 3.55s 'An AI system referred to in Annex III shall not be considered high-risk if it do'
+gemma-4-e4b q044: 2.32s 'An AI system referred to in Annex III shall always be considered to be high-risk'
+gemma-4-e4b q045: 2.18s 'AI systems intended to influence the outcome of an election or referendum or the'
+gemma-4-e4b q048: 1.98s 'Providers of high-risk AI systems must keep automatically generated logs for a p'
+gemma-4-e4b q049: 2.18s 'Deployers of high-risk AI systems must keep automatically generated logs under t'
+gemma-4-e4b q050: 3.34s 'In general, a report must be made immediately after the provider establishes a c'
+gemma-4-e4b q051: 1.71s 'If there is a death resulting from a high-risk AI system, the report must be pro'
+gemma-4-e4b q053: 2.07s 'Providers must ensure that AI systems designed to interact directly with natural'
+gemma-4-e4b q055: 2.59s 'If you deploy an AI system that generates or manipulates a deep fake, you must d'
+gemma-4-e4b q059: 4.07s 'Providers of general-purpose AI models must draw up and keep up-to-date the tech'
+gemma-4-e4b q062: 2.41s 'The Commission can consider the number of parameters of the model [3]. It can al'
+gemma-4-e4b q063: 1.3s 'A general-purpose AI model is presumed to have a high impact on the internal mar'
+gemma-4-e4b q064: 1.73s 'Providers of general-purpose AI models must put in place a policy to comply with'
+gemma-4-e4b q068: 1.67s 'For SMEs, including start-ups, each fine referred to in Article 99 shall be up t'
+gemma-4-e4b q069: 0.68s 'The AI Act passages provided do not answer this question.'
+gemma-4-e4b q072: 3.47s 'An affected person who is subject to a decision made by a deployer based on the '
+gemma-4-e4b q074: 1.6s 'Member States must ensure that their competent authorities establish at least on'
+gemma-4-e4b q075: 2.25s 'The passages state that for high-risk AI systems listed in point 1 of Annex III,'
+gemma-4-e4b q076: 2.45s 'For AI systems classified as high-risk AI systems related to products covered by'
+gemma-4-e4b q077: 2.32s 'The Regulation shall apply from 2 August 2026 [5]. However, certain parts apply '
+gemma-4-e4b q078: 2.25s 'Operators of high-risk AI systems that were placed on the market or put into ser'
+gemma-4-e4b q079: 1.69s "A 'deployer' is a natural or legal person, public authority, agency or other bod"
+gemma-4-e4b q080: 3.6s 'For non-compliance with the prohibition of AI practices referred to in Article 5'
+gemma-4-e4b q082: 0.76s 'The AI Act passages provided do not answer this question.'
+gemma-4-e4b q084: 0.79s 'The AI Act passages provided do not answer this question.'
+gemma-4-e4b q087: 0.86s 'The AI Act passages provided do not answer this question.'
+gemma-4-e4b q088: 0.69s 'The AI Act passages provided do not answer this question.'
+gemma-4-e4b q089: 0.79s 'The AI Act passages provided do not answer this question.'
+judged gemma-4-e2b q002: correct
+judged gemma-4-e2b q004: correct
+judged gemma-4-e2b q006: correct
+judged gemma-4-e2b q007: correct
+judged gemma-4-e2b q008: correct
+judged gemma-4-e2b q009: correct
+judged gemma-4-e2b q011: incorrect
+judged gemma-4-e2b q012: incorrect
+judged gemma-4-e2b q013: correct
+judged gemma-4-e2b q015: correct
+judged gemma-4-e2b q018: correct
+judged gemma-4-e2b q020: correct
+judged gemma-4-e2b q022: correct
+judged gemma-4-e2b q023: correct
+judged gemma-4-e2b q024: correct
+judged gemma-4-e2b q025: partial
+judged gemma-4-e2b q026: correct
+judged gemma-4-e2b q027: correct
+judged gemma-4-e2b q028: correct
+judged gemma-4-e2b q030: partial
+judged gemma-4-e2b q031: correct
+judged gemma-4-e2b q032: correct
+judged gemma-4-e2b q034: incorrect
+judged gemma-4-e2b q035: partial
+judged gemma-4-e2b q036: partial
+judged gemma-4-e2b q039: correct
+judged gemma-4-e2b q040: correct
+judged gemma-4-e2b q041: correct
+judged gemma-4-e2b q044: correct
+judged gemma-4-e2b q045: correct
+judged gemma-4-e2b q048: correct
+judged gemma-4-e2b q049: correct
+judged gemma-4-e2b q050: correct
+judged gemma-4-e2b q051: correct
+judged gemma-4-e2b q053: partial
+judged gemma-4-e2b q055: correct
+judged gemma-4-e2b q059: correct
+judged gemma-4-e2b q062: partial
+judged gemma-4-e2b q063: correct
+judged gemma-4-e2b q064: correct
+judged gemma-4-e2b q068: correct
+judged gemma-4-e2b q069: correct
+judged gemma-4-e2b q072: correct
+judged gemma-4-e2b q074: partial
+judged gemma-4-e2b q075: incorrect
+judged gemma-4-e2b q076: incorrect
+judged gemma-4-e2b q077: partial
+judged gemma-4-e2b q078: partial
+judged gemma-4-e2b q079: incorrect
+judged gemma-4-e2b q080: incorrect
+judged gemma-4-e2b q082: correct
+judged gemma-4-e2b q084: incorrect
+judged gemma-4-e2b q087: correct
+judged gemma-4-e2b q088: correct
+judged gemma-4-e2b q089: correct
+judged gemma-4-e4b q002: correct
+judged gemma-4-e4b q004: correct
+judged gemma-4-e4b q006: correct
+judged gemma-4-e4b q007: correct
+judged gemma-4-e4b q008: correct
+judged gemma-4-e4b q009: correct
+judged gemma-4-e4b q011: incorrect
+judged gemma-4-e4b q012: correct
+judged gemma-4-e4b q013: correct
+judged gemma-4-e4b q015: correct
+judged gemma-4-e4b q018: correct
+judged gemma-4-e4b q020: correct
+judged gemma-4-e4b q022: correct
+judged gemma-4-e4b q023: correct
+judged gemma-4-e4b q024: correct
+judged gemma-4-e4b q025: partial
+judged gemma-4-e4b q026: correct
+judged gemma-4-e4b q027: correct
+judged gemma-4-e4b q028: correct
+judged gemma-4-e4b q030: correct
+judged gemma-4-e4b q031: correct
+judged gemma-4-e4b q032: correct
+judged gemma-4-e4b q034: correct
+judged gemma-4-e4b q035: incorrect
+judged gemma-4-e4b q036: correct
+judged gemma-4-e4b q039: correct
+judged gemma-4-e4b q040: correct
+judged gemma-4-e4b q041: partial
+judged gemma-4-e4b q044: correct
+judged gemma-4-e4b q045: correct
+judged gemma-4-e4b q048: correct
+judged gemma-4-e4b q049: correct
+judged gemma-4-e4b q050: correct
+judged gemma-4-e4b q051: correct
+judged gemma-4-e4b q053: partial
+judged gemma-4-e4b q055: correct
+judged gemma-4-e4b q059: correct
+judged gemma-4-e4b q062: partial
+judged gemma-4-e4b q063: correct
+judged gemma-4-e4b q064: correct
+judged gemma-4-e4b q068: correct
+judged gemma-4-e4b q069: correct
+judged gemma-4-e4b q072: correct
+judged gemma-4-e4b q074: correct
+judged gemma-4-e4b q075: incorrect
+judged gemma-4-e4b q076: incorrect
+judged gemma-4-e4b q077: partial
+judged gemma-4-e4b q078: correct
+judged gemma-4-e4b q079: partial
+judged gemma-4-e4b q080: incorrect
+judged gemma-4-e4b q082: correct
+judged gemma-4-e4b q084: correct
+judged gemma-4-e4b q087: correct
+judged gemma-4-e4b q088: correct
+judged gemma-4-e4b q089: correct
+judged qwen3.5-0.8b q002: correct
+judged qwen3.5-0.8b q004: correct
+judged qwen3.5-0.8b q006: correct
+judged qwen3.5-0.8b q007: correct
+judged qwen3.5-0.8b q008: correct
+judged qwen3.5-0.8b q009: correct
+judged qwen3.5-0.8b q011: correct
+judged qwen3.5-0.8b q012: correct
+judged qwen3.5-0.8b q013: incorrect
+judged qwen3.5-0.8b q015: correct
+judged qwen3.5-0.8b q018: partial
+judged qwen3.5-0.8b q020: correct
+judged qwen3.5-0.8b q022: incorrect
+judged qwen3.5-0.8b q023: correct
+judged qwen3.5-0.8b q024: incorrect
+judged qwen3.5-0.8b q025: partial
+judged qwen3.5-0.8b q026: correct
+judged qwen3.5-0.8b q027: partial
+judged qwen3.5-0.8b q028: correct
+judged qwen3.5-0.8b q030: correct
+judged qwen3.5-0.8b q031: incorrect
+judged qwen3.5-0.8b q032: correct
+judged qwen3.5-0.8b q034: incorrect
+judged qwen3.5-0.8b q035: partial
+judged qwen3.5-0.8b q036: incorrect
+judged qwen3.5-0.8b q039: incorrect
+judged qwen3.5-0.8b q040: incorrect
+judged qwen3.5-0.8b q041: incorrect
+judged qwen3.5-0.8b q044: correct
+judged qwen3.5-0.8b q045: correct
+judged qwen3.5-0.8b q048: correct
+judged qwen3.5-0.8b q049: correct
+judged qwen3.5-0.8b q050: incorrect
+judged qwen3.5-0.8b q051: partial
+judged qwen3.5-0.8b q053: partial
+judged qwen3.5-0.8b q055: correct
+judged qwen3.5-0.8b q059: correct
+judged qwen3.5-0.8b q062: partial
+judged qwen3.5-0.8b q063: incorrect
+judged qwen3.5-0.8b q064: correct
+judged qwen3.5-0.8b q068: incorrect
+judged qwen3.5-0.8b q069: correct
+judged qwen3.5-0.8b q072: correct
+judged qwen3.5-0.8b q074: partial
+judged qwen3.5-0.8b q075: incorrect
+judged qwen3.5-0.8b q076: incorrect
+judged qwen3.5-0.8b q077: incorrect
+judged qwen3.5-0.8b q078: incorrect
+judged qwen3.5-0.8b q079: incorrect
+judged qwen3.5-0.8b q080: incorrect
+judged qwen3.5-0.8b q082: incorrect
+judged qwen3.5-0.8b q084: correct
+judged qwen3.5-0.8b q087: correct
+judged qwen3.5-0.8b q088: correct
+judged qwen3.5-0.8b q089: incorrect
+judged qwen3.5-2b q002: partial
+judged qwen3.5-2b q004: correct
+judged qwen3.5-2b q006: partial
+judged qwen3.5-2b q007: partial
+judged qwen3.5-2b q008: correct
+judged qwen3.5-2b q009: correct
+judged qwen3.5-2b q011: correct
+judged qwen3.5-2b q012: correct
+judged qwen3.5-2b q013: correct
+judged qwen3.5-2b q015: correct
+judged qwen3.5-2b q018: partial
+judged qwen3.5-2b q020: correct
+judged qwen3.5-2b q022: incorrect
+judged qwen3.5-2b q023: correct
+judged qwen3.5-2b q024: partial
+judged qwen3.5-2b q025: partial
+judged qwen3.5-2b q026: correct
+judged qwen3.5-2b q027: correct
+judged qwen3.5-2b q028: incorrect
+judged qwen3.5-2b q030: partial
+judged qwen3.5-2b q031: correct
+judged qwen3.5-2b q032: correct
+judged qwen3.5-2b q034: incorrect
+judged qwen3.5-2b q035: partial
+judged qwen3.5-2b q036: partial
+judged qwen3.5-2b q039: incorrect
+judged qwen3.5-2b q040: correct
+judged qwen3.5-2b q041: incorrect
+judged qwen3.5-2b q044: incorrect
+judged qwen3.5-2b q045: partial
+judged qwen3.5-2b q048: correct
+judged qwen3.5-2b q049: correct
+judged qwen3.5-2b q050: correct
+judged qwen3.5-2b q051: partial
+judged qwen3.5-2b q053: partial
+judged qwen3.5-2b q055: correct
+judged qwen3.5-2b q059: correct
+judged qwen3.5-2b q062: partial
+judged qwen3.5-2b q063: correct
+judged qwen3.5-2b q064: correct
+judged qwen3.5-2b q068: correct
+judged qwen3.5-2b q069: incorrect
+judged qwen3.5-2b q072: correct
+judged qwen3.5-2b q074: correct
+judged qwen3.5-2b q075: incorrect
+judged qwen3.5-2b q076: incorrect
+judged qwen3.5-2b q077: partial
+judged qwen3.5-2b q078: correct
+judged qwen3.5-2b q079: incorrect
+judged qwen3.5-2b q080: incorrect
+judged qwen3.5-2b q082: correct
+judged qwen3.5-2b q084: correct
+judged qwen3.5-2b q087: correct
+judged qwen3.5-2b q088: correct
+judged qwen3.5-2b q089: correct
+judged qwen3.5-4b q002: correct
+judged qwen3.5-4b q004: correct
+judged qwen3.5-4b q006: correct
+judged qwen3.5-4b q007: correct
+judged qwen3.5-4b q008: correct
+judged qwen3.5-4b q009: correct
+judged qwen3.5-4b q011: correct
+judged qwen3.5-4b q012: correct
+judged qwen3.5-4b q013: correct
+judged qwen3.5-4b q015: correct
+judged qwen3.5-4b q018: correct
+judged qwen3.5-4b q020: correct
+judged qwen3.5-4b q022: correct
+judged qwen3.5-4b q023: correct
+judged qwen3.5-4b q024: correct
+judged qwen3.5-4b q025: partial
+judged qwen3.5-4b q026: partial
+judged qwen3.5-4b q027: correct
+judged qwen3.5-4b q028: correct
+judged qwen3.5-4b q030: incorrect
+judged qwen3.5-4b q031: correct
+judged qwen3.5-4b q032: correct
+judged qwen3.5-4b q034: correct
+judged qwen3.5-4b q035: correct
+judged qwen3.5-4b q036: correct
+judged qwen3.5-4b q039: correct
+judged qwen3.5-4b q040: correct
+judged qwen3.5-4b q041: correct
+judged qwen3.5-4b q044: incorrect
+judged qwen3.5-4b q045: correct
+judged qwen3.5-4b q048: correct
+judged qwen3.5-4b q049: correct
+judged qwen3.5-4b q050: correct
+judged qwen3.5-4b q051: correct
+judged qwen3.5-4b q053: correct
+judged qwen3.5-4b q055: correct
+judged qwen3.5-4b q059: correct
+judged qwen3.5-4b q062: partial
+judged qwen3.5-4b q063: correct
+judged qwen3.5-4b q064: correct
+judged qwen3.5-4b q068: correct
+judged qwen3.5-4b q069: correct
+judged qwen3.5-4b q072: correct
+judged qwen3.5-4b q074: correct
+judged qwen3.5-4b q075: correct
+judged qwen3.5-4b q076: correct
+judged qwen3.5-4b q077: partial
+judged qwen3.5-4b q078: correct
+judged qwen3.5-4b q079: partial
+judged qwen3.5-4b q080: correct
+judged qwen3.5-4b q082: correct
+judged qwen3.5-4b q084: correct
+judged qwen3.5-4b q087: correct
+judged qwen3.5-4b q088: correct
+judged qwen3.5-4b q089: correct
+judged qwen3.5-9b q002: correct
+judged qwen3.5-9b q004: correct
+judged qwen3.5-9b q006: correct
+judged qwen3.5-9b q007: correct
+judged qwen3.5-9b q008: correct
+judged qwen3.5-9b q009: correct
+judged qwen3.5-9b q011: correct
+judged qwen3.5-9b q012: correct
+judged qwen3.5-9b q013: correct
+judged qwen3.5-9b q015: correct
+judged qwen3.5-9b q018: correct
+judged qwen3.5-9b q020: correct
+judged qwen3.5-9b q022: correct
+judged qwen3.5-9b q023: correct
+judged qwen3.5-9b q024: correct
+judged qwen3.5-9b q025: partial
+judged qwen3.5-9b q026: correct
+judged qwen3.5-9b q027: correct
+judged qwen3.5-9b q028: correct
+judged qwen3.5-9b q030: correct
+judged qwen3.5-9b q031: correct
+judged qwen3.5-9b q032: correct
+judged qwen3.5-9b q034: correct
+judged qwen3.5-9b q035: partial
+judged qwen3.5-9b q036: partial
+judged qwen3.5-9b q039: correct
+judged qwen3.5-9b q040: correct
+judged qwen3.5-9b q041: correct
+judged qwen3.5-9b q044: correct
+judged qwen3.5-9b q045: correct
+judged qwen3.5-9b q048: correct
+judged qwen3.5-9b q049: correct
+judged qwen3.5-9b q050: correct
+judged qwen3.5-9b q051: correct
+judged qwen3.5-9b q053: correct
+judged qwen3.5-9b q055: partial
+judged qwen3.5-9b q059: correct
+judged qwen3.5-9b q062: partial
+judged qwen3.5-9b q063: correct
+judged qwen3.5-9b q064: correct
+judged qwen3.5-9b q068: incorrect
+judged qwen3.5-9b q069: correct
+judged qwen3.5-9b q072: correct
+judged qwen3.5-9b q074: correct
+judged qwen3.5-9b q075: correct
+judged qwen3.5-9b q076: correct
+judged qwen3.5-9b q077: partial
+judged qwen3.5-9b q078: correct
+judged qwen3.5-9b q079: correct
+judged qwen3.5-9b q080: incorrect
+judged qwen3.5-9b q082: correct
+judged qwen3.5-9b q084: correct
+judged qwen3.5-9b q087: correct
+judged qwen3.5-9b q088: correct
+judged qwen3.5-9b q089: correct
+gemma-4-e2b {'questions': 55, 'judged': 55, 'score': 0.773, 'correct': 0.691, 'partial': 0.164, 'grounded': 0.964, 'declines_unanswerable': 0.4, 'declines_answerable': 0.0, 'answers_with_citation': 0.8, 'invalid_citations': 0.127, 'cites_expected_passage': 0.72, 'truncated': 0.0, 'median_completion_tokens': 91}
+gemma-4-e4b {'questions': 55, 'judged': 55, 'score': 0.855, 'correct': 0.8, 'partial': 0.109, 'grounded': 1.0, 'declines_unanswerable': 1.0, 'declines_answerable': 0.06, 'answers_with_citation': 0.979, 'invalid_citations': 0.0, 'cites_expected_passage': 0.872, 'truncated': 0.0, 'median_completion_tokens': 100}
+qwen3.5-0.8b {'questions': 55, 'judged': 55, 'score': 0.564, 'correct': 0.491, 'partial': 0.145, 'grounded': 0.8, 'declines_unanswerable': 0.4, 'declines_answerable': 0.1, 'answers_with_citation': 0.689, 'invalid_citations': 0.0, 'cites_expected_passage': 0.6, 'truncated': 0.182, 'median_completion_tokens': 103}
+qwen3.5-2b {'questions': 55, 'judged': 55, 'score': 0.673, 'correct': 0.545, 'partial': 0.255, 'grounded': 0.873, 'declines_unanswerable': 0.2, 'declines_answerable': 0.0, 'answers_with_citation': 0.98, 'invalid_citations': 0.0, 'cites_expected_passage': 0.86, 'truncated': 0.0, 'median_completion_tokens': 87}
+qwen3.5-4b {'questions': 55, 'judged': 55, 'score': 0.918, 'correct': 0.873, 'partial': 0.091, 'grounded': 1.0, 'declines_unanswerable': 0.6, 'declines_answerable': 0.04, 'answers_with_citation': 0.896, 'invalid_citations': 0.0, 'cites_expected_passage': 0.854, 'truncated': 0.0, 'median_completion_tokens': 114}
+qwen3.5-9b {'questions': 55, 'judged': 55, 'score': 0.909, 'correct': 0.855, 'partial': 0.109, 'grounded': 1.0, 'declines_unanswerable': 1.0, 'declines_answerable': 0.02, 'answers_with_citation': 0.939, 'invalid_citations': 0.0, 'cites_expected_passage': 0.878, 'truncated': 0.0, 'median_completion_tokens': 95}
+selection: {'selected': 'gemma-4-e2b', 'eligible': ['qwen3.5-0.8b', 'qwen3.5-2b', 'gemma-4-e2b'], 'rule': {'metric': 'score', 'margin': 0.05, 'mac_seconds': 150}}
+done: results in /kaggle/working/results
