@@ -8,7 +8,7 @@ from ai_act_qa.chunk import build, windows, words
 from ai_act_qa.config import load_config, project_path
 from ai_act_qa.eval_set import SPLIT, Question, check, load_questions, make_split
 from ai_act_qa.parse import Unit, parse
-from ai_act_qa.retrieval_eval import overlaps, score_question, select
+from ai_act_qa.retrieval_eval import gate, overlaps, score_question, select
 from ai_act_qa.search import Hit
 
 
@@ -81,3 +81,9 @@ def test_selection_rule_keeps_baseline_within_margin():
     assert select(exact, rule) == "as_set"  # 0.90 - 0.86 is exactly the margin, not more
     results["other"]["recall@5"] = 0.85
     assert select(results, rule) == "other"
+
+
+def test_gate_lists_metrics_below_their_minimum():
+    result = {"recall@5": 0.82, "mrr": 0.70}
+    assert gate(result, {"recall@5": 0.80, "mrr": 0.72}) == ["mrr = 0.7 is below 0.72"]
+    assert gate(result, {"recall@5": 0.80}) == []

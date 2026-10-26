@@ -1,4 +1,4 @@
-.PHONY: help setup test data questions split retrieval retrieval-experiments retrieval-test review review-apply
+.PHONY: help setup test data questions split retrieval retrieval-experiments retrieval-test review review-apply retrieval-gate
 
 help:  ## List the targets
 	@grep -E '^[a-z-]+:.*## ' $(MAKEFILE_LIST) | awk -F':.*## ' '{printf "  %-22s %s\n", $$1, $$2}'
@@ -36,3 +36,6 @@ review:  ## Build the question review page (eval/review.html) and open it
 
 review-apply:  ## Record downloaded verdicts: make review-apply FILE=~/Downloads/review.json
 	uv run python -m ai_act_qa.review apply "$(FILE)"
+
+retrieval-gate:  ## CI: fail if retrieval on the development questions drops below the gate
+	uv run python -m ai_act_qa.retrieval_eval --gate

@@ -38,6 +38,10 @@ retrieval:
   rerank: true
   reranker: Xenova/ms-marco-MiniLM-L-6-v2
   k: 5                  # passages given to the model
+  # CI regression gate on the development questions (make retrieval-gate): set 2026-10-26
+  # from the reviewed development run (recall@5 0.86, MRR 0.81) minus about three questions,
+  # so that a change that loses several answers fails, while CPU-to-CPU float noise does not.
+  ci_gate: {recall@5: 0.80, mrr: 0.72}
 
 # Evaluation, fixed before any question was scored (2026-10-26). Questions are split once into
 # development (all design choices) and test (used once, at the end), at random within each

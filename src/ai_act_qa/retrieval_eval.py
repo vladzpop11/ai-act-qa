@@ -13,6 +13,8 @@ python -m ai_act_qa.retrieval_eval [--experiments] [--test]
   --experiments: every setting in `retrieval_experiments` on the development questions
     -> reports/retrieval_experiments.json, with the setting the pre-registered rule selects.
   --test: the configured retrieval on the test questions, once, at the end of the project.
+  --gate: the configured retrieval on the development questions, failing (exit 1) below the
+    thresholds in `retrieval.ci_gate`: the regression test CI runs on every push.
 """
 
 import copy
@@ -101,6 +103,12 @@ def select(results: dict, rule: dict) -> str:
     return baseline
 
 
+def gate(result: dict, thresholds: dict) -> list[str]:
+    """-> the thresholds the result falls below ({"recall@5": 0.8} means recall@5 >= 0.8)."""
+    return [f"{metric} = {result[metric]} is below {minimum}"
+            for metric, minimum in thresholds.items() if result[metric] < minimum]  # fmt: skip
+
+
 def main(argv: list[str]) -> None:
     cfg = load_config()
     split = "test" if "--test" in argv else "dev"
@@ -119,6 +127,12 @@ def main(argv: list[str]) -> None:
         print(f"selected by the rule: {chosen}")
         return
     result = evaluate(cfg, questions)
+    if "--gate" in argv:
+        failed = gate(result, cfg["retrieval"]["ci_gate"])
+        print("\n".join(failed) or f"retrieval gate passed: {cfg['retrieval']['ci_gate']}")
+        if failed:
+            sys.exit(1)
+        return
     name = "reports/retrieval_test.json" if split == "test" else "reports/retrieval.json"
     write_json(name, {"split": split, **result, "provenance": provenance()})
     print({k: v for k, v in result.items() if k != "per_question"})

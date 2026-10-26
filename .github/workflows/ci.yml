@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      UV_LOCKED: "1"  # every uv command must match uv.lock exactly
+    steps:
+      # Actions are pinned by commit SHA.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+
+      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884  # v10.3.0
+        with:
+          version: "0.13.1"
+          enable-cache: true
+
+      - run: uv sync
+
+      - name: Audit installed dependencies for known vulnerabilities
+        run: |
+          uv pip freeze --exclude-editable > "$RUNNER_TEMP/requirements.txt"
+          uvx pip-audit==2.10.1 --disable-pip --no-deps -r "$RUNNER_TEMP/requirements.txt"
+
+      - name: Check the pinned document and parse it
+        run: |
+          uv run python -m ai_act_qa.ingest --check
+          uv run python -m ai_act_qa.parse
+
+      - run: make test
+
+      - name: Check the evaluation questions
+        run: make questions
+
+      # The ONNX models (embedding, BM25, reranker) and the chunk embeddings, which only
+      # change with the document, the parser, the chunking or the models.
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
+        with:
+          path: |
+            .cache/fastembed
+            data/cache
+          key: retrieval-${{ hashFiles('configs/config.yaml', 'src/ai_act_qa/parse.py', 'src/ai_act_qa/chunk.py', 'data/raw/*') }}
+          restore-keys: retrieval-
+
+      - name: Retrieval regression gate (development questions)
+        run: make retrieval-gate
