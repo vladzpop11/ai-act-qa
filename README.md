@@ -8,7 +8,7 @@ the testing around it: retrieval and answers are measured on a reviewed question
 design choice is made on development questions by a rule written before the run, and the test
 questions are used once.
 
-**Status: stage 2 of 3 complete** (data, retrieval, answering models and judge agreement validation). Stage 3 adds the product QA layer (API, adversarial tests, flakiness, load and accessibility tests).
+**Status: all 3 stages complete** (stage 1: data and retrieval; stage 2: answering models and judge validation; stage 3: product QA layer with API, adversarial, flakiness, load testing and held-out test evaluation).
 
 **Not legal advice.** The consolidated text is, in its own words, "a documentation tool" with
 no legal effect; the authentic versions are those published in the Official Journal.
@@ -136,14 +136,40 @@ Because the judge (`gemma-4-31b`) shares a model family with `gemma-4-e2b`, its 
 - **No family bias**: the judge was slightly stricter than the person on both families (Gemma $-0.048$, Qwen $-0.037$), dispelling the concern of pro-Gemma bias.
 - **Selection confirmed by human grades**: on the questions where the judge graded `qwen3.5-2b` and `gemma-4-e2b` differently, the person scored `gemma-4-e2b` at 0.722 vs `qwen3.5-2b` at 0.528 (+0.194), matching the judge's margin (+0.195).
 
+## The held-out test evaluation
+
+Retrieval scored once at the end of the project on the **31 answerable test questions** ([reports/retrieval_test.json](reports/retrieval_test.json)):
+
+| Split | Questions | recall@5 | hit@5 | MRR | words@5 | s/query |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Development** (used for choices) | 50 | **0.86** | 0.84 | 0.81 | 564 | 3.3 |
+| **Test** (held out, used once) | 31 | **0.84** | 0.84 | 0.76 | 551 | 4.0 |
+
+The test performance matches the development baseline within 2 percentage points (less than a single question's variance, which is 3.2 points on 31 questions), confirming that the retrieval design did not overfit.
+
+## Stage 3: Product QA layer
+
+The serving API ([api.py](src/ai_act_qa/api.py), [service.py](src/ai_act_qa/service.py)) exposes the pipeline as a FastAPI service:
+- `POST /ask`: takes a question and optional `k`, returns the answer, citation details (statutory article labels, chapters and text), retrieved passages with scores, latency breakdown, and provenance.
+- `GET /passages`: allows previewing retrieved passages without invoking the generation model.
+- `GET /healthz`, `GET /ready`, `GET /info`: container health and system metadata endpoints.
+
+Tested like a product with 40 unit and integration tests (`make qa`):
+- **Adversarial & robustness** ([test_adversarial.py](tests/test_adversarial.py)): prompt injection isolation (system prompt rules remain unmutated), delimiter breaking defense, date traps (asserting 2026 Omnibus dates over 2024 dates), XSS/SQL/CRLF injection payloads, and 2000-character input bounds.
+- **Flakiness & determinism** ([test_flakiness.py](tests/test_flakiness.py)): bit-for-bit repeatability across repeated greedy runs ($T=0$), citation parsing stability.
+- **Load & concurrency** ([test_load.py](tests/test_load.py)): 20 concurrent queries executed across worker pools verifying thread safety, state isolation, and connection stability.
+
 ## How to run
 
 ```bash
 make setup                   # uv sync --locked
 make data                    # check the pinned document (download if missing) and parse it
-make test                    # ruff and pytest
+make test                    # ruff and pytest (all 40 tests)
+make qa                      # product QA suite (API, adversarial, flakiness, load)
+make api                     # start the FastAPI web service on port 8000
 make retrieval               # score the configured retrieval on the development questions
 make retrieval-experiments   # compare the settings in configs/config.yaml
+make retrieval-test          # score retrieval on the held-out test questions (reports/retrieval_test.json)
 make review                  # the question review page
 make answers-report          # metrics per model and the served model (reports/answers_dev.json)
 make labels                  # build the blind judge-labelling page (eval/judge_labels.html)

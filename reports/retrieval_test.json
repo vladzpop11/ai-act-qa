@@ -1,0 +1,485 @@
+{
+ "split": "test",
+ "questions": 31,
+ "chunks": 906,
+ "recall@5": 0.8387,
+ "hit@5": 0.8387,
+ "mrr": 0.7588,
+ "words@5": 551.4,
+ "seconds_per_query": 4.03,
+ "index_seconds": 0.8,
+ "per_question": [
+  {
+   "id": "q001",
+   "type": "definition",
+   "recall": 0.0,
+   "hit": false,
+   "rr": 0.07692307692307693,
+   "words": 446,
+   "top": [
+    "anxIII.7.a",
+    "anxIII.6.a",
+    "anxIII.6.b",
+    "anxIII.6.c",
+    "anxIII.6.e"
+   ]
+  },
+  {
+   "id": "q003",
+   "type": "definition",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "words": 424,
+   "top": [
+    "art3.49",
+    "art73.10",
+    "art73.9",
+    "art73.1",
+    "art73.2"
+   ]
+  },
+  {
+   "id": "q005",
+   "type": "definition",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "words": 530,
+   "top": [
+    "art3.63",
+    "art51",
+    "art52.2",
+    "art3.66",
+    "art52.3"
+   ]
+  },
+  {
+   "id": "q010",
+   "type": "scope",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "words": 605,
+   "top": [
+    "art2.10",
+    "art50.4",
+    "art50.3",
+    "art50.1",
+    "art26.7"
+   ]
+  },
+  {
+   "id": "q014",
+   "type": "scope",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "words": 553,
+   "top": [
+    "art2.8",
+    "art9.8",
+    "art60.2",
+    "art6.4",
+    "art75.1e"
+   ]
+  },
+  {
+   "id": "q016",
+   "type": "obligation",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "words": 515,
+   "top": [
+    "art10.2",
+    "art10.3",
+    "art10.1",
+    "art10.6",
+    "art10.4"
+   ]
+  },
+  {
+   "id": "q017",
+   "type": "obligation",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 0.3333333333333333,
+   "words": 730,
+   "top": [
+    "art19",
+    "art26.6",
+    "art12",
+    "art16.e",
+    "art21"
+   ]
+  },
+  {
+   "id": "q019",
+   "type": "number",
+   "recall": 0.0,
+   "hit": false,
+   "rr": 0.1111111111111111,
+   "words": 770,
+   "top": [
+    "art26.10#w0",
+    "art26.10#w1",
+    "art26.10#w2",
+    "art5.2.a",
+    "art26.10#w3"
+   ]
+  },
+  {
+   "id": "q021",
+   "type": "obligation",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 0.3333333333333333,
+   "words": 439,
+   "top": [
+    "art49.2",
+    "art49.1",
+    "art22.1",
+    "art24.1",
+    "art23.1"
+   ]
+  },
+  {
+   "id": "q029",
+   "type": "obligation",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 0.5,
+   "words": 696,
+   "top": [
+    "art4a.2",
+    "art4a.1.a",
+    "art4a.1.e",
+    "art4a.1.c",
+    "art4a.1.b"
+   ]
+  },
+  {
+   "id": "q033",
+   "type": "amended",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "words": 362,
+   "top": [
+    "art5.1.ba",
+    "art5.1b",
+    "art5.1.g",
+    "art5.1.e",
+    "art5.3#w2"
+   ]
+  },
+  {
+   "id": "q037",
+   "type": "prohibition",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "words": 571,
+   "top": [
+    "art5.1.d",
+    "anxIII.6.d",
+    "anxIII.6.e",
+    "art3.52",
+    "art26.10#w0"
+   ]
+  },
+  {
+   "id": "q038",
+   "type": "prohibition",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "words": 556,
+   "top": [
+    "art5.1.g",
+    "anxIII.1",
+    "art5.1.h",
+    "art5.2.a",
+    "art3.39"
+   ]
+  },
+  {
+   "id": "q042",
+   "type": "classification",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "words": 428,
+   "top": [
+    "anxIII.4",
+    "art14.1",
+    "art74.12",
+    "art6.1a",
+    "anxIII.6.b"
+   ]
+  },
+  {
+   "id": "q043",
+   "type": "classification",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "words": 816,
+   "top": [
+    "anxIII.5",
+    "art6.3",
+    "art15.5",
+    "anxIII.1",
+    "anxIII.3"
+   ]
+  },
+  {
+   "id": "q046",
+   "type": "amended",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "words": 423,
+   "top": [
+    "art6.1a",
+    "art6.1b",
+    "anxIII.2",
+    "art6.1",
+    "art3.14"
+   ]
+  },
+  {
+   "id": "q047",
+   "type": "classification",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "words": 406,
+   "top": [
+    "anxIII.2",
+    "art6.1a",
+    "art6.1b",
+    "art15.4",
+    "anxIII.7.a"
+   ]
+  },
+  {
+   "id": "q052",
+   "type": "number",
+   "recall": 0.0,
+   "hit": false,
+   "rr": 0.08333333333333333,
+   "words": 529,
+   "top": [
+    "art73.4",
+    "art60.7",
+    "art73.10",
+    "art46.2",
+    "art73.2"
+   ]
+  },
+  {
+   "id": "q054",
+   "type": "obligation",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "words": 659,
+   "top": [
+    "art50.2",
+    "art111.4",
+    "art50.4",
+    "art50.7",
+    "art48.2"
+   ]
+  },
+  {
+   "id": "q056",
+   "type": "obligation",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 0.5,
+   "words": 563,
+   "top": [
+    "art50.1",
+    "art50.5",
+    "art50.4",
+    "art5.1.ba",
+    "art91.2"
+   ]
+  },
+  {
+   "id": "q057",
+   "type": "date",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 0.5,
+   "words": 556,
+   "top": [
+    "art111.3",
+    "art111.4",
+    "art111.2",
+    "art111.1",
+    "art23.1"
+   ]
+  },
+  {
+   "id": "q058",
+   "type": "number",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "words": 584,
+   "top": [
+    "art51",
+    "anxXIII.c",
+    "anxXIII.f",
+    "anxXIII.e",
+    "anxXIII.d"
+   ]
+  },
+  {
+   "id": "q060",
+   "type": "scope",
+   "recall": 0.0,
+   "hit": false,
+   "rr": 0.08333333333333333,
+   "words": 519,
+   "top": [
+    "art53.1.a",
+    "anxXI.s2.2#t0",
+    "anxXI.s2.1",
+    "anxXI.s2.2.e",
+    "anxXI.s2.2.a"
+   ]
+  },
+  {
+   "id": "q061",
+   "type": "obligation",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "words": 560,
+   "top": [
+    "art55.1",
+    "art55.3",
+    "art53.2",
+    "art55.2",
+    "anxXIII.e"
+   ]
+  },
+  {
+   "id": "q065",
+   "type": "date",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "words": 555,
+   "top": [
+    "art111.3",
+    "art111.4",
+    "art111.1",
+    "art111.2",
+    "art56.9"
+   ]
+  },
+  {
+   "id": "q066",
+   "type": "number",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "words": 412,
+   "top": [
+    "art99.3",
+    "art100.2",
+    "art5.1.h",
+    "art5.1.f",
+    "art100.3"
+   ]
+  },
+  {
+   "id": "q067",
+   "type": "number",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "words": 651,
+   "top": [
+    "art99.5",
+    "art101.1",
+    "art75a.3",
+    "art91.4",
+    "art99.7.h"
+   ]
+  },
+  {
+   "id": "q070",
+   "type": "obligation",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "words": 394,
+   "top": [
+    "art99.7.e",
+    "art99.7.f",
+    "art99.7.b",
+    "art99.7.d",
+    "art99.7.c"
+   ]
+  },
+  {
+   "id": "q071",
+   "type": "number",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "words": 377,
+   "top": [
+    "art101.1",
+    "art101.5",
+    "art101.2",
+    "art101.3",
+    "art101.6"
+   ]
+  },
+  {
+   "id": "q073",
+   "type": "rights",
+   "recall": 0.0,
+   "hit": false,
+   "rr": 0.0,
+   "words": 704,
+   "top": [
+    "art75a.2",
+    "art89",
+    "art91.5",
+    "art75a.4#t0.w1",
+    "art75c.9"
+   ]
+  },
+  {
+   "id": "q081",
+   "type": "multi",
+   "recall": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "words": 761,
+   "top": [
+    "art26.6",
+    "art19",
+    "art23.5",
+    "art18",
+    "art22.3.b"
+   ]
+  }
+ ],
+ "provenance": {
+  "created": "2026-10-27T18:09:55Z",
+  "commit": "a1973d9",
+  "dirty": true,
+  "document_sha256": "5e7719f77e8a606b257dc25958ee3222c4383300a5a34270a5b850a2ce8b8715",
+  "questions_sha256": "cefdf76605c86ed82435ff10a53b9e5d7a34b005d777c716228ddad004646ed8"
+ }
+}

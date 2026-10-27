@@ -1,4 +1,4 @@
-.PHONY: help setup test data questions split retrieval retrieval-experiments retrieval-test review review-apply retrieval-gate mac-latency answers-report labels labels-apply judge-agreement
+.PHONY: help setup test data questions split retrieval retrieval-experiments retrieval-test review review-apply retrieval-gate mac-latency answers-report labels labels-apply judge-agreement api qa
 
 help:  ## List the targets
 	@grep -E '^[a-z-]+:.*## ' $(MAKEFILE_LIST) | awk -F':.*## ' '{printf "  %-22s %s\n", $$1, $$2}'
@@ -56,3 +56,9 @@ labels-apply:  ## Record downloaded labels: make labels-apply FILE=~/Downloads/j
 
 judge-agreement:  ## Agreement between the labels and the judge -> reports/judge_agreement.json
 	uv run python -m ai_act_qa.judge_agreement report
+
+api:  ## Start the FastAPI web service: make api [PORT=8000] [LLM_URL=http://127.0.0.1:8090]
+	uv run python -m ai_act_qa.api $${PORT:+--port $$PORT} $${LLM_URL:+--llm-url $$LLM_URL}
+
+qa:  ## Product QA suite: API, adversarial, flakiness and load tests
+	uv run pytest tests/test_api.py tests/test_adversarial.py tests/test_flakiness.py tests/test_load.py

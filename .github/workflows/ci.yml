@@ -44,6 +44,9 @@ jobs:
       - name: Check the evaluation questions
         run: make questions
 
+      - name: Check judge agreement report
+        run: make judge-agreement
+
       # The ONNX models (embedding, BM25, reranker) and the chunk embeddings, which only
       # change with the document, the parser, the chunking or the models.
       - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
