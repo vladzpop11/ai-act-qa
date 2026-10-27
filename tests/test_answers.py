@@ -1,8 +1,11 @@
 """Reading answers, the deterministic answer metrics and the served-model rule (no model)."""
 
+import json
+
 from ai_act_qa.answer import load_prompt, messages, read_answer
 from ai_act_qa.answer_eval import select, summarise
-from ai_act_qa.config import load_config
+from ai_act_qa.artifacts import file_sha256
+from ai_act_qa.config import load_config, project_path
 from ai_act_qa.eval_set import Question
 from ai_act_qa.judge_agreement import compare, kappa
 from ai_act_qa.parse import Unit
@@ -100,3 +103,14 @@ def test_kappa_and_agreement_between_person_and_judge():
              {"person": "incorrect", "judge": "correct", "judge_rubric": "incorrect"}]  # fmt: skip
     c = compare(items)
     assert c["agreement"] == 0.5 and c["agreement_rubric"] == 1.0 and c["answers"] == 2
+
+
+def test_judge_labels_match_sample_when_present():
+    labels_file = project_path("eval/judge_labels.json")
+    if not labels_file.exists():
+        return
+    sample_file = project_path("eval/judge_sample.json")
+    labels = json.loads(labels_file.read_text())
+    sample = json.loads(sample_file.read_text())
+    assert labels["sample_sha256"] == file_sha256("eval/judge_sample.json")
+    assert set(labels["labels"]) == {item["item"] for item in sample["items"]}

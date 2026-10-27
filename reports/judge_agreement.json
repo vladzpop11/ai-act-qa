@@ -1,0 +1,102 @@
+{
+ "judge": "gemma-4-31b",
+ "labelled": 48,
+ "sampled": 48,
+ "random": {
+  "answers": 12,
+  "agreement": 0.833,
+  "kappa": 0.429,
+  "agreement_rubric": 0.833
+ },
+ "pair": {
+  "answers": 36,
+  "agreement": 0.778,
+  "kappa": 0.652,
+  "agreement_rubric": 0.833
+ },
+ "all": {
+  "answers": 48,
+  "agreement": 0.792,
+  "kappa": 0.646,
+  "agreement_rubric": 0.833
+ },
+ "pair_scores": {
+  "qwen3.5-2b": {
+   "person": 0.528,
+   "judge": 0.472
+  },
+  "gemma-4-e2b": {
+   "person": 0.722,
+   "judge": 0.667
+  }
+ },
+ "judge_minus_person_by_family": {
+  "gemma": -0.048,
+  "qwen": -0.037
+ },
+ "disagreements": [
+  {
+   "item": "a02",
+   "model": "qwen3.5-0.8b",
+   "id": "q074",
+   "person": "correct",
+   "judge": "partial"
+  },
+  {
+   "item": "a15",
+   "model": "qwen3.5-2b",
+   "id": "q041",
+   "person": "partial",
+   "judge": "incorrect"
+  },
+  {
+   "item": "a22",
+   "model": "qwen3.5-2b",
+   "id": "q028",
+   "person": "partial",
+   "judge": "incorrect"
+  },
+  {
+   "item": "a23",
+   "model": "qwen3.5-2b",
+   "id": "q011",
+   "person": "partial",
+   "judge": "correct"
+  },
+  {
+   "item": "a24",
+   "model": "gemma-4-e2b",
+   "id": "q012",
+   "person": "partial",
+   "judge": "incorrect"
+  },
+  {
+   "item": "a39",
+   "model": "gemma-4-e2b",
+   "id": "q074",
+   "person": "correct",
+   "judge": "partial"
+  },
+  {
+   "item": "a43",
+   "model": "qwen3.5-2b",
+   "id": "q022",
+   "person": "partial",
+   "judge": "incorrect"
+  },
+  {
+   "item": "a44",
+   "model": "qwen3.5-4b",
+   "id": "q053",
+   "person": "partial",
+   "judge": "correct"
+  }
+ ],
+ "provenance": {
+  "created": "2026-10-27T17:36:37Z",
+  "commit": "4fd9e38",
+  "dirty": true,
+  "document_sha256": "5e7719f77e8a606b257dc25958ee3222c4383300a5a34270a5b850a2ce8b8715",
+  "questions_sha256": "cefdf76605c86ed82435ff10a53b9e5d7a34b005d777c716228ddad004646ed8"
+ }
+}

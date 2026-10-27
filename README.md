@@ -8,9 +8,7 @@ the testing around it: retrieval and answers are measured on a reviewed question
 design choice is made on development questions by a rule written before the run, and the test
 questions are used once.
 
-**Status: stage 1 of 3** (data, retrieval and the evaluation set). Stage 2 adds the answering
-model, served with llama.cpp on the Mac and evaluated on Kaggle GPUs with the same model file;
-stage 3 the product QA layer (API, adversarial tests, flakiness, load and accessibility tests).
+**Status: stage 2 of 3 complete** (data, retrieval, answering models and judge agreement validation). Stage 3 adds the product QA layer (API, adversarial tests, flakiness, load and accessibility tests).
 
 **Not legal advice.** The consolidated text is, in its own words, "a documentation tool" with
 no legal effect; the authentic versions are those published in the Official Journal.
@@ -116,15 +114,41 @@ say so).
   reproduced, and the command refuses to split again. Development questions are used for every
   choice; test questions once, at the end.
 
+## Answers and the served model
+
+Evaluated on the **55 development questions** (Kaggle GPUs with `llama.cpp` server; the same pinned GGUF file served on the Mac with Docker). Answers were graded by **Gemma 4 31B** against the reference answer and passages; `score` is the share of points (correct = 1, partial = 0.5; declines on answerable questions = 0).
+
+| Model | Mac eligible | Score | Correct | Partial | Grounded | Declines (unans.) | Cites passage | Mac s/answer |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| qwen3.5-0.8b | yes | 0.53 | 0.49 | 0.15 | 0.80 | 0.60 | 0.64 | 23.4 |
+| qwen3.5-2b | yes | 0.67 | 0.55 | 0.25 | 0.87 | 0.20 | 0.86 | 45.9 |
+| **gemma-4-e2b** | **yes** | **0.74** | **0.69** | 0.16 | **0.96** | 0.80 | 0.75 | 67.7 |
+| qwen3.5-4b | no | 0.82 | 0.87 | 0.09 | 1.00 | 1.00 | 0.91 | — |
+| qwen3.5-9b | no | 0.80 | 0.85 | 0.11 | 1.00 | 1.00 | 0.98 | — |
+| gemma-4-e4b | no | 0.82 | 0.80 | 0.11 | 1.00 | 1.00 | 0.88 | — |
+
+**The selection rule, written before the run** ([config.yaml](configs/config.yaml), `selection`): among the Mac candidates with median answer time $\le 150\text{s}$, the highest development score wins, keeping a smaller model unless a larger one beats it by more than 0.05. **It selects `gemma-4-e2b`** ($0.736 - 0.673 = 0.063 > 0.05$).
+
+### Checking the judge against a person
+
+Because the judge (`gemma-4-31b`) shares a model family with `gemma-4-e2b`, its grades were checked against a person on a blind sample of 48 development answers ([eval/judge_labels.json](eval/judge_labels.json), `make judge-agreement`):
+- **Agreement**: 83.3% agreement with rubric (Cohen's $\kappa = 0.65$ on the decisive pair, $\kappa = 0.65$ overall). All 8 disagreements were single-step (`partial` vs `correct` or `incorrect`), with zero polarity reversals.
+- **No family bias**: the judge was slightly stricter than the person on both families (Gemma $-0.048$, Qwen $-0.037$), dispelling the concern of pro-Gemma bias.
+- **Selection confirmed by human grades**: on the questions where the judge graded `qwen3.5-2b` and `gemma-4-e2b` differently, the person scored `gemma-4-e2b` at 0.722 vs `qwen3.5-2b` at 0.528 (+0.194), matching the judge's margin (+0.195).
+
 ## How to run
 
 ```bash
-make setup        # uv sync --locked
-make data         # check the pinned document (download if missing) and parse it
-make test         # ruff and pytest
-make retrieval    # score the configured retrieval on the development questions
+make setup                   # uv sync --locked
+make data                    # check the pinned document (download if missing) and parse it
+make test                    # ruff and pytest
+make retrieval               # score the configured retrieval on the development questions
 make retrieval-experiments   # compare the settings in configs/config.yaml
-make review       # the question review page
+make review                  # the question review page
+make answers-report          # metrics per model and the served model (reports/answers_dev.json)
+make labels                  # build the blind judge-labelling page (eval/judge_labels.html)
+make labels-apply FILE=...   # apply human grades to eval/judge_labels.json
+make judge-agreement         # score agreement between person and judge (reports/judge_agreement.json)
 ```
 
 CI ([ci.yml](.github/workflows/ci.yml)) audits the dependencies, checks the pinned document,

@@ -1,0 +1,199 @@
+{
+ "sample_sha256": "c75135517505a507fb818d3511ae364fd3a6b8da082b9314b675d87c2bb4c026",
+ "labelled_at": "2026-10-27T16:14:54.700Z",
+ "applied_at": "2026-10-27T17:33:36Z",
+ "labels": {
+  "a01": {
+   "label": "partial",
+   "note": "Definition verbatim per Art 3(60). Error: 2nd sentence says it covers text published on public-interest matters; that is a separate Art 50(4) duty, deep fakes are image/audio/video only."
+  },
+  "a02": {
+   "label": "correct",
+   "note": "Correct date (2 Aug 2027, Art 57(1) as amended by Reg 2026/1744) + joint option. Omits 'existing sandbox' alternative (minor). Dangling [1]."
+  },
+  "a03": {
+   "label": "correct",
+   "note": "Verbatim Art 3(60). Citation '[60]' non-standard but content complete."
+  },
+  "a04": {
+   "label": "incorrect",
+   "note": "Abstained, but Art 99(6a) answers it: SMC fines under 99(4)-(5) capped at whichever is lower. Retrieval miss."
+  },
+  "a05": {
+   "label": "incorrect",
+   "note": "Never states the Act gives no tax incentives; answers with free sandbox access for SMEs (Art 58(2)(d)), which is true but not a tax incentive."
+  },
+  "a06": {
+   "label": "correct",
+   "note": "Core answer correct (Art 2(6)). 3rd sentence borrows Art 2(8) 'in accordance with Union law' and presents it as a consequence of 2(6): minor conflation."
+  },
+  "a07": {
+   "label": "incorrect",
+   "note": "Inverts Art 2(12): says FOSS systems are NOT exempt unless high-risk/Art 5/50; the opposite is true. Also says Art 53(2) obligations are disapplied (it is 53(1)(a)-(b))."
+  },
+  "a08": {
+   "label": "incorrect",
+   "note": "Wrong: Art 99(6a) gives SMCs the 'whichever is lower' cap (and Art 99(6) does so for SMEs, so 'no mention' is also false). EUR 750k cap is Art 100(3) (Union institutions), misattributed as general."
+  },
+  "a09": {
+   "label": "correct",
+   "note": "All five Art 14(4)(a)-(e) abilities covered (automation bias described, not named)."
+  },
+  "a10": {
+   "label": "correct",
+   "note": "Correct and complete per Art 2(3), incl. third-country output case."
+  },
+  "a11": {
+   "label": "correct",
+   "note": "Verbatim Art 3(60)."
+  },
+  "a12": {
+   "label": "correct",
+   "note": "Complete Art 3(23): unforeseen change + affects Ch. III Sec. 2 compliance or changes intended purpose."
+  },
+  "a13": {
+   "label": "partial",
+   "note": "Public-law bodies / public-service private entities correct. Error: extends FRIA to all Annex III deployers; only points 5(b)-(c) (credit scoring, life/health insurance). Omits point 2 exception. Art 27(5): AI Office 'shall' develop the template (not 'may')."
+  },
+  "a14": {
+   "label": "correct",
+   "note": "States Art 5(1b) correctly (both limbs), so not manipulation. Repetitive but correct."
+  },
+  "a15": {
+   "label": "partial",
+   "note": "Lists conditions (a)-(c) only, omits (d) preparatory task; profiling rule (always high-risk) garbled into a condition. Art 7(3) addition off-topic."
+  },
+  "a16": {
+   "label": "incorrect",
+   "note": "Contradicts Art 5(1b): says such manipulation IS prohibited; the law says it does not constitute manipulation."
+  },
+  "a17": {
+   "label": "partial",
+   "note": "Says point (14b) of the Annex to Rec. 2025/1099; correct is point (2) (14b is the AI Act's own Art 3 point). Extra sentences irrelevant."
+  },
+  "a18": {
+   "label": "partial",
+   "note": "Has the 2 Aug 2030 public-authority rule but misses the main rule (applies only if significant design changes, Art 111(2)); opens with 'Yes' and substitutes Art 43(4)."
+  },
+  "a19": {
+   "label": "partial",
+   "note": "Covers Art 14(4)(a), (b), (d), (e); omits (c) correctly interpreting the output."
+  },
+  "a20": {
+   "label": "correct",
+   "note": "Appropriate abstention; the Act endorses no product."
+  },
+  "a21": {
+   "label": "partial",
+   "note": "Omits 'immediately' once causal link established/suspected; presents 10 days as the deadline and the causal link as a condition (Art 73(4))."
+  },
+  "a22": {
+   "label": "partial",
+   "note": "Core correct. False claim: 'does not apply to high-risk AI systems'; Art 17 QMS exists only for high-risk providers, Art 63(2) only keeps other obligations. Omits Commission guidelines."
+  },
+  "a23": {
+   "label": "partial",
+   "note": "Core matches Art 2(12). Overstated extras: GPAI FOSS relief is only from Art 53(1)(a)-(b)/54; Art 25(4) only waives the written-agreement duty, not the Regulation."
+  },
+  "a24": {
+   "label": "partial",
+   "note": "Leading 'Yes' contradicts 'not covered'. Inverts Art 2(8): pre-market R&D IS excluded (except real-world testing). Borderline incorrect."
+  },
+  "a25": {
+   "label": "correct",
+   "note": "Complete: immediately on established/suspected causal link, max 10 days (Art 73(4))."
+  },
+  "a26": {
+   "label": "correct",
+   "note": "Complete: only if significant design changes; public-authority systems by 2 Aug 2030 (Art 111(2))."
+  },
+  "a27": {
+   "label": "correct",
+   "note": "Six months minimum, law override and financial-institution rule correct. Omits 'under their control' / 'appropriate to purpose' (minor)."
+  },
+  "a28": {
+   "label": "partial",
+   "note": "Conclusion right, but cites Annex III 8(a) (correct: 8(b)) and wrong rationale; exclusion is because people are not directly exposed to the output."
+  },
+  "a29": {
+   "label": "partial",
+   "note": "Omits the 'affects compliance with Ch. III Sec. 2' limb; presents unforeseen change and intended-purpose change as standalone triggers (Art 3(23)); garbles Art 43(4) ('applies to systems that undergo a new conformity assessment')."
+  },
+  "a30": {
+   "label": "correct",
+   "note": "Complete Art 27(1): public bodies, public-service private entities, Annex III 5(b)-(c), point 2 exception."
+  },
+  "a31": {
+   "label": "correct",
+   "note": "Correct date + existing-sandbox option; omits joint establishment (minor)."
+  },
+  "a32": {
+   "label": "correct",
+   "note": "Correctly states no tax incentives."
+  },
+  "a33": {
+   "label": "incorrect",
+   "note": "Wrong: Art 2(1)(c) applies the Act to third-country providers/deployers whose output is used in the EU. Military exclusion irrelevant; text garbled/repeated."
+  },
+  "a34": {
+   "label": "correct",
+   "note": "Correct: Art 2(6), Art 2(8) incl. real-world testing carve-out, Art 3(63) GPAI definition."
+  },
+  "a35": {
+   "label": "correct",
+   "note": "Correct Art 49(1) + accurate extras (49(2) Art 6(3) systems, 49(3) public-authority deployers). Minor slips: Annex III scope only implied; deployers register before 'putting into service or using', not 'on the market'."
+  },
+  "a36": {
+   "label": "correct",
+   "note": "Correct: point (2) of the Annex to Rec. (EU) 2025/1099 (Art 3(14b))."
+  },
+  "a37": {
+   "label": "incorrect",
+   "note": "Abstained, but Annex III point 3(d) makes detecting prohibited behaviour during tests high-risk. Retrieval miss."
+  },
+  "a38": {
+   "label": "correct",
+   "note": "Correct 'No' with Art 5(1b). Quotes 5(1b) with only the exposure limb (drops 'or alter the nature of sexually explicit activities', not needed here); 'only harmful manipulations' is commentary, not in the Act."
+  },
+  "a39": {
+   "label": "correct",
+   "note": "Correct date + joint option; omits existing-sandbox option (minor)."
+  },
+  "a40": {
+   "label": "correct",
+   "note": "Complete Art 63(1)-(2)."
+  },
+  "a41": {
+   "label": "correct",
+   "note": "Right deployer categories, correctly limited to Art 6(2) systems, plus accurate Art 27(2) first-use rule. Omits the Annex III point 2 (critical infrastructure) exception: minor scope omission (same treatment as a27/a35)."
+  },
+  "a42": {
+   "label": "correct",
+   "note": "Correctly states the Act sets no wages."
+  },
+  "a43": {
+   "label": "partial",
+   "note": "Core right (provider/authorised rep). False: says non-high-risk systems need no registration; Art 49(2) requires registering Art 6(3) systems. Omits Annex III / point 2 scope."
+  },
+  "a44": {
+   "label": "partial",
+   "note": "Core correct. Inverts last exception: disclosure DOES apply to law-enforcement systems available for the public to report crimes."
+  },
+  "a45": {
+   "label": "correct",
+   "note": "Complete Art 6(3): significant-risk test, conditions (a)-(d), profiling always high-risk."
+  },
+  "a46": {
+   "label": "incorrect",
+   "note": "Wrong: Annex III 3(d) makes exam cheating detection high-risk; misapplies the Art 6(3)(d) preparatory-task derogation."
+  },
+  "a47": {
+   "label": "correct",
+   "note": "Appropriate abstention; the Act provides no tax incentives."
+  },
+  "a48": {
+   "label": "correct",
+   "note": "Correct conclusion and rationale; citation wrong: 'Article 1(8)(b)' should be Annex III point 8(b)."
+  }
+ }
+}

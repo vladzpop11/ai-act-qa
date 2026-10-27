@@ -193,9 +193,9 @@
   }
  },
  "provenance": {
-  "created": "2026-10-26T21:03:44Z",
-  "commit": "863c62a",
-  "dirty": false,
+  "created": "2026-10-27T17:36:55Z",
+  "commit": "4fd9e38",
+  "dirty": true,
   "document_sha256": "5e7719f77e8a606b257dc25958ee3222c4383300a5a34270a5b850a2ce8b8715",
   "questions_sha256": "cefdf76605c86ed82435ff10a53b9e5d7a34b005d777c716228ddad004646ed8"
  }
