@@ -138,14 +138,34 @@ Because the judge (`gemma-4-31b`) shares a model family with `gemma-4-e2b`, its 
 
 ## The held-out test evaluation
 
-Retrieval scored once at the end of the project on the **31 answerable test questions** ([reports/retrieval_test.json](reports/retrieval_test.json)):
+Evaluated once at the end of the project on the **34 held-out test questions** (31 answerable, 3 unanswerable), which were never used during retrieval tuning or model selection.
+
+### Retrieval ([reports/retrieval_test.json](reports/retrieval_test.json))
 
 | Split | Questions | recall@5 | hit@5 | MRR | words@5 | s/query |
 | --- | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Development** (used for choices) | 50 | **0.86** | 0.84 | 0.81 | 564 | 3.3 |
 | **Test** (held out, used once) | 31 | **0.84** | 0.84 | 0.76 | 551 | 4.0 |
 
-The test performance matches the development baseline within 2 percentage points (less than a single question's variance, which is 3.2 points on 31 questions), confirming that the retrieval design did not overfit.
+Test retrieval matches the development baseline within 2 percentage points (less than a single question's variance, which is 3.2 points on 31 questions), confirming that the retrieval design did not overfit.
+
+### End-to-end answers ([reports/answers_test.json](reports/answers_test.json))
+
+All 6 candidate models were evaluated on the 34 test questions using Kaggle GPUs with the exact same pinned GGUF weights, and graded by **Gemma 4 31B**:
+
+| Model | Mac eligible | Score | Correct | Partial | Grounded | Declines (unans.) | Cites passage |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| qwen3.5-0.8b | yes | 0.52 | 0.44 | 0.15 | 0.82 | 0.33 | 0.68 |
+| qwen3.5-2b | yes | 0.75 | 0.68 | 0.21 | 0.91 | 0.00 | 0.83 |
+| **gemma-4-e2b** (selected) | **yes** | **0.75** | **0.71** | 0.15 | **0.94** | **1.00** | 0.73 |
+| qwen3.5-4b | no | 0.75 | 0.71 | 0.21 | 0.94 | 0.67 | 0.86 |
+| qwen3.5-9b | no | 0.75 | 0.79 | 0.09 | 1.00 | 1.00 | 0.93 |
+| gemma-4-e4b | no | 0.78 | 0.82 | 0.09 | 0.97 | 1.00 | 0.93 |
+
+**Key findings on the held-out test split**:
+- **Selection validated**: The chosen model, **`gemma-4-e2b`**, achieved a **0.75 score** (0.71 correct, 0.94 grounded), matching or exceeding its dev score (0.74), proving the model selection generalized without overfitting.
+- **Perfect unanswerable detection**: `gemma-4-e2b` correctly declined **100% of unanswerable test questions** (`declines_unanswerable = 1.0`), whereas `qwen3.5-2b` scored 0.00 (failed to decline any unanswerable questions, hallucinating answers instead).
+- **Clean execution**: Zero truncated completions, zero invalid citations, and strong citation discipline (93.3% of answers include citations).
 
 ## Stage 3: Product QA layer
 
